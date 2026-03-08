@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootsangeln in Norwegen - Expertenwissen</title>
+    <style>
+        /* Grundlegende Stile */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e5799 0%, #207cca 51%, #2989d8 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .presentation-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 700px;
+            position: relative;
+        }
+        
+        .slides-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 40px;
+            display: none;
+            overflow-y: auto;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        .slide-header {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #1e6da0;
+        }
+        
+        .slide-title {
+            color: #1e6da0;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .slide-subtitle {
+            color: #4a7fa6;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .slide-content {
+            height: calc(100% - 100px);
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        /* Inhaltsstile */
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        
+        h3 {
+            color: #245681;
+            margin: 20px 0 10px;
+            font-size: 22px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box {
+            background-color: #e1f0fa;
+            padding: 15px;
+            border-left: 4px solid #1e6da0;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .two-columns {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-item {
+            background-color: #f0f7fc;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #4a7fa6;
+        }
+        
+        .number-highlight {
+            display: inline-block;
+            background-color: #1e6da0;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            background-color: #1e6da0;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background-color: #16527a;
+        }
+        
+        .slide-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Folien-spezifische Stile */
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .fact-item {
+            background: linear-gradient(to bottom right, #e1f0fa, #f5f9fc);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #1e6da0;
+            color: white;
+        }
+        
+        .fish-info {
+            background-color: #eef7ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #1e6da0;
+        }
+        
+        .technique-card {
+            background-color: #f9fbff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #d0e3f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slides-container">
+            
+            <!-- Folie 1: Deckblatt -->
+            <div class="slide active" id="slide1">
+                <div class="slide-header">
+                    <h1 class="slide-title">Bootsangeln in Norwegen im Sommer</h1>
+                    <p class="slide-subtitle">Professionelle Strategien und Techniken für fortgeschrittene Angler</p>
+                </div>
+                <div class="slide-content">
+                    <div class="fact-grid">
+                        <div class="fact-item">
+                            <h3>Mitternachtssonne 24h</h3>
+                            <p>Von Juni bis August ermöglicht die Mitternachtssonne durchgehendes Angeln rund um die Uhr</p>
+                        </div>
+                        <div class="fact-item">
+                            <h3>Optimale Wassertemperatur</h3>
+                            <p>11-14°C aktivieren Raubfische und schaffen ideale Bedingungen für aggressive Bisse</p>
+                        </div>
+                        <div class="fact-item">
+                            <h3>Über 100.000 km Küste</h3>
+                            <p>Unzählige Fjorde, Buchten und Angelplätze bieten endlose Möglichkeiten</p>
+                        </div>
+                    </div>
+                    <div class="two-columns">
+                        <div class="column">
+                            <h3>Hauptzielfische Sommer</h3>
+                            <ul>
+                                <li>Dorsch</li>
+                                <li>Heilbutt</li>
+                                <li>Lachs</li>
+                                <li>Makrele</li>
+                                <li>Pollack</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3>Aktives Beißverhalten</h3>
+                            <p>Im Sommer jagen Fische in höheren Wasserschichten mit deutlich erhöhter Aktivität</p>
+                            <div class="highlight-box">
+                                <p><strong>Zielgruppe Experten:</strong> Diese Präsentation richtet sich an fortgeschrittene und erfahrene Meeresangler</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 1 von 15</div>
+            </div>
+            
+            <!-- Folie 2: Bootausrüstung -->
+            <div class="slide" id="slide2">
+                <div class="slide-header">
+                    <h2 class="slide-title">Optimale Bootausrüstung</h2>
+                    <p class="slide-subtitle">Sicherheit und Fangerfolg auf dem Wasser</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <h3><span class="number-highlight">1</span> Boottyp</h3>
+                            <p>Stabile Angelboote 18-24 Fuß, z.B. Quicksilver-Modelle mit verstärktem Heck für raue Bedingungen</p>
+                            
+                            <h3><span class="number-highlight">2</span> Motorisierung</h3>
+                            <p>Außenbordmotoren 50-115 PS für Fjorde, höhere PS-Zahl bei Fahrten auf offenes Meer</p>
+                            
+                            <h3><span class="number-highlight">3</span> Konstruktion</h3>
+                            <p>Robuste Bauweise für Seebedingungen, breites Heck für mehrere Angelpositionen, ausreichend Stauraum</p>
+                        </div>
+                        <div class="column">
+                            <h3><span class="number-highlight">4</span> Sicherheitsausrüstung</h3>
+                            <p>Rettungswesten für alle Personen, Notfallsignale, Funkgerät VHF, Erste-Hilfe-Set obligatorisch</p>
+                            
+                            <h3><span class="number-highlight">5</span> Ankersystem</h3>
+                            <p>Schwerer Anker mit langer Kette für starke Fjordströmungen und präzises Positionieren</p>
+                            
+                            <div class="highlight-box">
+                                <p><strong>Experten-Tipp:</strong> Immer auf überdimensionierte Sicherheitsausrüstung setzen – norwegische Gewässer können unberechenbar sein!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 2 von 15</div>
+            </div>
+            
+            <!-- Folie 3: Angelausrüstung -->
+            <div class="slide" id="slide3">
+                <div class="slide-header">
+                    <h2 class="slide-title">Professionelle Angelausrüstung</h2>
+                    <p class="slide-subtitle">Equipment für Zielfische</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <h3>Ruten Schwer</h3>
+                            <ul>
+                                <li><strong>Größe:</strong> 1,80-2,40 m</li>
+                                <li><strong>Wurfgewicht:</strong> 200-400 g</li>
+                                <li><strong>Einsatz:</strong> Für Dorsch und Heilbutt beim schweren Pilken</li>
+                            </ul>
+                            
+                            <h3>Ruten Leicht</h3>
+                            <ul>
+                                <li><strong>Größe:</strong> 2,40-3,20 m</li>
+                                <li><strong>Wurfgewicht:</strong> 100-150 g</li>
+                                <li><strong>Einsatz:</strong> Für Makrele und Pollack mit Blinkern und Gummis</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3>Rollen & Schnüre</h3>
+                            <ul>
+                                <li><strong>Rollen:</strong> Multirollen für schwere Belastungen, große Schnurkapazität, Stationärrollen mit Frontbremse</li>
+                                <li><strong>Schnüre:</strong> Geflochtene Hauptschnur 0,25-0,40 mm, Tragkraft 15-30 kg</li>
+                                <li><strong>Vorfach:</strong> Fluorocarbon 0,60-1,00 mm</li>
+                            </ul>
+                            
+                            <h3>Empfohlene Köder</h3>
+                            <ul>
+                                <li>Pilker 100-400 g (Silber/Gold)</li>
+                                <li>Gummifische 15-25 cm</li>
+                                <li>Naturköder (Hering, Makrele)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 3 von 15</div>
+            </div>
+            
+            <!-- Folie 4: Elektronik -->
+            <div class="slide" id="slide4">
+                <div class="slide-header">
+                    <h2 class="slide-title">Moderne Elektronik</h2>
+                    <p class="slide-subtitle">Revolution der Fischsuche</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="info-item">
+                                <h3>Fischfinder/Echolote</h3>
+                                <p>Garmin, Lowrance oder Humminbird mit CHIRP-Technologie</p>
+                                <ul>
+                                    <li>Tiefenmessung, Bodenstruktur</li>
+                                    <li>Fischschwärme lokalisieren</li>
+                                    <li>Wassertemperatur</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>GPS-Systeme</h3>
+                                <p>Markierung produktiver Angelstellen (Hotspots)</p>
+                                <ul>
+                                    <li>Navigation zu bekannten Fangplätzen</li>
+                                    <li>Sicherheit bei Nebelfahrten und schlechter Sicht</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="info-item">
+                                <h3>Kartenplotter Navionics</h3>
+                                <p>Detaillierte Fjord-Darstellung, Untiefen und Kanten erkennen</p>
+                                <ul>
+                                    <li>Integration mit Echolot-Daten</li>
+                                    <li>Routenplanung und Aufzeichnung</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="highlight-box">
+                                <h3>Geräte-Kombination</h3>
+                                <p><strong>Empfehlung:</strong> Kombinierte Systeme mit Fischfinder, GPS und Kartenplotter für maximale Effizienz auf dem Wasser</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 4 von 15</div>
+            </div>
+            
+            <!-- Folie 5: Dorsch & Köhler -->
+            <div class="slide" id="slide5">
+                <div class="slide-header">
+                    <h2 class="slide-title">Dorsch & Köhler</h2>
+                    <p class="slide-subtitle">Hauptzielfische im Sommer</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="fish-info">
+                                <h3>Dorsch (Kabeljau)</h3>
+                                <ul>
+                                    <li><strong>Vorkommen:</strong> Tiefen 20-150 m bei 8-12°C Wassertemperatur</li>
+                                    <li><strong>Sommerverhalten:</strong> Jagen in mittleren Wasserschichten an Kanten und Riffen</li>
+                                    <li><strong>Fangmethoden:</strong> Pilken mit 150-300 g Pilkern, Naturködermontagen mit Heringsfetzen</li>
+                                    <li><strong>Durchschnittsgrößen:</strong> 3-8 kg, Kapitale über 15 kg möglich</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="fish-info">
+                                <h3>Köhler (Pollack)</h3>
+                                <ul>
+                                    <li><strong>Vorkommen:</strong> Oberflächennähe bis 50 m Tiefe</li>
+                                    <li><strong>Sommerverhalten:</strong> Folgen Heringsschwärmen, aggressive und schnelle Bisse</li>
+                                    <li><strong>Fangmethoden:</strong> Leichtes Pilken, Gummifische, Blinker beim Spinnfischen</li>
+                                    <li><strong>Durchschnittsgrößen:</strong> 2-6 kg, große Exemplare bis 12 kg</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <p><strong>Experten-Tipp:</strong> Dorsche stehen im Sommer oft an Kanten und Riffbergen. Köhler hingegen sind aktive Jäger, die Futterfischschwärmen folgen und oberflächennahe Köder bevorzugen.</p>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 5 von 15</div>
+            </div>
+            
+            <!-- Folie 6: Heilbutt & Lachs -->
+            <div class="slide" id="slide6">
+                <div class="slide-header">
+                    <h2 class="slide-title">Heilbutt & Lachs</h2>
+                    <p class="slide-subtitle">Spezialisierte Zielfische</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="fish-info">
+                                <h3>Heilbutt – Norwegens Königsfisch</h3>
+                                <ul>
+                                    <li><strong>Vorkommen:</strong> Grundfisch in 50-300 m Tiefe</li>
+                                    <li><strong>Beste Fangzeit:</strong> Mai-September, Hauptsaison Juni-Juli</li>
+                                    <li><strong>Köder:</strong> Große Naturköder (ganze Makrelen, Heringe), schwere Pilker 300-500 g mit Beifänger</li>
+                                    <li><strong>Taktik:</strong> Langsames Driften über Plateaus und Kanten, Köder bodennah führen</li>
+                                    <li><strong>Größen:</strong> Durchschnitt 10-40 kg, Trophäen über 100 kg möglich</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="fish-info">
+                                <h3>Lachs – Küstenlachs vor Fjordmündungen</h3>
+                                <ul>
+                                    <li><strong>Vorkommen:</strong> Vor Fjordmündungen aktiv, Tiefe 5-20 m</li>
+                                    <li><strong>Fangmethoden:</strong> Schleppangeln mit Wobblern und Blinkern, Fliegenfischen vom Boot</li>
+                                    <li><strong>Sommerverhalten:</strong> Folgt Futterfischschwärmen, Saison Juni-August</li>
+                                    <li><strong>Wichtig:</strong> Strenge Fangregeln und spezielle Lizenzen erforderlich</li>
+                                </ul>
+                            </div>
+                            <div class="highlight-box">
+                                <h3>Makrele – Massenfisch im Sommer</h3>
+                                <p>Massenhaft im Sommer verfügbar, Schwarmfisch in 10-40 m Tiefe. Ideal mit Makrelenpaternoster und Pilker. Sehr aktiv und kampfstark, hervorragender Köder für Heilbutt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 6 von 15</div>
+            </div>
+            
+            <!-- Folie 7: Angeltechniken -->
+            <div class="slide" id="slide7">
+                <div class="slide-header">
+                    <h2 class="slide-title">Bewährte Angeltechniken</h2>
+                    <p class="slide-subtitle">Vier Hauptmethoden</p>
+                </div>
+                <div class="slide-content">
+                    <div class="info-grid">
+                        <div class="technique-card">
+                            <h3>Pilken (Vertikal)</h3>
+                            <ul>
+                                <li>Klassische Methode für Dorsch, Köhler und Heilbutt</li>
+                                <li>Pilker auf gewünschte Tiefe ablassen, ruckartig anheben und absinken lassen</li>
+                                <li>Gewicht 150-400 g je nach Tiefe und Strömung</li>
+                            </ul>
+                        </div>
+                        <div class="technique-card">
+                            <h3>Jigging</h3>
+                            <ul>
+                                <li>Moderne Variante mit Gummifischen und Jigköpfen</li>
+                                <li>Sehr effektiv für aktive Räuber</li>
+                                <li>Variable Führungsstile je nach Fischverhalten möglich</li>
+                            </ul>
+                        </div>
+                        <div class="technique-card">
+                            <h3>Schleppangeln</h3>
+                            <ul>
+                                <li>Für Lachs, Makrele und Pollack an der Oberfläche</li>
+                                <li>Langsame Bootsgeschwindigkeit 2-4 Knoten</li>
+                                <li>Mehrere Ruten gleichzeitig ausgebracht</li>
+                            </ul>
+                        </div>
+                        <div class="technique-card">
+                            <h3>Naturköderangeln</h3>
+                            <ul>
+                                <li>Schwere Grundmontagen für Heilbutt und große Dorschen</li>
+                                <li>Kombinierbar mit Pilkern als Gewicht und Beifänger als Naturköder-System</li>
+                                <li>Besonders effektiv in Gebieten mit natürlichem Futterangebot</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <p><strong>Experten-Tipp:</strong> Kombinieren Sie Techniken! Beginnen Sie mit Pilken zum Aufspüren der Fische, wechseln Sie dann zu Jigging für aktive Fische oder Naturködern für vorsichtige Bisse.</p>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 7 von 15</div>
+            </div>
+            
+            <!-- Folie 8: Wetter & Wasser -->
+            <div class="slide" id="slide8">
+                <div class="slide-header">
+                    <h2 class="slide-title">Wetter & Wasser</h2>
+                    <p class="slide-subtitle">Schlüssel zum Fangerfolg</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="info-item">
+                                <h3>Windverhältnisse</h3>
+                                <ul>
+                                    <li><strong>Südwestwind:</strong> Bringt warmes Wasser und aktiviert Fische</li>
+                                    <li><strong>Nordostwind:</strong> Klares, kaltes Wasser mit besserer Sicht</li>
+                                    <li><strong>Sicherheit:</strong> Bei über 5 Beaufort auf sichere Fjordabschnitte ausweichen</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Strömung</h3>
+                                <ul>
+                                    <li>Gezeitenströmungen konzentrieren Futterfische an Kanten und Engstellen</li>
+                                    <li>Beste Angelzeiten: 2 Stunden vor bis 2 Stunden nach Strömungswechsel</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="info-item">
+                                <h3>Wassertemperatur</h3>
+                                <ul>
+                                    <li>10-14°C optimal für Sommerfischerei</li>
+                                    <li>Mit Echolot messbar</li>
+                                    <li>Temperatursprünge markieren oft produktive Bereiche</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Sonnenstand & Wetterdienste</h3>
+                                <ul>
+                                    <li>Mitternachtssonne verlängert Aktivitätsphasen der Fische</li>
+                                    <li>Dämmerungszeiten sind trotzdem besonders produktiv für große Exemplare</li>
+                                    <li>Norwegische yr.no App für przise Vorhersagen nutzen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <p><strong>Wichtiger Hinweis:</strong> Wetterkarten richtig interpretieren lernen – essentiell für Sicherheit und Erfolg. Norwegens Wetter kann sich schnell ändern!</p>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 8 von 15</div>
+            </div>
+            
+            <!-- Folie 9: Angelregionen -->
+            <div class="slide" id="slide9">
+                <div class="slide-header">
+                    <h2 class="slide-title">Top-Angelregionen</h2>
+                    <p class="slide-subtitle">Norwegens beste Hotspots</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="fish-info">
+                                <h3>Lofoten & Vesterålen</h3>
+                                <ul>
+                                    <li>Weltberühmt für Riesendorsch und Heilbutt</li>
+                                    <li>Spektakuläre Fjordlandschaften</li>
+                                    <li>Beste Monate Mai-Juli</li>
+                                    <li>Legendäre Fanggebiete für Kapitale</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fish-info">
+                                <h3>Trondheimsleia & Hitra</h3>
+                                <ul>
+                                    <li>Vielfältige Fischarten: Seeteufel, Rotbarsch, Leng, Dorsch</li>
+                                    <li>Ausgezeichnet für Heilbutt-Angeln mit großen Exemplaren</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="fish-info">
+                                <h3>Romsdalsfjord (Mittelnorwegen)</h3>
+                                <ul>
+                                    <li>Sehr gute Dorsch- und Köhler-Bestände</li>
+                                    <li>Geschützte Buchten ideal für Anfänger</li>
+                                    <li>Saison Juni-September optimal</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="fish-info">
+                                <h3>Süd-Norwegen (Lindesnes)</h3>
+                                <ul>
+                                    <li>Top-Region für Küstenlachs und Makrele</li>
+                                    <li>Ideal für Schleppangeln</li>
+                                    <li>Gute Infrastruktur und Bootsvermietung</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <h3>Fjorde vs. Offenes Meer</h3>
+                        <p><strong>Fjorde:</strong> Geschützt, weniger windanfällig, gute Infrastruktur</p>
+                        <p><strong>Offenes Meer:</strong> Größere Fische, anspruchsvoller, nur bei gutem Wetter</p>
+                        <p><strong>Insider-Tipp:</strong> Lokale Guides für exklusive Hotspots konsultieren</p>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 9 von 15</div>
+            </div>
+            
+            <!-- Folie 10: Sicherheit & Navigation -->
+            <div class="slide" id="slide10">
+                <div class="slide-header">
+                    <h2 class="slide-title">Sicherheit & Navigation</h2>
+                    <p class="slide-subtitle">Lebenswichtige Grundlagen</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="info-item">
+                                <h3>Bootsführerschein & Pflichten</h3>
+                                <ul>
+                                    <li>Bootsführerschein Pflicht für Personen ab Geburtsjahr 1980</li>
+                                    <li>Gilt auch für Touristen</li>
+                                    <li>Bei Kontrolle nachweispflichtig</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Obligatorische Sicherheitsausrüstung</h3>
+                                <ul>
+                                    <li>Rettungswesten für alle Personen an Bord</li>
+                                    <li>Feuerlöscher</li>
+                                    <li>Erste-Hilfe-Set</li>
+                                    <li>Signalmittel (Leuchtraketen, Flaggen)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="info-item">
+                                <h3>Navigation & Kommunikation</h3>
+                                <ul>
+                                    <li>GPS und Kartenplotter zur Orientierung</li>
+                                    <li>Notfall-Kompass als Backup</li>
+                                    <li>VHF-Funkgerät für Notrufe (Kanal 16 international)</li>
+                                    <li>Norwegische Küstenwache: 120</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Wetterbedingungen & Fjord-Navigation</h3>
+                                <ul>
+                                    <li>Vor jeder Ausfahrt lokale Wetterberichte prüfen (yr.no)</li>
+                                    <li>Bei Unwetterwarnungen im Hafen bleiben – keine Kompromisse</li>
+                                    <li>Untiefen und Klippen beachten, Seekarten studieren</li>
+                                    <li>Position regelmäßig mit Land kommunizieren</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 10 von 15</div>
+            </div>
+            
+            <!-- Folie 11: Vorschriften & Nachhaltigkeit -->
+            <div class="slide" id="slide11">
+                <div class="slide-header">
+                    <h2 class="slide-title">Vorschriften & Nachhaltigkeit</h2>
+                    <p class="slide-subtitle">Regeln strikt einhalten</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="info-item">
+                                <h3>Ausfuhrquote Touristen</h3>
+                                <ul>
+                                    <li>Maximal 18 kg Fisch oder 1 Trophäenfisch ausführen</li>
+                                    <li>Dokumentation erforderlich</li>
+                                    <li>Belege aufbewahren</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Fangmeldepflicht</h3>
+                                <ul>
+                                    <li>Elektronische Registrierung bei Ausreise über Zoll obligatorisch</li>
+                                    <li>Kontrollen werden durchgeführt</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Maßgrenzen beachten</h3>
+                                <ul>
+                                    <li>Dorsch mindestens 44 cm</li>
+                                    <li>Heilbutt mindestens 80 cm</li>
+                                    <li>Lachs regionalabhängig</li>
+                                    <li>Untermaßige Fische vorsichtig zurücksetzen</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="info-item">
+                                <h3>Schonzeiten & Lizenzen</h3>
+                                <ul>
+                                    <li>Lachsfischerei nur mit spezieller Lizenz</li>
+                                    <li>Regionale Beschränkungen strikt beachten</li>
+                                    <li>Informationen aktuell prüfen</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Verbotene Praktiken</h3>
+                                <ul>
+                                    <li>Nur handgehaltene Angelgeräte erlaubt</li>
+                                    <li>Keine Netze, Reusen oder Schleppnetze für Touristen</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-item">
+                                <h3>Nachhaltigkeit & Umweltschutz</h3>
+                                <ul>
+                                    <li>Catch and Release für große Laichfische praktizieren</li>
+                                    <li>Nur benötigte Mengen entnehmen</li>
+                                    <li>Müll mitnehmen, Köderreste nicht ins Wasser</li>
+                                    <li>Naturschutzgebiete respektieren</li>
+                                    <li>Aktuelle Regelungen auf fiskeridir.no prüfen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 11 von 15</div>
+            </div>
+            
+            <!-- Folie 12: Experten-Taktiken -->
+            <div class="slide" id="slide12">
+                <div class="slide-header">
+                    <h2 class="slide-title">Experten-Taktiken</h2>
+                    <p class="slide-subtitle">Maximaler Fangerfolg</p>
+                </div>
+                <div class="slide-content">
+                    <div class="info-grid">
+                        <div class="technique-card">
+                            <h3>Köderführung & Variation</h3>
+                            <ul>
+                                <li>Variiere Geschwindigkeit und Hebamplitude beim Pilken stetig</li>
+                                <li>Pausen einbauen für zögernde Fische</li>
+                                <li>Bei ausbleibendem Erfolg Farbe und Größe wechseln, Naturköder testen</li>
+                            </ul>
+                        </div>
+                        <div class="technique-card">
+                            <h3>Tiefenvariation & GPS</h3>
+                            <ul>
+                                <li>Nicht nur Grund abfischen – mittlere Wasserschichten für Köhler und Pollack</li>
+                                <li>GPS-Hotspots markieren: Erfolgreiche Stellen sofort speichern</li>
+                                <li>Strukturen wie Kanten, Plateaus, Wracks notieren</li>
+                            </ul>
+                        </div>
+                        <div class="technique-card">
+                            <h3>Driftangeln perfektionieren</h3>
+                            <ul>
+                                <li>Strömung nutzen für großflächiges Absuchen von Arealen</li>
+                                <li>Treibanker zur Geschwindigkeitskontrolle einsetzen</li>
+                                <li>Abdriftrouten auf GPS dokumentieren</li>
+                            </ul>
+                        </div>
+                        <div class="technique-card">
+                            <h3>Timing & Lokales Wissen</h3>
+                            <ul>
+                                <li>Morgen- und Abenddämmerung auch im Hochsommer nutzen</li>
+                                <li>Fischer und Vermieter nach aktuellen Fangplätzen fragen</li>
+                                <li>Norwegische Angel-Community nutzen</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <h3>Ausrüstungspflege</h3>
+                        <p>Salzwasser nach jeder Tour abspülen – Korrosion kann teure Ausrüstung schnell zerstören!</p>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 12 von 15</div>
+            </div>
+            
+            <!-- Folie 13: Zusammenfassung der Zielfische -->
+            <div class="slide" id="slide13">
+                <div class="slide-header">
+                    <h2 class="slide-title">Zusammenfassung: Zielfische</h2>
+                    <p class="slide-subtitle">Hauptarten und ihre Eigenschaften</p>
+                </div>
+                <div class="slide-content">
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Fischart</th>
+                            <th>Sommer-Tiefe</th>
+                            <th>Beste Köder</th>
+                            <th>Durchschnittsgröße</th>
+                            <th>Angeltechnik</th>
+                        </tr>
+                        <tr>
+                            <td>Dorsch</td>
+                            <td>20-150 m</td>
+                            <td>Pilker 150-300g</td>
+                            <td>3-8 kg</td>
+                            <td>Pilken, Jigging</td>
+                        </tr>
+                        <tr>
+                            <td>Köhler (Pollack)</td>
+                            <td>0-50 m</td>
+                            <td>Gummifische, Blinker</td>
+                            <td>2-6 kg</td>
+                            <td>Spinnfischen, Pilken</td>
+                        </tr>
+                        <tr>
+                            <td>Heilbutt</td>
+                            <td>50-300 m</td>
+                            <td>Große Naturköder</td>
+                            <td>10-40 kg</td>
+                            <td>Schwere Grundmontagen</td>
+                        </tr>
+                        <tr>
+                            <td>Lachs</td>
+                            <td>5-20 m</td>
+                            <td>Wobbler, Blinker</td>
+                            <td>4-10 kg</td>
+                            <td>Schleppangeln</td>
+                        </tr>
+                        <tr>
+                            <td>Makrele</td>
+                            <td>10-40 m</td>
+                            <td>Paternoster, Pilker</td>
+                            <td>0,5-1,5 kg</td>
+                            <td>Pilken, Schleppangeln</td>
+                        </tr>
+                    </table>
+                    <div class="highlight-box">
+                        <p><strong>Wichtig:</strong> Diese Angaben sind Richtwerte. Lokale Bedingungen, Wetter und Jahreszeit können die Fischaktivität beeinflussen.</p>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 13 von 15</div>
+            </div>
+            
+            <!-- Folie 14: Wichtige Checkliste -->
+            <div class="slide" id="slide14">
+                <div class="slide-header">
+                    <h2 class="slide-title">Checkliste für die Reise</h2>
+                    <p class="slide-subtitle">Was Sie nicht vergessen sollten</p>
+                </div>
+                <div class="slide-content">
+                    <div class="two-columns">
+                        <div class="column">
+                            <h3>Ausrüstung</h3>
+                            <ul>
+                                <li>Angelruten (schwer und leicht)</li>
+                                <li>Rollen mit ausreichender Schnurkapazität</li>
+                                <li>Verschiedene Köder (Pilker, Gummifische, Blinker)</li>
+                                <li>Ersatzschnüre und Vorfächer</li>
+                                <li>Angelwerkzeug (Zange, Messer, Kescher)</li>
+                            </ul>
+                            
+                            <h3>Elektronik</h3>
+                            <ul>
+                                <li>Fischfinder/Echolot</li>
+                                <li>GPS-Gerät mit Karten</li>
+                                <li>VHF-Funkgerät</li>
+                                <li>Ladegeräte und Powerbank</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3>Sicherheit & Dokumente</h3>
+                            <ul>
+                                <li>Bootsführerschein</li>
+                                <li>Angel-Lizenzen (falls erforderlich)</li>
+                                <li>Rettungswesten für alle Personen</li>
+                                <li>Erste-Hilfe-Set</li>
+                                <li>Notfallsignale</li>
+                            </ul>
+                            
+                            <h3>Persönliche Ausstattung</h3>
+                            <ul>
+                                <li>Wetterfeste Kleidung (mehrere Schichten)</li>
+                                <li>Sonnen- und Wetterschutz</li>
+                                <li>Ausreichend Verpflegung und Wasser</li>
+                                <li>Kühlbox für den Fang</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <p><strong>Tipp:</strong> Erstellen Sie eine persönliche Checkliste und gehen Sie diese vor der Abreise systematisch durch!</p>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 14 von 15</div>
+            </div>
+            
+            <!-- Folie 15: Abschluss -->
+            <div class="slide" id="slide15">
+                <div class="slide-header">
+                    <h2 class="slide-title">Petri Heil in Norwegen!</h2>
+                    <p class="slide-subtitle">Abschluss und Ausblick</p>
+                </div>
+                <div class="slide-content">
+                    <div class="fact-grid">
+                        <div class="fact-item">
+                            <h3>Erfolg durch Vorbereitung</h3>
+                            <p>Gute Planung ist die Basis für erfolgreiches Angeln in Norwegen</p>
+                        </div>
+                        <div class="fact-item">
+                            <h3>Sicherheit geht vor</h3>
+                            <p>Respekt für die Natur und Gewässer sichert unvergessliche Erlebnisse</p>
+                        </div>
+                        <div class="fact-item">
+                            <h3>Nachhaltigkeit zählt</h3>
+                            <p>Verantwortungsvolles Angeln sichert die Fischbestände für die Zukunft</p>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <h3>Zusammenfassung</h3>
+                        <p>Norwegens Sommer bietet Weltklasse-Bootsangeln mit erstklassigen Beständen. Vorbereitung, richtige Ausrüstung und lokales Wissen garantieren unvergessliche Angelerlebnisse.</p>
+                    </div>
+                    <div class="two-columns">
+                        <div class="column">
+                            <h3>Letzte Experten-Tipps</h3>
+                            <ul>
+                                <li>Informieren Sie sich vor Ort über aktuelle Fangbedingungen</li>
+                                <li>Seien Sie flexibel und passen Sie Ihre Taktik an</li>
+                                <li>Respektieren Sie die norwegischen Angelvorschriften</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3>Weiterführende Ressourcen</h3>
+                            <ul>
+                                <li>Offizielle norwegische Fischereiseite: fiskeridir.no</li>
+                                <li>Wettervorhersagen: yr.no</li>
+                                <li>Lokale Angelverbände für aktuelle Informationen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-counter">Folie 15 von 15</div>
+            </div>
+            
+        </div>
+        
+        <div class="navigation">
+            <button class="nav-btn" id="prev-btn">Zurück</button>
+            <button class="nav-btn" id="next-btn">Weiter</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let currentSlide = 0;
+            
+            // Initialisiere erste Folie
+            showSlide(currentSlide);
+            
+            // Event-Listener für Navigation
+            nextBtn.addEventListener('click', function() {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            prevBtn.addEventListener('click', function() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            // Funktion zum Anzeigen der aktuellen Folie
+            function showSlide(n) {
+                // Alle Folien ausblenden
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Aktuelle Folie anzeigen
+                slides[n].classList.add('active');
+                
+                // Navigation-Buttons aktualisieren
+                prevBtn.disabled = n === 0;
+                nextBtn.disabled = n === slides.length - 1;
+            }
+            
+            // Tastatur-Navigation hinzufügen
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') {
+                    if (currentSlide < slides.length - 1) {
+                        currentSlide++;
+                        showSlide(currentSlide);
+                    }
+                } else if (e.key === 'ArrowLeft') {
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        showSlide(currentSlide);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
