@@ -1,1029 +1,2132 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootsangeln in Norwegen - Expertenwissen</title>
-    <style>
-        /* Grundlegende Stile */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #1e5799 0%, #207cca 51%, #2989d8 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .presentation-container {
-            width: 100%;
-            max-width: 1200px;
-            height: 700px;
-            position: relative;
-        }
-        
-        .slides-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            padding: 40px;
-            display: none;
-            overflow-y: auto;
-        }
-        
-        .slide.active {
-            display: block;
-        }
-        
-        .slide-header {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #1e6da0;
-        }
-        
-        .slide-title {
-            color: #1e6da0;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .slide-subtitle {
-            color: #4a7fa6;
-            font-size: 18px;
-            font-weight: 500;
-        }
-        
-        .slide-content {
-            height: calc(100% - 100px);
-            overflow-y: auto;
-            padding-right: 10px;
-        }
-        
-        /* Inhaltsstile */
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-            padding-left: 10px;
-        }
-        
-        h3 {
-            color: #245681;
-            margin: 20px 0 10px;
-            font-size: 22px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-        }
-        
-        .highlight-box {
-            background-color: #e1f0fa;
-            padding: 15px;
-            border-left: 4px solid #1e6da0;
-            margin: 15px 0;
-            border-radius: 0 4px 4px 0;
-        }
-        
-        .two-columns {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .column {
-            flex: 1;
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .info-item {
-            background-color: #f0f7fc;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 3px solid #4a7fa6;
-        }
-        
-        .number-highlight {
-            display: inline-block;
-            background-color: #1e6da0;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-        
-        .navigation {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-        }
-        
-        .nav-btn {
-            background-color: #1e6da0;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .nav-btn:hover {
-            background-color: #16527a;
-        }
-        
-        .slide-counter {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-        
-        /* Folien-spezifische Stile */
-        .fact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .fact-item {
-            background: linear-gradient(to bottom right, #e1f0fa, #f5f9fc);
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        
-        .comparison-table th, .comparison-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .comparison-table th {
-            background-color: #1e6da0;
-            color: white;
-        }
-        
-        .fish-info {
-            background-color: #eef7ff;
-            padding: 15px;
-            margin: 10px 0;
-            border-left: 4px solid #1e6da0;
-        }
-        
-        .technique-card {
-            background-color: #f9fbff;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 6px;
-            border: 1px solid #d0e3f7;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ålesund Bootsangeln – Expertenpräsentation</title>
+  <style>
+    :root{
+      --bg:#06111c;
+      --bg2:#081827;
+      --panel:#0b1726ee;
+      --panel2:#0d1d30;
+      --line:rgba(255,255,255,.08);
+      --text:#eef6ff;
+      --muted:#b8cbe2;
+      --accent:#66d9ef;
+      --accent2:#8dffb3;
+      --accent3:#ffcb66;
+      --danger:#ff6b8b;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:Inter, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 520px at 20% 10%, rgba(102,217,239,.18), transparent 55%),
+        radial-gradient(900px 520px at 80% 20%, rgba(141,255,179,.10), transparent 55%),
+        linear-gradient(135deg, #040a11 0%, var(--bg) 44%, #050b12 100%);
+      overflow:hidden;
+    }
+
+    .app{
+      height:100%;
+      display:grid;
+      grid-template-columns:360px 1fr;
+    }
+
+    .toc{
+      position:relative;
+      background:linear-gradient(180deg, rgba(7,16,27,.98), rgba(5,10,18,.98));
+      border-right:1px solid var(--line);
+      padding:18px 16px 16px;
+      overflow:auto;
+    }
+
+    .brand{
+      background:linear-gradient(135deg, rgba(102,217,239,.15), rgba(141,255,179,.10));
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:28px;
+      padding:18px;
+      box-shadow:var(--shadow);
+      margin-bottom:14px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(102,217,239,.12);
+      border:1px solid rgba(102,217,239,.18);
+      color:#dffcff;
+      font-size:12px;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+
+    .brand h1{
+      margin:12px 0 8px;
+      font-size:24px;
+      line-height:1.05;
+      font-weight:900;
+    }
+
+    .brand p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .miniStats{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+    .miniStat{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:18px;
+      padding:11px 12px;
+    }
+    .miniStat .k{
+      color:var(--muted);
+      font-size:11px;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+    .miniStat .v{
+      margin-top:5px;
+      font-size:15px;
+      font-weight:900;
+    }
+
+    .search{
+      width:100%;
+      margin-top:2px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--text);
+      border-radius:16px;
+      padding:12px 14px;
+      outline:none;
+      font:inherit;
+    }
+    .search:focus{
+      border-color:rgba(102,217,239,.45);
+      box-shadow:0 0 0 4px rgba(102,217,239,.09);
+    }
+
+    .tocSection{
+      margin-top:14px;
+      padding-top:10px;
+    }
+    .tocSection h2{
+      margin:0 0 10px;
+      font-size:12px;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      color:#b9c9dc;
+    }
+
+    .tocList{
+      display:grid;
+      gap:8px;
+    }
+
+    .tocItem{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      width:100%;
+      border:none;
+      cursor:pointer;
+      text-align:left;
+      padding:12px 12px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.06);
+      transition:.16s ease;
+    }
+    .tocItem:hover{
+      transform:translateY(-1px);
+      border-color:rgba(102,217,239,.22);
+      background:rgba(255,255,255,.055);
+    }
+    .tocItem.active{
+      background:linear-gradient(135deg, rgba(102,217,239,.14), rgba(141,255,179,.10));
+      border-color:rgba(102,217,239,.34);
+      box-shadow:0 0 0 3px rgba(102,217,239,.08) inset;
+    }
+    .tocNo{
+      flex:none;
+      width:34px;height:34px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.06);
+      font-size:13px;
+      font-weight:900;
+    }
+    .tocText{
+      min-width:0;
+    }
+    .tocTitle{
+      font-size:13px;
+      font-weight:900;
+      margin:0 0 4px;
+      line-height:1.25;
+    }
+    .tocDesc{
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.35;
+      margin:0;
+    }
+
+    .tocFooter{
+      margin-top:14px;
+      padding:12px 4px 2px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .deck{
+      position:relative;
+      overflow:hidden;
+      display:grid;
+      grid-template-rows:auto 1fr auto;
+      min-width:0;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:14px 18px;
+      border-bottom:1px solid var(--line);
+      background:rgba(4,8,13,.30);
+      backdrop-filter:blur(10px);
+    }
+    .crumbs{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      min-width:0;
+    }
+    .crumbs strong{
+      font-size:14px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:#dcecff;
+    }
+    .crumbs span{
+      color:var(--muted);
+      font-size:12px;
+    }
+    .navBtns{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .navBtn{
+      border:none;
+      cursor:pointer;
+      color:var(--text);
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      padding:10px 14px;
+      border-radius:14px;
+      font:inherit;
+      font-weight:800;
+      transition:.16s ease;
+    }
+    .navBtn:hover{
+      transform:translateY(-1px);
+      border-color:rgba(102,217,239,.25);
+    }
+
+    .slidesViewport{
+      position:relative;
+      overflow:hidden;
+      padding:18px;
+    }
+
+    .slide{
+      position:absolute;
+      inset:18px;
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(102,217,239,.10), transparent 40%),
+        linear-gradient(180deg, rgba(12,24,39,.96), rgba(7,16,27,.98));
+      border:1px solid rgba(255,255,255,.07);
+      border-radius:32px;
+      box-shadow:var(--shadow);
+      padding:34px 34px 28px;
+      display:none;
+      overflow:auto;
+    }
+    .slide.active{display:block}
+
+    .slideHeader{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:flex-start;
+      margin-bottom:20px;
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .slideHeader h2{
+      margin:0 0 8px;
+      font-size:32px;
+      line-height:1.05;
+      letter-spacing:-.03em;
+    }
+    .slideHeader p{
+      margin:0;
+      color:var(--muted);
+      max-width:78ch;
+      font-size:15px;
+      line-height:1.6;
+    }
+    .slideTag{
+      flex:none;
+      padding:9px 12px;
+      border-radius:999px;
+      background:rgba(102,217,239,.10);
+      border:1px solid rgba(102,217,239,.18);
+      color:#dffcff;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .heroGrid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:16px;
+      margin-top:18px;
+    }
+
+    .panel{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:22px;
+      padding:16px;
+    }
+    .panel h3{
+      margin:0 0 10px;
+      font-size:18px;
+      color:#eaf5ff;
+    }
+    .panel p, .panel li{
+      color:#d3e2f3;
+      font-size:14px;
+      line-height:1.65;
+    }
+    ul{
+      margin:0 0 0 18px;
+      padding:0;
+    }
+    li{margin:0 0 8px}
+    .bulletStrong{font-weight:800;color:#fff}
+
+    .grid2{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:16px;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:20px;
+      padding:16px;
+    }
+    .card h4{
+      margin:0 0 10px;
+      font-size:16px;
+    }
+    .card .meta{
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:10px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .callout{
+      margin-top:16px;
+      padding:16px 16px 16px 18px;
+      background:linear-gradient(135deg, rgba(102,217,239,.14), rgba(141,255,179,.08));
+      border:1px solid rgba(102,217,239,.22);
+      border-radius:20px;
+    }
+    .callout strong{color:#fff}
+
+    .fishBand{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .fishPill{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.07);
+      font-size:12px;
+      font-weight:800;
+      color:#f3fbff;
+    }
+    .dot{
+      width:9px;height:9px;border-radius:50%;
+      background:var(--accent);
+    }
+    .dot.alt{background:var(--accent2)}
+    .dot.warm{background:var(--accent3)}
+    .dot.hot{background:var(--danger)}
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:12px;
+      overflow:hidden;
+      border-radius:18px;
+    }
+    th,td{
+      padding:12px 10px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      text-align:left;
+      vertical-align:top;
+      font-size:14px;
+    }
+    th{
+      color:#fff;
+      background:rgba(102,217,239,.13);
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    tr:hover td{
+      background:rgba(255,255,255,.015);
+    }
+
+    .scoreGrid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:12px;
+      margin-top:16px;
+    }
+    .scoreCard{
+      padding:14px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.06);
+    }
+    .scoreCard .k{
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .scoreCard .v{
+      font-size:28px;
+      font-weight:900;
+      margin-top:8px;
+      line-height:1;
+    }
+    .scoreCard .s{
+      color:#d8e6f4;
+      font-size:13px;
+      line-height:1.5;
+      margin-top:8px;
+    }
+
+    .footerNav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:0 18px 16px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .progress{
+      flex:1;
+      height:10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      overflow:hidden;
+      max-width:420px;
+      margin:0 14px;
+      border:1px solid rgba(255,255,255,.06);
+    }
+    .progress > div{
+      width:0%;
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg, rgba(102,217,239,.95), rgba(141,255,179,.95));
+    }
+
+    .chapter{
+      color:#fff;
+      font-weight:900;
+    }
+
+
+    .hiddenBySearch{display:none !important;}
+
+
+    .slideMedia{
+      display:block;
+      margin-top:16px;
+    }
+    .mediaFigure{
+      margin:0;
+      border-radius:22px;
+      overflow:hidden;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.06);
+      box-shadow:0 12px 30px rgba(0,0,0,.22);
+      position:relative;
+      aspect-ratio: 16 / 9;
+      max-height: min(34vw, 340px);
+    }
+    .mediaFigure img{
+      width:100%;
+      height:auto;
+      aspect-ratio: 16 / 9;
+      max-height: min(34vw, 340px);
+      object-fit:cover;
+      display:block;
+    }
+    .mediaCaption{
+      position:absolute;
+      left:12px;
+      bottom:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(6,17,28,.72);
+      backdrop-filter:blur(8px);
+      border:1px solid rgba(255,255,255,.12);
+      font-size:12px;
+      font-weight:800;
+      color:#f5fbff;
+      max-width:calc(100% - 24px);
+    }
+
+    @media (max-width: 1180px){
+      .slideMedia{display:block}
+      .mediaFigure{max-height:none; aspect-ratio: 16 / 10;}
+    }
+
+    .kbd{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:28px;
+      height:28px;
+      padding:0 8px;
+      border-radius:8px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      font-size:12px;
+      font-weight:800;
+      color:#fff;
+      margin:0 4px;
+    }
+
+    @media (max-width: 1180px){
+      .app{grid-template-columns:300px 1fr;}
+      .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .scoreGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .heroGrid,.grid2{grid-template-columns:1fr}
+    }
+    @media (max-width: 900px){
+      body{overflow:auto}
+      .app{grid-template-columns:1fr; grid-template-rows:auto 1fr}
+      .toc{border-right:none;border-bottom:1px solid var(--line)}
+      .deck{min-height:70vh}
+      .topbar{flex-direction:column; align-items:flex-start}
+      .navBtns{width:100%}
+      .navBtn{flex:1 1 0}
+      .slide{inset:10px; padding:18px}
+      .slideHeader{flex-direction:column}
+      .slideMedia{margin-top:12px}
+      .grid3,.scoreGrid{grid-template-columns:1fr}
+      .mediaCaption{font-size:11px; left:10px; right:10px; bottom:10px; max-width:calc(100% - 20px)}
+    }
+  </style>
 </head>
 <body>
-    <div class="presentation-container">
-        <div class="slides-container">
-            
-            <!-- Folie 1: Deckblatt -->
-            <div class="slide active" id="slide1">
-                <div class="slide-header">
-                    <h1 class="slide-title">Bootsangeln in Norwegen im Sommer</h1>
-                    <p class="slide-subtitle">Professionelle Strategien und Techniken für fortgeschrittene Angler</p>
-                </div>
-                <div class="slide-content">
-                    <div class="fact-grid">
-                        <div class="fact-item">
-                            <h3>Mitternachtssonne 24h</h3>
-                            <p>Von Juni bis August ermöglicht die Mitternachtssonne durchgehendes Angeln rund um die Uhr</p>
-                        </div>
-                        <div class="fact-item">
-                            <h3>Optimale Wassertemperatur</h3>
-                            <p>11-14°C aktivieren Raubfische und schaffen ideale Bedingungen für aggressive Bisse</p>
-                        </div>
-                        <div class="fact-item">
-                            <h3>Über 100.000 km Küste</h3>
-                            <p>Unzählige Fjorde, Buchten und Angelplätze bieten endlose Möglichkeiten</p>
-                        </div>
-                    </div>
-                    <div class="two-columns">
-                        <div class="column">
-                            <h3>Hauptzielfische Sommer</h3>
-                            <ul>
-                                <li>Dorsch</li>
-                                <li>Heilbutt</li>
-                                <li>Lachs</li>
-                                <li>Makrele</li>
-                                <li>Pollack</li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h3>Aktives Beißverhalten</h3>
-                            <p>Im Sommer jagen Fische in höheren Wasserschichten mit deutlich erhöhter Aktivität</p>
-                            <div class="highlight-box">
-                                <p><strong>Zielgruppe Experten:</strong> Diese Präsentation richtet sich an fortgeschrittene und erfahrene Meeresangler</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 1 von 15</div>
-            </div>
-            
-            <!-- Folie 2: Bootausrüstung -->
-            <div class="slide" id="slide2">
-                <div class="slide-header">
-                    <h2 class="slide-title">Optimale Bootausrüstung</h2>
-                    <p class="slide-subtitle">Sicherheit und Fangerfolg auf dem Wasser</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <h3><span class="number-highlight">1</span> Boottyp</h3>
-                            <p>Stabile Angelboote 18-24 Fuß, z.B. Quicksilver-Modelle mit verstärktem Heck für raue Bedingungen</p>
-                            
-                            <h3><span class="number-highlight">2</span> Motorisierung</h3>
-                            <p>Außenbordmotoren 50-115 PS für Fjorde, höhere PS-Zahl bei Fahrten auf offenes Meer</p>
-                            
-                            <h3><span class="number-highlight">3</span> Konstruktion</h3>
-                            <p>Robuste Bauweise für Seebedingungen, breites Heck für mehrere Angelpositionen, ausreichend Stauraum</p>
-                        </div>
-                        <div class="column">
-                            <h3><span class="number-highlight">4</span> Sicherheitsausrüstung</h3>
-                            <p>Rettungswesten für alle Personen, Notfallsignale, Funkgerät VHF, Erste-Hilfe-Set obligatorisch</p>
-                            
-                            <h3><span class="number-highlight">5</span> Ankersystem</h3>
-                            <p>Schwerer Anker mit langer Kette für starke Fjordströmungen und präzises Positionieren</p>
-                            
-                            <div class="highlight-box">
-                                <p><strong>Experten-Tipp:</strong> Immer auf überdimensionierte Sicherheitsausrüstung setzen – norwegische Gewässer können unberechenbar sein!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 2 von 15</div>
-            </div>
-            
-            <!-- Folie 3: Angelausrüstung -->
-            <div class="slide" id="slide3">
-                <div class="slide-header">
-                    <h2 class="slide-title">Professionelle Angelausrüstung</h2>
-                    <p class="slide-subtitle">Equipment für Zielfische</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <h3>Ruten Schwer</h3>
-                            <ul>
-                                <li><strong>Größe:</strong> 1,80-2,40 m</li>
-                                <li><strong>Wurfgewicht:</strong> 200-400 g</li>
-                                <li><strong>Einsatz:</strong> Für Dorsch und Heilbutt beim schweren Pilken</li>
-                            </ul>
-                            
-                            <h3>Ruten Leicht</h3>
-                            <ul>
-                                <li><strong>Größe:</strong> 2,40-3,20 m</li>
-                                <li><strong>Wurfgewicht:</strong> 100-150 g</li>
-                                <li><strong>Einsatz:</strong> Für Makrele und Pollack mit Blinkern und Gummis</li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h3>Rollen & Schnüre</h3>
-                            <ul>
-                                <li><strong>Rollen:</strong> Multirollen für schwere Belastungen, große Schnurkapazität, Stationärrollen mit Frontbremse</li>
-                                <li><strong>Schnüre:</strong> Geflochtene Hauptschnur 0,25-0,40 mm, Tragkraft 15-30 kg</li>
-                                <li><strong>Vorfach:</strong> Fluorocarbon 0,60-1,00 mm</li>
-                            </ul>
-                            
-                            <h3>Empfohlene Köder</h3>
-                            <ul>
-                                <li>Pilker 100-400 g (Silber/Gold)</li>
-                                <li>Gummifische 15-25 cm</li>
-                                <li>Naturköder (Hering, Makrele)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 3 von 15</div>
-            </div>
-            
-            <!-- Folie 4: Elektronik -->
-            <div class="slide" id="slide4">
-                <div class="slide-header">
-                    <h2 class="slide-title">Moderne Elektronik</h2>
-                    <p class="slide-subtitle">Revolution der Fischsuche</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <div class="info-item">
-                                <h3>Fischfinder/Echolote</h3>
-                                <p>Garmin, Lowrance oder Humminbird mit CHIRP-Technologie</p>
-                                <ul>
-                                    <li>Tiefenmessung, Bodenstruktur</li>
-                                    <li>Fischschwärme lokalisieren</li>
-                                    <li>Wassertemperatur</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="info-item">
-                                <h3>GPS-Systeme</h3>
-                                <p>Markierung produktiver Angelstellen (Hotspots)</p>
-                                <ul>
-                                    <li>Navigation zu bekannten Fangplätzen</li>
-                                    <li>Sicherheit bei Nebelfahrten und schlechter Sicht</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="info-item">
-                                <h3>Kartenplotter Navionics</h3>
-                                <p>Detaillierte Fjord-Darstellung, Untiefen und Kanten erkennen</p>
-                                <ul>
-                                    <li>Integration mit Echolot-Daten</li>
-                                    <li>Routenplanung und Aufzeichnung</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="highlight-box">
-                                <h3>Geräte-Kombination</h3>
-                                <p><strong>Empfehlung:</strong> Kombinierte Systeme mit Fischfinder, GPS und Kartenplotter für maximale Effizienz auf dem Wasser</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 4 von 15</div>
-            </div>
-            
-            <!-- Folie 5: Dorsch & Köhler -->
-            <div class="slide" id="slide5">
-                <div class="slide-header">
-                    <h2 class="slide-title">Dorsch & Köhler</h2>
-                    <p class="slide-subtitle">Hauptzielfische im Sommer</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <div class="fish-info">
-                                <h3>Dorsch (Kabeljau)</h3>
-                                <ul>
-                                    <li><strong>Vorkommen:</strong> Tiefen 20-150 m bei 8-12°C Wassertemperatur</li>
-                                    <li><strong>Sommerverhalten:</strong> Jagen in mittleren Wasserschichten an Kanten und Riffen</li>
-                                    <li><strong>Fangmethoden:</strong> Pilken mit 150-300 g Pilkern, Naturködermontagen mit Heringsfetzen</li>
-                                    <li><strong>Durchschnittsgrößen:</strong> 3-8 kg, Kapitale über 15 kg möglich</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="fish-info">
-                                <h3>Köhler (Pollack)</h3>
-                                <ul>
-                                    <li><strong>Vorkommen:</strong> Oberflächennähe bis 50 m Tiefe</li>
-                                    <li><strong>Sommerverhalten:</strong> Folgen Heringsschwärmen, aggressive und schnelle Bisse</li>
-                                    <li><strong>Fangmethoden:</strong> Leichtes Pilken, Gummifische, Blinker beim Spinnfischen</li>
-                                    <li><strong>Durchschnittsgrößen:</strong> 2-6 kg, große Exemplare bis 12 kg</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="highlight-box">
-                        <p><strong>Experten-Tipp:</strong> Dorsche stehen im Sommer oft an Kanten und Riffbergen. Köhler hingegen sind aktive Jäger, die Futterfischschwärmen folgen und oberflächennahe Köder bevorzugen.</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 5 von 15</div>
-            </div>
-            
-            <!-- Folie 6: Heilbutt & Lachs -->
-            <div class="slide" id="slide6">
-                <div class="slide-header">
-                    <h2 class="slide-title">Heilbutt & Lachs</h2>
-                    <p class="slide-subtitle">Spezialisierte Zielfische</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <div class="fish-info">
-                                <h3>Heilbutt – Norwegens Königsfisch</h3>
-                                <ul>
-                                    <li><strong>Vorkommen:</strong> Grundfisch in 50-300 m Tiefe</li>
-                                    <li><strong>Beste Fangzeit:</strong> Mai-September, Hauptsaison Juni-Juli</li>
-                                    <li><strong>Köder:</strong> Große Naturköder (ganze Makrelen, Heringe), schwere Pilker 300-500 g mit Beifänger</li>
-                                    <li><strong>Taktik:</strong> Langsames Driften über Plateaus und Kanten, Köder bodennah führen</li>
-                                    <li><strong>Größen:</strong> Durchschnitt 10-40 kg, Trophäen über 100 kg möglich</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="fish-info">
-                                <h3>Lachs – Küstenlachs vor Fjordmündungen</h3>
-                                <ul>
-                                    <li><strong>Vorkommen:</strong> Vor Fjordmündungen aktiv, Tiefe 5-20 m</li>
-                                    <li><strong>Fangmethoden:</strong> Schleppangeln mit Wobblern und Blinkern, Fliegenfischen vom Boot</li>
-                                    <li><strong>Sommerverhalten:</strong> Folgt Futterfischschwärmen, Saison Juni-August</li>
-                                    <li><strong>Wichtig:</strong> Strenge Fangregeln und spezielle Lizenzen erforderlich</li>
-                                </ul>
-                            </div>
-                            <div class="highlight-box">
-                                <h3>Makrele – Massenfisch im Sommer</h3>
-                                <p>Massenhaft im Sommer verfügbar, Schwarmfisch in 10-40 m Tiefe. Ideal mit Makrelenpaternoster und Pilker. Sehr aktiv und kampfstark, hervorragender Köder für Heilbutt.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 6 von 15</div>
-            </div>
-            
-            <!-- Folie 7: Angeltechniken -->
-            <div class="slide" id="slide7">
-                <div class="slide-header">
-                    <h2 class="slide-title">Bewährte Angeltechniken</h2>
-                    <p class="slide-subtitle">Vier Hauptmethoden</p>
-                </div>
-                <div class="slide-content">
-                    <div class="info-grid">
-                        <div class="technique-card">
-                            <h3>Pilken (Vertikal)</h3>
-                            <ul>
-                                <li>Klassische Methode für Dorsch, Köhler und Heilbutt</li>
-                                <li>Pilker auf gewünschte Tiefe ablassen, ruckartig anheben und absinken lassen</li>
-                                <li>Gewicht 150-400 g je nach Tiefe und Strömung</li>
-                            </ul>
-                        </div>
-                        <div class="technique-card">
-                            <h3>Jigging</h3>
-                            <ul>
-                                <li>Moderne Variante mit Gummifischen und Jigköpfen</li>
-                                <li>Sehr effektiv für aktive Räuber</li>
-                                <li>Variable Führungsstile je nach Fischverhalten möglich</li>
-                            </ul>
-                        </div>
-                        <div class="technique-card">
-                            <h3>Schleppangeln</h3>
-                            <ul>
-                                <li>Für Lachs, Makrele und Pollack an der Oberfläche</li>
-                                <li>Langsame Bootsgeschwindigkeit 2-4 Knoten</li>
-                                <li>Mehrere Ruten gleichzeitig ausgebracht</li>
-                            </ul>
-                        </div>
-                        <div class="technique-card">
-                            <h3>Naturköderangeln</h3>
-                            <ul>
-                                <li>Schwere Grundmontagen für Heilbutt und große Dorschen</li>
-                                <li>Kombinierbar mit Pilkern als Gewicht und Beifänger als Naturköder-System</li>
-                                <li>Besonders effektiv in Gebieten mit natürlichem Futterangebot</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="highlight-box">
-                        <p><strong>Experten-Tipp:</strong> Kombinieren Sie Techniken! Beginnen Sie mit Pilken zum Aufspüren der Fische, wechseln Sie dann zu Jigging für aktive Fische oder Naturködern für vorsichtige Bisse.</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 7 von 15</div>
-            </div>
-            
-            <!-- Folie 8: Wetter & Wasser -->
-            <div class="slide" id="slide8">
-                <div class="slide-header">
-                    <h2 class="slide-title">Wetter & Wasser</h2>
-                    <p class="slide-subtitle">Schlüssel zum Fangerfolg</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <div class="info-item">
-                                <h3>Windverhältnisse</h3>
-                                <ul>
-                                    <li><strong>Südwestwind:</strong> Bringt warmes Wasser und aktiviert Fische</li>
-                                    <li><strong>Nordostwind:</strong> Klares, kaltes Wasser mit besserer Sicht</li>
-                                    <li><strong>Sicherheit:</strong> Bei über 5 Beaufort auf sichere Fjordabschnitte ausweichen</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="info-item">
-                                <h3>Strömung</h3>
-                                <ul>
-                                    <li>Gezeitenströmungen konzentrieren Futterfische an Kanten und Engstellen</li>
-                                    <li>Beste Angelzeiten: 2 Stunden vor bis 2 Stunden nach Strömungswechsel</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="info-item">
-                                <h3>Wassertemperatur</h3>
-                                <ul>
-                                    <li>10-14°C optimal für Sommerfischerei</li>
-                                    <li>Mit Echolot messbar</li>
-                                    <li>Temperatursprünge markieren oft produktive Bereiche</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="info-item">
-                                <h3>Sonnenstand & Wetterdienste</h3>
-                                <ul>
-                                    <li>Mitternachtssonne verlängert Aktivitätsphasen der Fische</li>
-                                    <li>Dämmerungszeiten sind trotzdem besonders produktiv für große Exemplare</li>
-                                    <li>Norwegische yr.no App für przise Vorhersagen nutzen</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="highlight-box">
-                        <p><strong>Wichtiger Hinweis:</strong> Wetterkarten richtig interpretieren lernen – essentiell für Sicherheit und Erfolg. Norwegens Wetter kann sich schnell ändern!</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 8 von 15</div>
-            </div>
-            
-            <!-- Folie 9: Angelregionen -->
-            <div class="slide" id="slide9">
-                <div class="slide-header">
-                    <h2 class="slide-title">Top-Angelregionen</h2>
-                    <p class="slide-subtitle">Norwegens beste Hotspots</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <div class="fish-info">
-                                <h3>Lofoten & Vesterålen</h3>
-                                <ul>
-                                    <li>Weltberühmt für Riesendorsch und Heilbutt</li>
-                                    <li>Spektakuläre Fjordlandschaften</li>
-                                    <li>Beste Monate Mai-Juli</li>
-                                    <li>Legendäre Fanggebiete für Kapitale</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="fish-info">
-                                <h3>Trondheimsleia & Hitra</h3>
-                                <ul>
-                                    <li>Vielfältige Fischarten: Seeteufel, Rotbarsch, Leng, Dorsch</li>
-                                    <li>Ausgezeichnet für Heilbutt-Angeln mit großen Exemplaren</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="fish-info">
-                                <h3>Romsdalsfjord (Mittelnorwegen)</h3>
-                                <ul>
-                                    <li>Sehr gute Dorsch- und Köhler-Bestände</li>
-                                    <li>Geschützte Buchten ideal für Anfänger</li>
-                                    <li>Saison Juni-September optimal</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="fish-info">
-                                <h3>Süd-Norwegen (Lindesnes)</h3>
-                                <ul>
-                                    <li>Top-Region für Küstenlachs und Makrele</li>
-                                    <li>Ideal für Schleppangeln</li>
-                                    <li>Gute Infrastruktur und Bootsvermietung</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="highlight-box">
-                        <h3>Fjorde vs. Offenes Meer</h3>
-                        <p><strong>Fjorde:</strong> Geschützt, weniger windanfällig, gute Infrastruktur</p>
-                        <p><strong>Offenes Meer:</strong> Größere Fische, anspruchsvoller, nur bei gutem Wetter</p>
-                        <p><strong>Insider-Tipp:</strong> Lokale Guides für exklusive Hotspots konsultieren</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 9 von 15</div>
-            </div>
-            
-            <!-- Folie 10: Sicherheit & Navigation -->
-            <div class="slide" id="slide10">
-                <div class="slide-header">
-                    <h2 class="slide-title">Sicherheit & Navigation</h2>
-                    <p class="slide-subtitle">Lebenswichtige Grundlagen</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <div class="info-item">
-                                <h3>Bootsführerschein & Pflichten</h3>
-                                <ul>
-                                    <li>Bootsführerschein Pflicht für Personen ab Geburtsjahr 1980</li>
-                                    <li>Gilt auch für Touristen</li>
-                                    <li>Bei Kontrolle nachweispflichtig</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="info-item">
-                                <h3>Obligatorische Sicherheitsausrüstung</h3>
-                                <ul>
-                                    <li>Rettungswesten für alle Personen an Bord</li>
-                                    <li>Feuerlöscher</li>
-                                    <li>Erste-Hilfe-Set</li>
-                                    <li>Signalmittel (Leuchtraketen, Flaggen)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="info-item">
-                                <h3>Navigation & Kommunikation</h3>
-                                <ul>
-                                    <li>GPS und Kartenplotter zur Orientierung</li>
-                                    <li>Notfall-Kompass als Backup</li>
-                                    <li>VHF-Funkgerät für Notrufe (Kanal 16 international)</li>
-                                    <li>Norwegische Küstenwache: 120</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="info-item">
-                                <h3>Wetterbedingungen & Fjord-Navigation</h3>
-                                <ul>
-                                    <li>Vor jeder Ausfahrt lokale Wetterberichte prüfen (yr.no)</li>
-                                    <li>Bei Unwetterwarnungen im Hafen bleiben – keine Kompromisse</li>
-                                    <li>Untiefen und Klippen beachten, Seekarten studieren</li>
-                                    <li>Position regelmäßig mit Land kommunizieren</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 10 von 15</div>
-            </div>
-            
-            <!-- Folie 11: Vorschriften & Nachhaltigkeit -->
-            <div class="slide" id="slide11">
-                <div class="slide-header">
-                    <h2 class="slide-title">Vorschriften & Nachhaltigkeit</h2>
-                    <p class="slide-subtitle">Regeln strikt einhalten</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <div class="info-item">
-                                <h3>Ausfuhrquote Touristen</h3>
-                                <ul>
-                                    <li>Maximal 18 kg Fisch oder 1 Trophäenfisch ausführen</li>
-                                    <li>Dokumentation erforderlich</li>
-                                    <li>Belege aufbewahren</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="info-item">
-                                <h3>Fangmeldepflicht</h3>
-                                <ul>
-                                    <li>Elektronische Registrierung bei Ausreise über Zoll obligatorisch</li>
-                                    <li>Kontrollen werden durchgeführt</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="info-item">
-                                <h3>Maßgrenzen beachten</h3>
-                                <ul>
-                                    <li>Dorsch mindestens 44 cm</li>
-                                    <li>Heilbutt mindestens 80 cm</li>
-                                    <li>Lachs regionalabhängig</li>
-                                    <li>Untermaßige Fische vorsichtig zurücksetzen</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="info-item">
-                                <h3>Schonzeiten & Lizenzen</h3>
-                                <ul>
-                                    <li>Lachsfischerei nur mit spezieller Lizenz</li>
-                                    <li>Regionale Beschränkungen strikt beachten</li>
-                                    <li>Informationen aktuell prüfen</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="info-item">
-                                <h3>Verbotene Praktiken</h3>
-                                <ul>
-                                    <li>Nur handgehaltene Angelgeräte erlaubt</li>
-                                    <li>Keine Netze, Reusen oder Schleppnetze für Touristen</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="info-item">
-                                <h3>Nachhaltigkeit & Umweltschutz</h3>
-                                <ul>
-                                    <li>Catch and Release für große Laichfische praktizieren</li>
-                                    <li>Nur benötigte Mengen entnehmen</li>
-                                    <li>Müll mitnehmen, Köderreste nicht ins Wasser</li>
-                                    <li>Naturschutzgebiete respektieren</li>
-                                    <li>Aktuelle Regelungen auf fiskeridir.no prüfen</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 11 von 15</div>
-            </div>
-            
-            <!-- Folie 12: Experten-Taktiken -->
-            <div class="slide" id="slide12">
-                <div class="slide-header">
-                    <h2 class="slide-title">Experten-Taktiken</h2>
-                    <p class="slide-subtitle">Maximaler Fangerfolg</p>
-                </div>
-                <div class="slide-content">
-                    <div class="info-grid">
-                        <div class="technique-card">
-                            <h3>Köderführung & Variation</h3>
-                            <ul>
-                                <li>Variiere Geschwindigkeit und Hebamplitude beim Pilken stetig</li>
-                                <li>Pausen einbauen für zögernde Fische</li>
-                                <li>Bei ausbleibendem Erfolg Farbe und Größe wechseln, Naturköder testen</li>
-                            </ul>
-                        </div>
-                        <div class="technique-card">
-                            <h3>Tiefenvariation & GPS</h3>
-                            <ul>
-                                <li>Nicht nur Grund abfischen – mittlere Wasserschichten für Köhler und Pollack</li>
-                                <li>GPS-Hotspots markieren: Erfolgreiche Stellen sofort speichern</li>
-                                <li>Strukturen wie Kanten, Plateaus, Wracks notieren</li>
-                            </ul>
-                        </div>
-                        <div class="technique-card">
-                            <h3>Driftangeln perfektionieren</h3>
-                            <ul>
-                                <li>Strömung nutzen für großflächiges Absuchen von Arealen</li>
-                                <li>Treibanker zur Geschwindigkeitskontrolle einsetzen</li>
-                                <li>Abdriftrouten auf GPS dokumentieren</li>
-                            </ul>
-                        </div>
-                        <div class="technique-card">
-                            <h3>Timing & Lokales Wissen</h3>
-                            <ul>
-                                <li>Morgen- und Abenddämmerung auch im Hochsommer nutzen</li>
-                                <li>Fischer und Vermieter nach aktuellen Fangplätzen fragen</li>
-                                <li>Norwegische Angel-Community nutzen</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="highlight-box">
-                        <h3>Ausrüstungspflege</h3>
-                        <p>Salzwasser nach jeder Tour abspülen – Korrosion kann teure Ausrüstung schnell zerstören!</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 12 von 15</div>
-            </div>
-            
-            <!-- Folie 13: Zusammenfassung der Zielfische -->
-            <div class="slide" id="slide13">
-                <div class="slide-header">
-                    <h2 class="slide-title">Zusammenfassung: Zielfische</h2>
-                    <p class="slide-subtitle">Hauptarten und ihre Eigenschaften</p>
-                </div>
-                <div class="slide-content">
-                    <table class="comparison-table">
-                        <tr>
-                            <th>Fischart</th>
-                            <th>Sommer-Tiefe</th>
-                            <th>Beste Köder</th>
-                            <th>Durchschnittsgröße</th>
-                            <th>Angeltechnik</th>
-                        </tr>
-                        <tr>
-                            <td>Dorsch</td>
-                            <td>20-150 m</td>
-                            <td>Pilker 150-300g</td>
-                            <td>3-8 kg</td>
-                            <td>Pilken, Jigging</td>
-                        </tr>
-                        <tr>
-                            <td>Köhler (Pollack)</td>
-                            <td>0-50 m</td>
-                            <td>Gummifische, Blinker</td>
-                            <td>2-6 kg</td>
-                            <td>Spinnfischen, Pilken</td>
-                        </tr>
-                        <tr>
-                            <td>Heilbutt</td>
-                            <td>50-300 m</td>
-                            <td>Große Naturköder</td>
-                            <td>10-40 kg</td>
-                            <td>Schwere Grundmontagen</td>
-                        </tr>
-                        <tr>
-                            <td>Lachs</td>
-                            <td>5-20 m</td>
-                            <td>Wobbler, Blinker</td>
-                            <td>4-10 kg</td>
-                            <td>Schleppangeln</td>
-                        </tr>
-                        <tr>
-                            <td>Makrele</td>
-                            <td>10-40 m</td>
-                            <td>Paternoster, Pilker</td>
-                            <td>0,5-1,5 kg</td>
-                            <td>Pilken, Schleppangeln</td>
-                        </tr>
-                    </table>
-                    <div class="highlight-box">
-                        <p><strong>Wichtig:</strong> Diese Angaben sind Richtwerte. Lokale Bedingungen, Wetter und Jahreszeit können die Fischaktivität beeinflussen.</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 13 von 15</div>
-            </div>
-            
-            <!-- Folie 14: Wichtige Checkliste -->
-            <div class="slide" id="slide14">
-                <div class="slide-header">
-                    <h2 class="slide-title">Checkliste für die Reise</h2>
-                    <p class="slide-subtitle">Was Sie nicht vergessen sollten</p>
-                </div>
-                <div class="slide-content">
-                    <div class="two-columns">
-                        <div class="column">
-                            <h3>Ausrüstung</h3>
-                            <ul>
-                                <li>Angelruten (schwer und leicht)</li>
-                                <li>Rollen mit ausreichender Schnurkapazität</li>
-                                <li>Verschiedene Köder (Pilker, Gummifische, Blinker)</li>
-                                <li>Ersatzschnüre und Vorfächer</li>
-                                <li>Angelwerkzeug (Zange, Messer, Kescher)</li>
-                            </ul>
-                            
-                            <h3>Elektronik</h3>
-                            <ul>
-                                <li>Fischfinder/Echolot</li>
-                                <li>GPS-Gerät mit Karten</li>
-                                <li>VHF-Funkgerät</li>
-                                <li>Ladegeräte und Powerbank</li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h3>Sicherheit & Dokumente</h3>
-                            <ul>
-                                <li>Bootsführerschein</li>
-                                <li>Angel-Lizenzen (falls erforderlich)</li>
-                                <li>Rettungswesten für alle Personen</li>
-                                <li>Erste-Hilfe-Set</li>
-                                <li>Notfallsignale</li>
-                            </ul>
-                            
-                            <h3>Persönliche Ausstattung</h3>
-                            <ul>
-                                <li>Wetterfeste Kleidung (mehrere Schichten)</li>
-                                <li>Sonnen- und Wetterschutz</li>
-                                <li>Ausreichend Verpflegung und Wasser</li>
-                                <li>Kühlbox für den Fang</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="highlight-box">
-                        <p><strong>Tipp:</strong> Erstellen Sie eine persönliche Checkliste und gehen Sie diese vor der Abreise systematisch durch!</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 14 von 15</div>
-            </div>
-            
-            <!-- Folie 15: Abschluss -->
-            <div class="slide" id="slide15">
-                <div class="slide-header">
-                    <h2 class="slide-title">Petri Heil in Norwegen!</h2>
-                    <p class="slide-subtitle">Abschluss und Ausblick</p>
-                </div>
-                <div class="slide-content">
-                    <div class="fact-grid">
-                        <div class="fact-item">
-                            <h3>Erfolg durch Vorbereitung</h3>
-                            <p>Gute Planung ist die Basis für erfolgreiches Angeln in Norwegen</p>
-                        </div>
-                        <div class="fact-item">
-                            <h3>Sicherheit geht vor</h3>
-                            <p>Respekt für die Natur und Gewässer sichert unvergessliche Erlebnisse</p>
-                        </div>
-                        <div class="fact-item">
-                            <h3>Nachhaltigkeit zählt</h3>
-                            <p>Verantwortungsvolles Angeln sichert die Fischbestände für die Zukunft</p>
-                        </div>
-                    </div>
-                    <div class="highlight-box">
-                        <h3>Zusammenfassung</h3>
-                        <p>Norwegens Sommer bietet Weltklasse-Bootsangeln mit erstklassigen Beständen. Vorbereitung, richtige Ausrüstung und lokales Wissen garantieren unvergessliche Angelerlebnisse.</p>
-                    </div>
-                    <div class="two-columns">
-                        <div class="column">
-                            <h3>Letzte Experten-Tipps</h3>
-                            <ul>
-                                <li>Informieren Sie sich vor Ort über aktuelle Fangbedingungen</li>
-                                <li>Seien Sie flexibel und passen Sie Ihre Taktik an</li>
-                                <li>Respektieren Sie die norwegischen Angelvorschriften</li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h3>Weiterführende Ressourcen</h3>
-                            <ul>
-                                <li>Offizielle norwegische Fischereiseite: fiskeridir.no</li>
-                                <li>Wettervorhersagen: yr.no</li>
-                                <li>Lokale Angelverbände für aktuelle Informationen</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-counter">Folie 15 von 15</div>
-            </div>
-            
+  <div class="app">
+    <aside class="toc">
+      <div class="brand">
+        <div class="eyebrow">🎣 Ålesund / Sommer / Bootsangeln</div>
+        <h1>Expertenpräsentation für Tiefen, Drift und Köderführung</h1>
+        <p>Fokus auf Makrele, Dorsch, Heilbutt, Scholle, Pollack und auf die Logik dahinter: Spotwahl, Echolotbild, Driftfenster, Köderführung und Feintuning.</p>
+        <div class="miniStats">
+          <div class="miniStat"><div class="k">Folien</div><div class="v" id="slideCount">24</div></div>
+          <div class="miniStat"><div class="k">Kapitel</div><div class="v">6</div></div>
         </div>
-        
-        <div class="navigation">
-            <button class="nav-btn" id="prev-btn">Zurück</button>
-            <button class="nav-btn" id="next-btn">Weiter</button>
-        </div>
-    </div>
+      </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.slide');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            let currentSlide = 0;
-            
-            // Initialisiere erste Folie
-            showSlide(currentSlide);
-            
-            // Event-Listener für Navigation
-            nextBtn.addEventListener('click', function() {
-                if (currentSlide < slides.length - 1) {
-                    currentSlide++;
-                    showSlide(currentSlide);
-                }
-            });
-            
-            prevBtn.addEventListener('click', function() {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                    showSlide(currentSlide);
-                }
-            });
-            
-            // Funktion zum Anzeigen der aktuellen Folie
-            function showSlide(n) {
-                // Alle Folien ausblenden
-                slides.forEach(slide => {
-                    slide.classList.remove('active');
-                });
-                
-                // Aktuelle Folie anzeigen
-                slides[n].classList.add('active');
-                
-                // Navigation-Buttons aktualisieren
-                prevBtn.disabled = n === 0;
-                nextBtn.disabled = n === slides.length - 1;
-            }
-            
-            // Tastatur-Navigation hinzufügen
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'ArrowRight') {
-                    if (currentSlide < slides.length - 1) {
-                        currentSlide++;
-                        showSlide(currentSlide);
-                    }
-                } else if (e.key === 'ArrowLeft') {
-                    if (currentSlide > 0) {
-                        currentSlide--;
-                        showSlide(currentSlide);
-                    }
-                }
-            });
+      <input id="search" class="search" type="search" placeholder="Folien suchen: Titel, Inhalt, Drift, Heilbutt, Echolot ..." />
+
+      <div class="tocSection">
+        <h2>Inhaltsverzeichnis / Vorschau</h2>
+        <div class="tocList" id="tocList"></div>
+      </div>
+
+      <div class="tocFooter">
+        <div><strong>Tipp:</strong> Mit den Pfeiltasten <span class="kbd">←</span><span class="kbd">→</span> blättern.</div>
+        <div>Erstellt von Harald H.</div>
+      </div>
+    </aside>
+
+    <section class="deck">
+      <div class="topbar">
+        <div class="crumbs">
+          <strong id="currentTitle">Deckblatt</strong>
+          <span id="currentSubtitle">Expertenwissen für Sommer-Bootsangeln bei Ålesund</span>
+        </div>
+        <div class="navBtns">
+          <button class="navBtn" id="prevBtn">← Zurück</button>
+          <button class="navBtn" id="nextBtn">Weiter →</button>
+        </div>
+      </div>
+
+      <div class="slidesViewport" id="slidesViewport"></div>
+
+      <div class="footerNav">
+        <div>Folie <span id="currentIndex">1</span> / <span id="totalSlides">24</span></div>
+        <div class="progress"><div id="progressBar"></div></div>
+        <div id="chapterLabel" class="chapter">Einführung</div>
+      </div>
+    </section>
+  </div>
+
+  
+  <script>
+    const slidesData = [
+  {
+    "title": "Ålesund im Sommer: Revierlogik statt Zufall",
+    "subtitle": "Warum diese Küste Futter bündelt, Räuber schaltet und Driftfenster öffnet",
+    "chapter": "Einführung",
+    "tag": "Reviercode",
+    "intro": "Ålesund belohnt nicht den lautesten Ansatz, sondern den präzisesten: Kartenlogik, Echolotbild, Driftwinkel und Ködertempo müssen als Einheit funktionieren.",
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Küstenlogik",
+        "bullets": [
+          "Die Inselkette um Ålesund erzeugt auf engem Raum tiefe Rinnen, Schwellen und flache Ausläufer – genau diese Mischung produziert Fisch.",
+          "Im Sommer verlagert sich der Druck oft in 8–25 m über Kanten, aber die eigentliche Aktivität sitzt meist an der ersten Strukturkante.",
+          "Zwischen Fjordinnenbereich und Außenseite entstehen zwei völlig verschiedene Baustellen: Ruhezone und Fresszone.",
+          "Borgundfjord, Giske, Godøya und Valderøy liefern nicht nur Tiefe, sondern Richtungswechsel im Wasserstrom.",
+          "Wo die Karte langweilig aussieht, aber die Linien eng werden, steigt die Chance auf konzentrierte Beute.",
+          "Der Reviergewinn kommt aus Übergängen: hart/weich, flach/tief, offen/geschützt, glatt/geriffelt.",
+          "Sommerfisch in Ålesund ist selten reine Zufallstreffer-Jagd; er folgt fast immer einer Kante oder einem Futterkorridor.",
+          "In hellen Sommerphasen zählen nicht nur Tiefe und Zeit, sondern vor allem Sichtbarkeit von Beute und Mikro-Relief.",
+          "Ein guter Spot ist nicht der tiefste, sondern der mit mehreren aktiven Ebenen in einer einzigen Drift.",
+          "Wer die Küste nur als Hafen- und Inselkulisse liest, verschenkt die eigentliche Information: Strömungsarchitektur."
+        ]
+      },
+      {
+        "heading": "Strömungscode",
+        "bullets": [
+          "Die produktivsten Linien sind oft 20–300 m lang, nicht kilometerweit – kleinräumiges Scannen schlägt große Theorie.",
+          "Eine Session beginnt mit Kartenlesen: Plateau, Schulter, Rinne, Rand, danach erst mit Ködern.",
+          "Sommerliche Fressfenster liegen häufig an der Schnittstelle von Licht, Tide und Futterbewegung, nicht bloß bei Hochwasser.",
+          "Leichte Windauflandung kann die Beute an die windzugewandte Kante drücken und die Driftstruktur stabilisieren.",
+          "Eine ruhig wirkende Oberfläche sagt wenig aus; entscheidend ist, ob darunter Kleinfisch kompakt oder verstreut steht.",
+          "Wenn der Grund von weich auf hart wechselt, ist das biologisch oft relevanter als eine reine Tiefenzahl.",
+          "Im Außengebiet lohnt sich die Kombination aus flachen Jagdfeldern und unmittelbar angrenzenden Abstürzen.",
+          "Im inneren Fjordbereich gewinnt oft die Ruhe: weniger Welle, sauberer Köderkontakt, mehr Präsenz für scheue Fische.",
+          "Die besten Tageshälften sind jene, in denen du Drift, Sicht und Bait-Position gleichzeitig kontrollieren kannst.",
+          "Für Vollblutangler zählt nicht nur der Fang, sondern die Reproduzierbarkeit des Fensters am nächsten Tag."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: In Ålesund ist nicht der einzelne Spot entscheidend, sondern die Kette aus Beutezone, Strömungsnaht und Ankerpunkt für die Drift.",
+    "photo": {
+      "src": "https://www.netzwerk-angeln.de/images/inhalt/angelpraxis/geraet_technik/angelausruestung-norwegen/multirolle-fuer-norwegen.jpg",
+      "link": "https://www.netzwerk-angeln.de/images/inhalt/angelpraxis/geraet_technik/angelausruestung-norwegen/multirolle-fuer-norwegen.jpg",
+      "alt": "Ålesund im Sommer: Revierlogik statt Zufall – passendes Foto",
+      "caption": "Ålesund im Sommer: Revierlogik statt Zufall",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Boden lesen wie ein Vermesser",
+    "subtitle": "Wie Kante, Härte, Relief und Feinkorn den Fischstandplatz definieren",
+    "chapter": "Spotwahl",
+    "tag": "Struktur",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Härtebild",
+        "bullets": [
+          "Die erste nützliche Unterscheidung ist hart gegen weich: Stein, Muschel und Schotter liefern sauberere Rückmeldung als Sand oder Schlamm.",
+          "Ein flacher Rücken mit 2–6 m Unterschied kann produktiver sein als ein großer Tiefenbruch, wenn er Beute abklemmt.",
+          "Sättel zwischen zwei Höhenzügen erzeugen Durchzug und sammeln wandernde Schwärme, vor allem bei sauberer Tide.",
+          "Sandrinnen neben hartem Rand sind klassische Übergänge für Heilbutt und Scholle, aber auch für vorbeiziehenden Dorsch.",
+          "Rippen, Kuppen und kleine Buckel im 15–40 m-Bereich sind wichtiger als die große Tiefenangabe.",
+          "Eine Kante mit 3–8 m Fall auf 30–60 m ist oft die schärfere Adresse als eine gleichmäßige 60-m-Fläche.",
+          "Im Sommer lohnt die Suche nach Mikro-Relief: einzelne Felsköpfe, kleine Plateaus, abrupte Rinnenenden.",
+          "Wo der Grund auf 10–20 m zuerst hart und danach weich wird, sitzt die Nahrungskette häufig direkt an der Kante.",
+          "Die Windseite eines Plateaus drückt Futter an die Kante; die Leeseite hält oft die scheuen Fische.",
+          "Statt „tiefer ist besser“ gilt: Der Wechsel in 1–2 Bootsbreiten kann mehr bringen als 20 zusätzliche Meter Wasser."
+        ]
+      },
+      {
+        "heading": "Reliefkante",
+        "bullets": [
+          "Auf dem Echolot verrät die Bodenhärte mehr als die Tiefe: harte Rückläufer, schärfere Grundlinie, oft bessere Haltepunkte.",
+          "Eine dünne, saubere Linie spricht für harten Untergrund; ein breiter, diffuser Rückläufer zeigt weicheres Material.",
+          "Downscan und Side-Scan sollten zusammen gelesen werden: eines zeigt Kontur, das andere Textur und Verteilung.",
+          "Der produktive Driftkorridor liegt häufig genau auf dem Umschlag von hart zu weich, nicht mittig in einer Bodenart.",
+          "Ein Plateau ohne Rinne ist selten die Endstation; die Kantenenden, Einzüge und Nasen sind meist die relevanten Punkte.",
+          "Muschelfelder sind im Sommer besonders wertvoll, wenn Kleinfisch und Kleinkrebse den Grund beleben.",
+          "Kies und Schotter erzeugen meist mehr Nahrung und mehr Halt für aktive Räuber als absolut glatter Sand.",
+          "Bei Kanten mit Seegras oder Kelp ist die Übergangszone relevanter als die Vegetationsmitte.",
+          "In ruhigen Phasen markieren harte Grundsignale oft alte Fangpunkte; in Bewegung wird die Kante lebendig.",
+          "Notiere jede gute Drift mit Tiefenbeginn, Tiefenende, Grundhärte und Windrichtung – daraus entsteht dein persönlicher Spot-Atlas."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Der beste Boden ist selten ein einzelner Punkt – es ist die Linie, an der sich zwei Bodentypen in einer Fangdrift treffen.",
+    "photo": {
+      "src": "https://static.spektrum.de/fm/912/f2000x857/GettyImages-452417831.jpg",
+      "link": "https://static.spektrum.de/fm/912/f2000x857/GettyImages-452417831.jpg",
+      "alt": "Boden lesen wie ein Vermesser – passendes Foto",
+      "caption": "Boden lesen wie ein Vermesser",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Futterdruck, Licht und Tide",
+    "subtitle": "Warum die Tageszeit nur in Kombination mit Bewegung und Beute zählt",
+    "chapter": "Timing",
+    "tag": "Hydrologie",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Lichtfenster",
+        "bullets": [
+          "Sommerliches Oberflächenlicht macht Kleinfisch sichtbar; Räuber reagieren dann besonders auf Silhouette, Kontrast und Fluchtverhalten.",
+          "Morgen und Abend sind stark, weil der Lichtgradient die Beute nach oben zieht und Räuber weniger vorsichtig werden.",
+          "Bei bedecktem Himmel kann der Mittelteil des Tages besser laufen als bei grellem Sonnenschein, weil die Nahrungsschicht stabiler bleibt.",
+          "Tide wirkt in Ålesund nicht nur als Wasserstandsänderung, sondern als Förderband für Nahrung entlang von Nähten und Engstellen.",
+          "Die produktivste Phase ist oft der Bereich kurz vor und nach dem Strömungswechsel, wenn Futter in Bewegung gerät.",
+          "Starke Strömung ist kein Nachteil, solange du den Köder kontrolliert in der Linie halten kannst.",
+          "Geringe Strömung kann gut sein, wenn sie in einer Kante oder Rinne konzentriert bleibt und nicht flächig verpufft.",
+          "Wind gegen Strom baut Oberfläche und Drift auseinander; das kann Beute sammeln, aber den Köderkontakt erschweren.",
+          "Wind mit Strom glättet oft die Fahrt und macht sauberere, reproduzierbare Drifts möglich.",
+          "Die richtige Tageszeit ist nicht universell – sie hängt davon ab, ob Futterfisch oberflächennah oder bodennah gedrückt wird."
+        ]
+      },
+      {
+        "heading": "Tidezug",
+        "bullets": [
+          "Wenn Möwen, Spritzer und Kleinfisch zusammen auftreten, ist das Fressfenster meist schon geöffnet und nicht erst im Aufbau.",
+          "Makrele reagiert früh auf Licht und Wärme, Dorsch stärker auf Struktur und Beute, Heilbutt oft auf Grundnahrung und Ruhe.",
+          "Über helle Sandfelder ziehen sich Beutefische oft in die Naht zur dunkleren Struktur zurück.",
+          "Schwachwasser kann topp sein, wenn die letzte Bewegung die Beute auf die Kante geparkt hat.",
+          "Zu viel Bewegung macht die Präsentation unpräzise; zu wenig Bewegung nimmt dem Spot den Druck.",
+          "Die beste Tide ist diejenige, bei der die Kante eine sichtbare Driftlinie ausbildet.",
+          "Gute Sessions entstehen häufig an der ersten sauberen Tide nach einer ruhigeren Phase – das System „startet“ neu.",
+          "Sommerfisch in Ålesund ist oft positionsgetrieben; wenn das Licht kippt, wandert nicht nur die Tiefe, sondern auch die Fischdichte.",
+          "Plane pro Spot mindestens zwei Lichtfenster ein: frühe Aktivität und spätere Reaktivierung nach Wechsel des Sonnenstandes.",
+          "Merke: Nicht die Uhrzeit fängt, sondern die Kombination aus Licht, Bewegung und Nahrungsdruck."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Ein starker Sommer-Tag beginnt oft 30–60 Minuten vor dem sichtbaren Oberflächenrausch – dann ist die Unterwasserlogik schon aktiv.",
+    "photo": {
+      "src": "https://static.spektrum.de/fm/912/f1920x1080/Meer_unsplash33629_Greg-Becker-CC0.jpg",
+      "link": "https://static.spektrum.de/fm/912/f1920x1080/Meer_unsplash33629_Greg-Becker-CC0.jpg",
+      "alt": "Futterdruck, Licht und Tide – passendes Foto",
+      "caption": "Futterdruck, Licht und Tide",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Echolot-Meisterschaft: Bananen, Wolken und Bodenlinien",
+    "subtitle": "So liest du Fisch, Beute und Härte in Echtzeit",
+    "chapter": "Echolot",
+    "tag": "Sonar",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Bananenbild",
+        "bullets": [
+          "Bananen sind meist prägnante Einzelkontakte oder kleine Gruppen mit klarer Zielstruktur; Wolken sind oft Futterballen oder dichte Schulen.",
+          "Auf 2D zeigt ein harter Boden eine schmalere, dunklere Linie; weiche Böden wirken breiter und diffuser.",
+          "Hohe Ping-Geschwindigkeit lohnt bei Fahrt, weil Konturen sauberer gezeichnet werden und Bait schneller getrennt erscheint.",
+          "Zu hohe Empfindlichkeit erzeugt Rauschen, das Kleinfisch und echte Zielzeichen verschluckt – lieber sauber als überladen.",
+          "Downscan trennt Bodenstruktur besser, 2D zeigt dafür deutlicher Fisch- und Köderbahnen im Wasserkörper.",
+          "Makrelenwolken stehen oft kompakt, dynamisch und in mittleren Wasserschichten; Köhler wirken meist größer, lockerer und tiefer laufend.",
+          "Ein Fisch über harter Kante ist nicht automatisch aktiv – die Frage ist, ob die Wolke an einer Futterkante sitzt.",
+          "Wenn der Boden sich in einer Passage „aufreißt“, ist das oft interessanter als der Fischkontakt selbst.",
+          "Side-Scan soll zuerst die Geometrie liefern: Schulter, Nase, Rinne, Einzelstein.",
+          "Die beste Echolot-Passage ist oft die zweite, weil du dann die Zielzone aus einem anderen Winkel querst."
+        ]
+      },
+      {
+        "heading": "Wolkenradar",
+        "bullets": [
+          "Fischsymbole sind Hilfen, keine Wahrheit – die echte Lesung entsteht aus Bewegung, Tiefe und Wiederholbarkeit.",
+          "Schmale, längliche Rückläufer an der Kante deuten oft auf einzelne aktive Jäger, nicht auf ruhende Masse.",
+          "Im Mittelwasser stehende Bälle mit sauberer Hülle sind häufig Futter; unruhige, zerfaserte Kontakte können Jagddruck anzeigen.",
+          "Achte auf die „Schatten“ unter dem Baitball: Räuber stehen oft nicht im Ball, sondern knapp darunter.",
+          "Bei Pollack und Köhler sieht man häufig den schnellen Wechsel zwischen kompakter Schule und aufgelockerten Verfolgern.",
+          "Bei Heilbutt ist das Echolotbild subtiler: Bodennahe Unruhe, niedrige Bögen oder ein Aufbrechen der Bodenkante.",
+          "Kalibriere dein Display nach Tageslicht: Was im Hafen gut aussieht, ist auf See oft zu hell oder zu stark geglättet.",
+          "Im Rauschen verschwinden kleine Zielarten; reduziere lieber Clutter, bis die Struktur wieder lesbar wird.",
+          "Ein sauberer Grundstrich mit einzelnen Dellen ist meist produktiver als ein voller Bildschirm ohne Tiefe.",
+          "Speichere gute Screenshots mit Datum, Tiefenbereich und Driftwinkel – Mustererkennung schlägt Erinnerung."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Wer nur Fischsymbole jagt, fährt an den besten Linien vorbei; wer Boden, Beute und Bewegung kombiniert, trifft die Zone.",
+    "photo": {
+      "src": "https://www.blinker.de/content/uploads/2016/12/Angeln-Echolot-Tipps-14.jpg",
+      "link": "https://www.blinker.de/content/uploads/2016/12/Angeln-Echolot-Tipps-14.jpg",
+      "alt": "Echolot-Meisterschaft: Bananen, Wolken und Bodenlinien – passendes Foto",
+      "caption": "Echolot-Meisterschaft: Bananen, Wolken und Bodenlinien",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Drift-Strategie und Bootskontrolle",
+    "subtitle": "Vorhalt, Winkel, Bremsimpulse und die saubere Köderlinie",
+    "chapter": "Drift",
+    "tag": "Bootsführung",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Vorhalt",
+        "bullets": [
+          "Die Drift beginnt vor dem Spot: Starte oberhalb oder seitlich so, dass dein Köder beim ersten Grundkontakt bereits im Randbereich läuft.",
+          "Ein Bootswinkel von grob 20–35 Grad zur Kante hält den Köder länger in der produktiven Linie als ein gerader Anlauf.",
+          "Der Motor ist kein Störfaktor, sondern ein Korrekturwerkzeug für 2–5-Sekunden-Impulse, wenn die Drift zu schnell zieht.",
+          "Bei starkem Wind gegen Strom braucht das Boot oft mehr Längsdriftkontrolle, weil die Oberfläche schneller als der Grund läuft.",
+          "Die Köderspur sollte nicht quer über den Spot rauschen, sondern in einem kontrollierten Korridor parallel zur Struktur bleiben.",
+          "Für schwere Gummifische gilt: lieber etwas früher einsetzen und den Boden später anfahren als die Kante zu weit zu überdriften.",
+          "Wenn du den Drift vor dem Drop schon planen kannst, wird der erste Kontakt am Fischpunkt und nicht zufällig daneben landen.",
+          "Der Vorhalt hängt von Tiefe, Wind und Sinkphase ab; je tiefer und schneller die Drift, desto früher musst du ansetzen.",
+          "Halte das Boot mit kurzen Gegenstößen auf Linie, statt ständig Vollgas zu geben – feine Kontrolle ist effizienter.",
+          "Eine saubere Drift hat einen klaren Track auf dem Plotter; ein zappelnder Kurs kostet Bisszeit."
+        ]
+      },
+      {
+        "heading": "Bootsvektor",
+        "bullets": [
+          "Der Köder soll nicht zum Boot zurückarbeiten, sondern von der Bootslinie weg in die Kante hineingezogen werden.",
+          "Bei Querströmung ist der Vorhalt oft größer als vom Bauchgefühl erwartet; rechne mit dem Driftversatz des Bootes, nicht mit der Luftlinie.",
+          "Der beste Winkel ist meist derjenige, bei dem der Köder eine maximale Kontaktzeit auf der Breakline hat.",
+          "Bremsen mit dem Motor funktioniert besser vor der Kante als direkt darüber – dann ist die Linie noch stabil.",
+          "Wenn die Drift zu schnell wird, reduziere zuerst den Windangriff des Bootes durch Kurskorrektur, erst danach die Geschwindigkeit.",
+          "Ein leicht schräg gestelltes Boot läuft ruhiger als eines, das ständig gegen die Seitenwelle kämpft.",
+          "Bei langen Plateaus die Drift in Segmente denken: Anlauf, Kontakt, Durchgang, Auslauf, Reposition.",
+          "Wenn die Bisser auf einer bestimmten Linie kommen, markiere nicht nur den Spot, sondern den exakten Driftvektor.",
+          "Sobald die Linie abweicht, lohnt oft ein Neustart des Anfahrens statt ein müdes „Gerade noch mal drüber“. ",
+          "Die beste Bootsführung ist unsichtbar: Du merkst sie daran, dass der Köder konstant im Fenster bleibt."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Auf guten Ålesund-Linien gewinnt der Angler, der die Drift vor dem Wurf schon im Kopf zeichnet.",
+    "photo": {
+      "src": "https://www.side-tours.com/public/content/images/rent/Diamond-Drift_1749739693684ae8adc650e.webp",
+      "link": "https://www.side-tours.com/public/content/images/rent/Diamond-Drift_1749739693684ae8adc650e.webp",
+      "alt": "Drift-Strategie und Bootskontrolle – passendes Foto",
+      "caption": "Drift-Strategie und Bootskontrolle",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Schnellsuche: ohne halben Tag zu verheizen",
+    "subtitle": "Wie du Plateaus, Rinnen und Fangfenster systematisch abarbeitest",
+    "chapter": "Suchstrategie",
+    "tag": "Effizienz",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Kartenscan",
+        "bullets": [
+          "Vor der Ausfahrt dreistufig arbeiten: Karte lesen, Zielkorridor definieren, dann erst auf dem Wasser verfeinern.",
+          "Such nicht „einen Platz“, sondern drei Zonen pro Fischart: flach, Kante, tiefer Auslauf.",
+          "Jede Zone bekommt einen Testdrift von 100–300 m, damit sich Boden, Beute und Fischverhalten zeigen.",
+          "Nutze die Kartenkontur, um Suchachsen parallel zur Kante und nicht quer dazu zu fahren – das liefert mehr Information.",
+          "Ein Spot ohne Beutefisch ist nicht automatisch tot, aber er braucht einen klaren Trigger im Licht- oder Tidefenster.",
+          "Markiere bei jedem guten Kontakt die exakte Tiefe, dann baust du in wenigen Sessions dein eigenes Sommerprofil.",
+          "Wenn ein Plateau mehrere kleine Buckel hat, arbeite die Kuppen und die Auslaufseite zuerst ab.",
+          "Je sauberer die erste Echolotlinie, desto schneller kannst du entscheiden, ob du bleibst oder weiterziehst.",
+          "Bei wenig Zeit immer die Stelle mit der höchsten Strukturkomplexität zuerst, nicht die mit der größten Fläche.",
+          "Die schnellste Suche ist nicht hektisch, sondern diszipliniert: wenige, saubere Durchgänge mit klaren Notizen."
+        ]
+      },
+      {
+        "heading": "Driftfilter",
+        "bullets": [
+          "Eine gute Route fährt zuerst die Windkante, dann die Leekante und zuletzt die tiefere Rückfallzone ab.",
+          "Zwischen zwei Spots immer eine kurze Echolotfahrt einbauen, um Zwischenstruktur oder neue Beute zu erkennen.",
+          "Wenn ein Spot auf dem ersten Pass unklar wirkt, ändere Winkel oder Geschwindigkeit statt sofort die Karten zu verlassen.",
+          "Die Reihenfolge zählt: Erst das Gebiet mit kompaktem Relief, dann die glatteren Flächen.",
+          "Ein Suchkorridor von 15–40 Minuten pro Zone ist oft genug, wenn die Struktur stimmt.",
+          "Lange ohne Biss bedeutet nicht automatisch schlecht; oft fehlt nur der richtige Winkel oder die passende Sinkphase.",
+          "Arbeite die Außenseite eines Plateaus immer mit einer Wiederholungsdrift ab – viele Räuber stehen versetzt zur Hauptkante.",
+          "Wenn du Beutefisch siehst, aber keine Räuber, notiere die Tiefe und komm beim nächsten Tidefenster zurück.",
+          "Die effektive Suchzeit sinkt massiv, wenn du im Vorfeld schon 2–3 Tiefenziele pro Art fixierst.",
+          "Die besten Tage sind meist die mit klarer Suchstruktur, nicht die mit zehn zufälligen Spots."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Die Profis sparen Zeit nicht durch schnelleres Fahren, sondern durch präzisere Vorselektion der Kanten.",
+    "photo": {
+      "src": "https://www.rentaboatzadar.hr/attachments/preview/649970ef1ac4a/img-20230523-wa0040-2.jpg",
+      "link": "https://www.rentaboatzadar.hr/attachments/preview/649970ef1ac4a/img-20230523-wa0040-2.jpg",
+      "alt": "Schnellsuche: ohne halben Tag zu verheizen – passendes Foto",
+      "caption": "Schnellsuche: ohne halben Tag zu verheizen",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Heilbutt I: Standorte, Tiefen und Grundtypen",
+    "subtitle": "Wo Sommer-Heilbutt in Ålesund typischerweise am ehesten frisst",
+    "chapter": "Heilbutt",
+    "tag": "Trophäe",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Flachzonen",
+        "bullets": [
+          "Im Sommer steht Heilbutt oft nicht in der tiefsten Rinne, sondern auf 12–28 m an der Kante von Sand zu Mischgrund.",
+          "Besonders stark sind flache Plateaus mit angrenzendem Abfall auf 25–45 m, wenn dort Beutefisch durchgezogen wird.",
+          "Sandfelder mit Muschelstreu und einzelnen Steinen sind deutlich interessanter als reiner, glatter Sand.",
+          "Die Windkante eines Plateaus ist oft produktiver als die Leeseite, wenn Beute an die Struktur gedrückt wird.",
+          "Ein 1–3 m tieferer Einschnitt am Plateauende kann der eigentliche Hotspot sein, nicht die große Tiefenstufe dahinter.",
+          "Bei ruhigem Wasser kann Heilbutt überraschend flach stehen, besonders wenn Hering oder Makrele in Reichweite sind.",
+          "Mischgrund aus Schotter, Sand und kleinen Harten liefert in Ålesund oft die beste Sommerlogik.",
+          "Halte Ausschau nach isolierten Felsnasen in ansonsten weichem Grund – dort parkt der Fisch oft seitlich.",
+          "Kanten mit 5–12 m Höhenunterschied sind stark, wenn die Oberseite Nahrung hält und die Unterseite Deckung bietet.",
+          "Die produktivsten Flächen sind meist jene, die auf der Karte fast unspektakulär wirken, aber in der Drift mehrere Mikro-Übergänge haben."
+        ]
+      },
+      {
+        "heading": "Mischgrund",
+        "bullets": [
+          "In 18–22 m flacht der Heilbutt oft im Sommer ein, wenn das Licht diffuser ist und Beute seitlich über das Plateau zieht.",
+          "Im Bereich 30–40 m wird er unter Druck oft selektiver und hält enger an Relief und Härtewechsel.",
+          "Schlickige Mulden sind nur dann interessant, wenn sie an harte Kanten anschließen und nicht isoliert liegen.",
+          "Zwischen zwei Riffen oder Kuppen kann die Strömung eine „Essensrinne“ bilden, die der Fisch wiederholt kontrolliert.",
+          "Die besten Sommerfenster entstehen oft dort, wo die Strömung gerade stark genug ist, um Beute zu sammeln, aber nicht zu stark für den Köderkontakt.",
+          "An trüben Tagen ist ein etwas höherer Standplatz oft besser, weil der Heilbutt dann aktiver sucht.",
+          "Auf klaren Tagen hält er sich eher an den Grund und an die erste Kontrastlinie unterhalb der Kante.",
+          "Im äußeren Fjordbereich sind flachere Top-Zonen oft produktiver als tiefere Außenlöcher.",
+          "Die Kombination aus flacher Nahrungskante und tiefer Rückfallzone ist in Ålesund fast immer stärker als eine isolierte Tiefe.",
+          "Wenn du nur eine Tiefe testen kannst, nimm die Zone, in der die Kante erstmals deutlich bricht und nicht die Zone danach."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Heilbutt ist im Sommer oft ein Kantenfisch mit Flachwasser-Option – die Nahrung bestimmt die Tiefe, nicht die Karte.",
+    "photo": {
+      "src": "https://fischratgeber.wwf.de/wp-content/uploads/2016/10/287902.jpg",
+      "link": "https://fischratgeber.wwf.de/wp-content/uploads/2016/10/287902.jpg",
+      "alt": "Heilbutt I: Standorte, Tiefen und Grundtypen – passendes Foto",
+      "caption": "Heilbutt I: Standorte, Tiefen und Grundtypen",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Heilbutt II: Köderführung, Deadbait und 400-g-Gummi",
+    "subtitle": "Micro-Management zwischen langsamem Lockbild und harter Suchaktion",
+    "chapter": "Heilbutt",
+    "tag": "Führung",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Gummi-Start",
+        "bullets": [
+          "Der 400-g-Gummi läuft als Suchwerkzeug: zügiger Grundkontakt, 20–60 cm Hebephasen, danach kontrollierter Fall.",
+          "Bei aktivem Fisch reichen oft 2–4 kräftige Lift-Phasen pro Meter Drift; zu viele Schläge machen die Spur hektisch.",
+          "Deadbait auf Heilbutt lebt von Präsenz: längere Stillstände, minimale Pulsimpulse und saubere Bodennähe.",
+          "Ein flatternder Köderfisch darf kurz vom Grund abheben, soll aber nicht wie ein pelagischer Jäger aussehen.",
+          "Gummi arbeitet über Vibration und Silhouette, Deadbait über Geruch, Volumen und natürliche Flatterbewegung.",
+          "Beim Gummi ist der Kontaktmoment entscheidend; beim Deadbait die Liegezeit in der Schlagzone.",
+          "Wenn du mit Gummi fängst, steigere die Schlagfrequenz erst, wenn du Kontaktzeichen am Echolot siehst.",
+          "Wenn du mit Deadbait fischst, verlängere die Stillphase, bis die Drift das System natürlich in die Linie trägt.",
+          "Der Gummi ist ideal zum Suchen auf 20–40 m; der Deadbait ist ideal zum Ausfischen eines bestätigten Fensters.",
+          "Bei starkem Driftdruck den Gummi etwas aggressiver führen, beim Deadbait lieber mit mehr Vorhalt und weniger Aktion arbeiten."
+        ]
+      },
+      {
+        "heading": "Deadbait-Stop",
+        "bullets": [
+          "Ein Deadbait-Set gewinnt oft durch kontrolliertes Schweben knapp über Grund, nicht durch permanentes Ziehen.",
+          "Flatter-Hering oder Makrele funktioniert besonders gut, wenn die Montage beim Absinken leicht rotiert, aber nicht überschlägt.",
+          "Der Startimpuls beim Gummi darf deutlich sein, danach muss die Absenkung sauber bleiben – unkontrolliertes Pendeln kostet Tiefe.",
+          "Bei vorsichtigen Fischen den Gummi mit längeren Pausen fischen; der Biss kommt oft im Stillstand oder beim ersten Wiederanheben.",
+          "Ein 400-g-Köder ist kein Dauergewicht, sondern eine Antwort auf Drift, Tiefe und Kontaktverlust.",
+          "Deadbait braucht weniger Bewegung, aber mehr exakte Platzierung: Ein Meter daneben kann schon zu viel sein.",
+          "Wenn du Beißfenster gefunden hast, reduziere beim Deadbait die Montagebewegung auf das Minimum.",
+          "Scent, Druckwelle und Profil machen den Unterschied, wenn Sicht und Licht im Sommer wechselhaft sind.",
+          "Bei klarer Sicht ist der Gummi häufig überlegen; bei hoher Vorsicht oder Nachtphasen kann Deadbait stärker werden.",
+          "Denke bei Heilbutt in Reaktionsmodus und Fraßmodus: Gummi öffnet, Deadbait verwertet."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Der beste Heilbutt-Faden ist oft erst Gummi zum Finden, dann Deadbait zum Ausschlachten des Fensters.",
+    "photo": {
+      "src": "https://ruteundrolle.de/wp-content/uploads/2018/11/DirkNeydek-Heilbutt-160.jpg",
+      "link": "https://ruteundrolle.de/wp-content/uploads/2018/11/DirkNeydek-Heilbutt-160.jpg",
+      "alt": "Heilbutt II: Köderführung, Deadbait und 400-g-Gummi – passendes Foto",
+      "caption": "Heilbutt II: Köderführung, Deadbait und 400-g-Gummi",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Scholle I: Sand, Schlick und die stillen Sommerplätze",
+    "subtitle": "Wo die Platte in Ålesund Nahrung findet und wie tief sie steht",
+    "chapter": "Scholle",
+    "tag": "Plattfisch",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Sandruhe",
+        "bullets": [
+          "Scholle steht im Sommer meist auf 8–18 m in ruhigen Sand- oder Schlickzonen, gern mit weichen Übergängen statt harter Steinkante.",
+          "Besonders gut sind flache Ausläufer neben einer tieferen Rinne, wenn dort wenig Bootsverkehr und wenig Wellenstörung ankommen.",
+          "Ein leichter Muschel- oder Kiesanteil im Sand erhöht die Nahrung und macht den Platz meist deutlich interessanter.",
+          "Schollen ziehen oft die Leeseite eines flachen Plateaus der offenen Windseite vor.",
+          "Ein 2–5 m tieferer Außenrand reicht oft schon, um die Fische an die Produktivzone zu binden.",
+          "Schlickige Mulden funktionieren, wenn sie an eine saubere Sandfläche anschließen und nicht toter Einheitsboden sind.",
+          "Im Sommer können Schollen in 12–20 m überraschend flach stehen, wenn Licht und Nahrung passen.",
+          "Such nicht nur in „weichem Boden“, sondern an der Grenze, wo der Boden von glatt zu leicht geriffelt wechselt.",
+          "Leichte Rinnen, kleine Vertiefungen und alte Fahrwasserkanten sind oft besser als die Mitte eines flachen Feldes.",
+          "Die beste Schollen-Adresse ist häufig eine unscheinbare Fläche mit klarer Bodenruhe und klarer Übergangszone."
+        ]
+      },
+      {
+        "heading": "Randspur",
+        "bullets": [
+          "Im Vergleich zu anderen Arten reagieren Schollen stärker auf Bodenkontakt und weniger auf hektische Wasserbewegung.",
+          "Starker Wellenschlag macht sie oft vorsichtiger; stabile, ruhige Drift ist wichtiger als aggressives Fahren.",
+          "Eine sandige Plattform mit angrenzender dunklerer Zone ist ein klassischer Sommerplatz, vor allem bei wenig Druck.",
+          "Bei leichter Trübung steigen die Chancen, weil die Scholle weniger visuell auf jeder Bewegung hängt.",
+          "Kleine Beutetiere im Grundmilieu sind wichtiger als großer Futterfisch – Würmer, Kleinkrebse und Bodenleben zählen.",
+          "Die produktive Zone ist meist dort, wo das Boot gerade eben über den Boden streift und nicht in der Rinne schubbert.",
+          "Ein sauberer Kartenblick auf flache Kämme und Ausläufer spart viel Suchzeit bei Plattfisch.",
+          "Schollen lieben Ruhe; deshalb funktionieren abgeschirmte Kanten oft besser als befahrene Hauptfahrwasser.",
+          "Wenn die Sonne hoch steht, arbeite die schattigeren, etwas tieferen Seiten eines Flachfeldes zuerst ab.",
+          "Scholle ist im Sommer häufig ein Präzisionsfisch: kleinräumig, bodenorientiert, ohne unnötigen Lärm."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Schollen sind oft dort besser, wo der Grund biologisch lebendig ist, aber optisch langweilig wirkt.",
+    "photo": {
+      "src": "https://www.wwf.de/fileadmin/_processed_/1/2/csm_ACHTUNG-EINMALIGE-VERWENDUNG-Scholle-0093528721-c-imago-Ardea-Pat-Morris_1d971db5e7.jpg",
+      "link": "https://www.wwf.de/fileadmin/_processed_/1/2/csm_ACHTUNG-EINMALIGE-VERWENDUNG-Scholle-0093528721-c-imago-Ardea-Pat-Morris_1d971db5e7.jpg",
+      "alt": "Scholle I: Sand, Schlick und die stillen Sommerplätze – passendes Foto",
+      "caption": "Scholle I: Sand, Schlick und die stillen Sommerplätze",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Scholle II: Feine Grundführung mit maximaler Bodenkontrolle",
+    "subtitle": "Warum kleine Bewegungen und lange Pausen im Sommer oft gewinnen",
+    "chapter": "Scholle",
+    "tag": "Führung",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Bodenfeinheit",
+        "bullets": [
+          "Die Führung beginnt mit sauberem Absetzen: erst Grundkontakt, dann kurzer Zug, dann wieder stillstehen.",
+          "Hüpfe nicht zu hoch – 10–30 cm reichen oft, weil Schollen den Köder eher am Grund wahrnehmen als in der Wasserwolke.",
+          "Pausen von 5–15 Sekunden sind im Sommer oft produktiver als permanentes Pilken.",
+          "Ein leichtes Schleifen über Sand kann besser sein als jede spektakuläre Aktion, solange die Montage sauber bleibt.",
+          "Zu schwere Montage macht den Biss unpräzise; zu leichte Montage verliert den Bodenkontakt in der Drift.",
+          "Beim Pilken für Scholle ist die Haltephase am Boden häufig wichtiger als die Höhe des Anhebens.",
+          "Wenn der Grund weicher wird, reduziere die Zugintensität, damit der Köder nicht einsinkt und unbrauchbar wird.",
+          "Feine Dabs oder kleine Naturköder sind im ruhigen Wasser oft besser als großvolumige Reizköder.",
+          "Ein Deadbait für Scholle sollte ruhig liegen oder minimal pulsieren, nie unruhig taumeln.",
+          "Bisser auf Scholle kommen oft als leichtes Gewicht oder seitlicher Zug – deshalb ist direkte Verbindung wichtiger als rohes Tempo."
+        ]
+      },
+      {
+        "heading": "Stillstand",
+        "bullets": [
+          "Die beste Spur ist ein dünner Bodenkontakt mit gelegentlicher Entlastung, nicht das Dauerschaben.",
+          "Bei leichtem Driftzug den Köder etwas vor dem Boot fallen lassen, damit er in der Zone absetzt und nicht hinterhergezogen wird.",
+          "Im Gegenwind hilft ein minimal schwererer Kopf, damit die Montage im Bodenkorridor bleibt.",
+          "Flache Drift und kleine Hakenköder sind im Sommer oft der Schlüssel, weil die Fische weniger aggressiv fressen.",
+          "Wenn du an einem Platz mehrere kleine Bisse bekommst, halte den Winkel und ändere erst danach die Ködergröße.",
+          "Die Montage soll den Boden „lesen“, nicht ihn aufwühlen – zu viel Bewegung verschreckt eher, als dass sie anlockt.",
+          "Schollen steigen gern, wenn der Grund ruhig bleibt und die Nahrungsschicht nicht permanent aufgewirbelt wird.",
+          "Ein kurzer, sauberer Satz aus dem Stand ist oft besser als mehrere wilde Schläge.",
+          "Wenn du die Grundart im Drift verlierst, bist du für Scholle meist schon zu ungenau unterwegs.",
+          "Präzision gewinnt: Distanz, Pause und Bodenkontakt sind beim Plattfisch wichtiger als Feuerwerk."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Beim Plattfischangeln ist die Montage nicht „unterwegs“, sie arbeitet millimetergenau über dem Boden.",
+    "photo": {
+      "src": "https://www.doctor-catch.com/sites/default/files/article-image/2016-12-12/articleimage_bild/brandungsmontage-fuer-plattfisch-surf-casting-rigs-for-flatfish.jpg",
+      "link": "https://www.doctor-catch.com/sites/default/files/article-image/2016-12-12/articleimage_bild/brandungsmontage-fuer-plattfisch-surf-casting-rigs-for-flatfish.jpg",
+      "alt": "Scholle II: Feine Grundführung mit maximaler Bodenkontrolle – passendes Foto",
+      "caption": "Scholle II: Feine Grundführung mit maximaler Bodenkontrolle",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Makrele I: Schwärme, Oberwasser und Futterdruck",
+    "subtitle": "Wo im Sommer die schnellen Kontakte in Ålesund entstehen",
+    "chapter": "Makrele",
+    "tag": "Schwarmfisch",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Schwarmdruck",
+        "bullets": [
+          "Makrelen jagen im Sommer oft in 0–15 m, ziehen aber bei Druck oder Sonne auch in 20–30 m unter die Oberfläche.",
+          "Besonders stark sind Fjordmündungen, Strömungsnähte und die ersten Kanten, an denen Kleinfisch nach oben gedrückt wird.",
+          "Wenn Möwen kreisen und die Oberfläche unruhig bleibt, ist die Chance auf aktive Makrele hoch.",
+          "Makrele folgt dem Futter, nicht dem Grund: Wo Hering oder Sprotten dicht stehen, bleiben die Schwärme nicht weit.",
+          "Bei sauberem Licht und flacher Welle stehen Makrelen häufig höher als viele Angler fischen.",
+          "Die Außenkanten von Inselgruppen sind stärker als geschlossene Binnenbereiche, wenn Druck von offenen Wasserflächen kommt.",
+          "Morgenstunden und späte Lichtphase sind top, wenn Kleinfisch an die Oberfläche geht und die Schule kompakter wird.",
+          "Ein Temperatur- und Lichtsprung kann die Schule innerhalb kurzer Zeit um mehrere Meter verschieben.",
+          "Hältst du den Fisch in der Zone, darfst du nicht nur „drüberziehen“, sondern musst den Schwarm aktiv kreuzen.",
+          "Makrelen sind ein klarer Indikator für Beuteaktivität – oft ist ihre Anwesenheit der Türöffner für größere Räuber."
+        ]
+      },
+      {
+        "heading": "Oberwasser",
+        "bullets": [
+          "In der Praxis stehen die Schulen oft an Kanten, an denen das Wasser „arbeitet“ und kleine Nahrungspartikel sammelt.",
+          "Eine kompakte, helle Wolke im mittleren Wasser ist typischer als große Einzelbögen auf Grundhöhe.",
+          "Bei ruhigem Wetter gehen Makrelen oft hoch; bei Wind und Welle ziehen sie etwas tiefer und halten enger.",
+          "Wenn das Echolot nur diffuse Massen zeigt, lohnt der schnelle Wechsel der Tiefe, statt nur seitlich zu fahren.",
+          "Makrelen bleiben oft dort, wo der Futterdruck von oben und unten gleichzeitig kommt – Licht plus Strömung.",
+          "Kleine Schwärme sind nicht automatisch schwach; sie stehen oft enger und sind leichter zu fangen als riesige, nervöse Schulen.",
+          "Im warmen Sommerwasser reagieren Makrelen schnell auf Geräusch, Reflexion und kleine Fluchtbewegungen.",
+          "Die Anfahrtslinie sollte den Schwarm schneiden, nicht parallel begleiten – Kontakt entsteht durch Interception.",
+          "Wenn die Schule wandert, ist der erste Fang oft der beste Hinweis auf ihre Laufbahn und Tiefenachse.",
+          "Makrele ist der beste Schnelltest, um in Minuten zu prüfen, ob ein Gebiet biologisch „an“ oder „aus“ ist."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Makrelen sind oft der sichtbarste Beweis, dass an der Kante gerade echter Futterdruck läuft.",
+    "photo": {
+      "src": "https://www.doctor-catch.com/sites/default/files/styles/zoomed_image_lg/public/article-image/2016-07-01/articleimage_bild/koedergroesse-makrelenangeln-bait-size-atlantic-mackerel-fishing.jpg.webp?itok=Vtdr60bb",
+      "link": "https://www.doctor-catch.com/sites/default/files/styles/zoomed_image_lg/public/article-image/2016-07-01/articleimage_bild/koedergroesse-makrelenangeln-bait-size-atlantic-mackerel-fishing.jpg.webp?itok=Vtdr60bb",
+      "alt": "Makrele I: Schwärme, Oberwasser und Futterdruck – passendes Foto",
+      "caption": "Makrele I: Schwärme, Oberwasser und Futterdruck",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Makrele II: Führung, Vorfach und Tempo",
+    "subtitle": "Wie du aus einer Schule sofort maximale Bissfrequenz machst",
+    "chapter": "Makrele",
+    "tag": "Führung",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Tempozug",
+        "bullets": [
+          "Makrelen wollen Tempo: feine Paternoster, kleine Blinker oder schmale Jigs mit klarer, lebhafter Bewegung.",
+          "Die beste Führung ist häufig ein schneller, regelmäßiger Zug mit kurzen Pausen von nur 1–3 Sekunden.",
+          "Beim Makrelenfischen darf der Köder sichtbar flüchtig wirken; zu viel Ruhe nimmt den Reiz aus der Präsentation.",
+          "Wenn die Schule unter dem Boot steht, funktioniert auch das vertikale Fallenlassen mit sofortigem Nachsetzen sehr gut.",
+          "Ein sauberer Vorfachabstand verhindert Verheddern bei schnellen Zügen und macht die Bissaufnahme deutlich effizienter.",
+          "Die Montage sollte leicht genug sein, um im oberen Wasserkörper zu arbeiten, aber schwer genug, um die Tiefe zu halten.",
+          "Makrelen reagieren oft auf das erste Beschleunigen nach einem kurzen Stop – genau dort sitzen viele Bisse.",
+          "Wenn ein Fisch hängt, halte das Tempo stabil; hektisches Pumpen reißt unnötig auseinander.",
+          "Bei trübem Wasser darf das Vorfach etwas aktiver und akustischer sein, bei klarem Wasser lieber schlanker.",
+          "Makrelenfänge sind im Sommer oft die beste Livebait-Reserve für spätere Heilbutt- oder Dorschsesssions."
+        ]
+      },
+      {
+        "heading": "Bissrhythmus",
+        "bullets": [
+          "Bei oberflächennahen Schulen lohnt ein schneller Wechsel zwischen 2 und 8 m, weil der Schwarm selten exakt fix steht.",
+          "Das Vorfach darf nicht nur fangen, es muss auch die Schule stabil halten – zu starre Systeme bremsen den Schwung.",
+          "Wenn die Schule nach unten zieht, wechsle von Oberflächenaktion zu einem schnellen, kurzen Vertikalrhythmus.",
+          "Ein einziger sauberer Durchgang mit Treffer ist wertvoller als zehn langsame Schleppzüge ohne Dynamik.",
+          "Makrelen auf Zug zeigen oft ein klares „Feuer“: kurze hektische Phasen, dann wieder tieferes Auspendeln.",
+          "Kleine Größenunterschiede am Haken oder Vorfach können bei Launigkeit sofort einen Unterschied machen.",
+          "Der Drill muss kurz und effizient sein, weil das nächste Nachsetzen oft schon auf die gleiche Schule wartet.",
+          "Wer die Schule nicht zu lange belastet, bekommt häufiger mehrere Fische aus derselben Wolke.",
+          "Makrelen sind der beste Schnellindikator für lokale Futterdichte und windgetriebene Oberfläche.",
+          "Die erfolgreichste Makrele ist fast immer die, die du im richtigen Moment mit der richtigen Geschwindigkeit triffst."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Makrelen liefern dir oft in 10 Minuten mehr Revierinformation als eine Stunde Theoriefahrt.",
+    "photo": {
+      "src": "https://www.blinker.de/content/uploads/2017/06/makrelenangeln_17.jpg",
+      "link": "https://www.blinker.de/content/uploads/2017/06/makrelenangeln_17.jpg",
+      "alt": "Makrele II: Führung, Vorfach und Tempo – passendes Foto",
+      "caption": "Makrele II: Führung, Vorfach und Tempo",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Pollack I: Fels, Kelp, Strömung und 3D-Relief",
+    "subtitle": "Wo Pollack im Sommer steht und warum die Kante alles bestimmt",
+    "chapter": "Pollack",
+    "tag": "Steilkanten",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Felskante",
+        "bullets": [
+          "Pollack liebt die erste harte Kante an Fels, Kelp und strömungsreichem Relief – meist 8–25 m, oft mit sofortigem Tiefenzug.",
+          "Wo der Grund von Fels zu Kies oder Kelp zu offenem Boden wechselt, entsteht die klassische Ansitzkante.",
+          "In Ålesund funktionieren steile Inselabfälle besonders gut, wenn Strömung an der Kante bricht und Beute hochhält.",
+          "Pollack steht häufig nicht ganz unten, sondern knapp darüber in der Verwirbelung des Kantenwassers.",
+          "Die besten Plätze sind oft Punkte mit Weißwasser, kleiner Höhlung und angrenzender Schutzzone.",
+          "Ein einzelner Felskopf auf sonst relativ gleichmäßigem Grund kann wie ein Magnet wirken.",
+          "Kelp- und Tangzonen sind im Sommer nicht nur Deckung, sondern auch Jagdschneisen.",
+          "Pollack reagiert auf sichtbare Bewegung und Kantenwechsel stärker als auf massige Grundpräsentation.",
+          "Der Übergang von glattem Wasser zu gebrochener Oberfläche ist oft der eigentliche Trigger, nicht die Wassertiefe selbst.",
+          "Wenn der Wind die Strömung an die Kante drückt, wird die Jagdzone oft schärfer und enger."
+        ]
+      },
+      {
+        "heading": "Kelpbruch",
+        "bullets": [
+          "Typisch produktiv sind 10–18 m an Außenkanten sowie 18–35 m an tiefer auslaufenden Felsrippen.",
+          "Pollack zieht im Sommer gern in die obere Hälfte der Wassersäule, sobald Kleinfisch dort arbeitet.",
+          "Wo sich Kelp ausdünnt und ins offene Wasser übergeht, liegt häufig eine beachtliche Fanglinie.",
+          "An Punkten mit Bruchkante und Walzströmung stehen Pollacks oft in Staffeln, nicht isoliert.",
+          "Die Rückseite eines Felsriegels ist oft besser als die Spitze selbst, wenn dort die Strömung abfällt.",
+          "Leichte Umströmung ist gut, Volldruck ist oft zu hart; Pollack will Kantenarbeit, keinen Waschgang.",
+          "Ruhige, sonnige Tage machen Pollack nicht tot, sondern tiefer und vorsichtiger – die vertikale Suche muss mitgehen.",
+          "Bei angespülter Beute ist der obere Drittelbereich oft relevanter als der Grundbereich.",
+          "Eine Kante mit mehreren Mikrostufen ist immer besser als eine einzige glatte Wand.",
+          "Pollack ist im Sommer ein klassischer Struktur- und Reaktionsräuber: präzise Kante plus bewegter Köder."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Wenn die Kante weiß schäumt und darunter ruhige Taschen liegen, ist Pollack oft schon im System.",
+    "photo": {
+      "src": "https://www.doctor-catch.com/sites/default/files/styles/zoomed_image_lg/public/article-image/2016-08-29/articleimage_bild/angeln-in-norwegen-tipps-sea-fishing-in-norway-tips.jpg.webp?itok=jHeWNeH_",
+      "link": "https://www.doctor-catch.com/sites/default/files/styles/zoomed_image_lg/public/article-image/2016-08-29/articleimage_bild/angeln-in-norwegen-tipps-sea-fishing-in-norway-tips.jpg.webp?itok=jHeWNeH_",
+      "alt": "Pollack I: Fels, Kelp, Strömung und 3D-Relief – passendes Foto",
+      "caption": "Pollack I: Fels, Kelp, Strömung und 3D-Relief",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Pollack II: schnelle Reaktionsführung mit Gummi und Pilker",
+    "subtitle": "Wie du die Attacke auslöst, ohne den Fisch zu überreden",
+    "chapter": "Pollack",
+    "tag": "Reaktion",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Fluchtbild",
+        "bullets": [
+          "Beim Pollack funktionieren 80–200 g Gummifische oder schlanke Pilker sehr stark, weil sie schnell Höhe und Fluchtbild erzeugen.",
+          "Die Führung lebt von Beschleunigung: kurze schnelle Züge, kontrollierte Drop-Phasen und sofortiges Wiederaufnehmen.",
+          "Pollack nimmt den Köder oft in der Bewegung, deshalb darf der Hänger nicht zu lange im Stillstand stehen.",
+          "Wenn der Fisch auf Sicht jagt, ist ein schneller, sauberer Strike-Lauf besser als ein schwerer Bodeneinsatz.",
+          "Der Köder sollte an der Kante hochkommen, nicht nur unten entlangkriechen.",
+          "Bei Fehlbissen die Geschwindigkeit um ein kleines Stück erhöhen statt das System komplett zu ändern.",
+          "Eine leichte seitliche Drift des Köders im Wind kann Pollack triggern, solange die Linie nicht unkontrolliert ausbricht.",
+          "Der erste Kontakt ist oft nur ein Testbiss; sofortige Konterbewegung und Wiederabwurf halten die Schule aktiv.",
+          "Wenn sich Pollack unter dem Boot zeigt, lohnt oft die kurze Vertikaljagd statt des weiten Castings.",
+          "Im Sommer ist eine gewisse Hektik erlaubt – Pollack mag kein totales Kauderwelsch, aber sehr wohl Frische und Tempo."
+        ]
+      },
+      {
+        "heading": "Reaktionszug",
+        "bullets": [
+          "Pilker laufen bei Pollack stark, wenn sie nicht nur fallen, sondern mit klarer Fluchtachse zurückgezogen werden.",
+          "Ein kurzer, hoher Anriss kann den Fisch aus der Kantenlinie lösen; zu weiche Führung verschenkt Reaktion.",
+          "Der Fisch steht oft im Mittelwasser über der Steilstufe und folgt dem Köder erst, wenn dieser aus der Schattenkante kommt.",
+          "Bei klarer Sicht lieber schmalere Silhouetten, bei diffuser Sicht darf das Profil etwas breiter sein.",
+          "Wenn du eine Kontaktzone gefunden hast, arbeite sie in 2–3 Tiefenfenstern ab, nicht nur in einer Linie.",
+          "Ein Pollack-Hotspot ist oft gut, solange du in der Drift die Kante in beiden Richtungen abdecken kannst.",
+          "Mit Gummi kannst du die Aktion länger im Wasser halten; mit Pilker erreichst du oft schneller Reaktionsbisse.",
+          "Die wichtigere Frage ist nicht „welcher Köder?“, sondern „welche Geschwindigkeit trifft die Fischlaune?\"",
+          "Ein kurzer Zwischenstopp kann den Follow-Biss auslösen, danach sofort wieder beschleunigen.",
+          "Pollack liefert die klarste Bestätigung dafür, dass Struktur plus Geschwindigkeit die richtige Kombination sind."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Pollack beißt oft nicht auf den schönsten Lauf, sondern auf den Köder, der im richtigen Moment aus der Kante „herausschießt“.",
+    "photo": {
+      "src": "https://www.tackle-deals.eu/media/image/opc/xl/Blogbilder/vb%20bb%20angeln%20auf%20pollack.jpg",
+      "link": "https://www.tackle-deals.eu/media/image/opc/xl/Blogbilder/vb%20bb%20angeln%20auf%20pollack.jpg",
+      "alt": "Pollack II: schnelle Reaktionsführung mit Gummi und Pilker – passendes Foto",
+      "caption": "Pollack II: schnelle Reaktionsführung mit Gummi und Pilker",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Dorsch I: Sommerplätze zwischen Kante und Beute",
+    "subtitle": "Wo der Küstendorsch in Ålesund auf Druck, Tiefe und Nahrung reagiert",
+    "chapter": "Dorsch",
+    "tag": "Kabeljau",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Kantenstand",
+        "bullets": [
+          "Sommerdorsch steht in Ålesund häufig auf 18–35 m an Kanten, Schultern und Mischgrund, nicht zwangsläufig in der tiefsten Mulde.",
+          "Steht der Futterfisch höher, zieht der Dorsch in die obere Hälfte der Wassersäule und verlässt den reinen Bodenkontakt.",
+          "Produktiv sind Übergänge von 15 auf 25 m oder von 25 auf 45 m, wenn dort Relief und Nahrung zusammenlaufen.",
+          "Ein Plateau mit einem scharfen Abfall ist deutlich besser als ein glatter Hang ohne Haltepunkte.",
+          "Besonders stark sind Kanten, an denen kleine Stein- und Schotterflächen in Sand übergehen.",
+          "Dorsch reagiert auf Strömungsdruck, will aber keine dauerhaft ruppige Präsentation am Grund.",
+          "Im Sommer sind viele Dorsche streuend verteilt; daher ist die Suche nach kompakten Mini-Hotspots wichtiger als das Warten auf Zufall.",
+          "Wenn die Oberfläche ruhig bleibt, kann die Aktivität trotzdem tief unter der oberen Sichtlinie laufen.",
+          "Eine Kante mit Baitshow und hartem Echo ist fast immer den Versuch wert.",
+          "Bei hoher Sichtklarheit stehen Dorsche gern etwas tiefer und vorsichtiger, bei Trübung mutiger und höher."
+        ]
+      },
+      {
+        "heading": "Beutehöhe",
+        "bullets": [
+          "Im äußeren Bereich sind 25–50 m interessant, sobald Beute an den Drop gezogen wird und die Fische nicht in den Grund gedrückt werden.",
+          "Dorsch liebt Übergänge, an denen die Drift den Köder knapp über der Struktur hält.",
+          "Ein einzelner tieferer Einschlag an einer Kante kann mehr bringen als ein weites Durchfischen einer flachen Fläche.",
+          "Bei Sommerdruck lohnt es, die Kante mit leichtem Versatz von oben und unten zu befischen.",
+          "Im Gegensatz zum Heilbutt ist Dorsch oft eher vertikal-reaktiv und weniger reines Liegenbleiben.",
+          "Dorsch steht gern dort, wo Beute an der Oberfläche oder im Mittelwasser geführt wird, aber die Rückzugsmöglichkeit zum Grund bleibt.",
+          "Ruhige, bewölkte Tage verlängern die Bissphase häufig nach oben in die Wassersäule.",
+          "Starker Bootsdruck oder viele andere Angler drücken den Fisch oft auf die unauffällige Seite der Kante.",
+          "Eine gut geplante Linie kann zwei Tiefenfenster in einem Zug abarbeiten: erst obere Kante, dann Schulterabfall.",
+          "Sommerdorsch ist oft ein Opportunist: Wer die Beutehöhe trifft, hat den Schlüssel."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Dorsch ist im Sommer oft dort am ehesten greifbar, wo die Kante nicht nur fällt, sondern Nahrung bündelt.",
+    "photo": {
+      "src": "https://www.pilker-discount.de/media/5b/5c/97/1754480454/Dorsch_3.jpg?ts=1754480454",
+      "link": "https://www.pilker-discount.de/media/5b/5c/97/1754480454/Dorsch_3.jpg?ts=1754480454",
+      "alt": "Dorsch I: Sommerplätze zwischen Kante und Beute – passendes Foto",
+      "caption": "Dorsch I: Sommerplätze zwischen Kante und Beute",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Dorsch II: Pilker, Gummi und Bodenkontakt-Disziplin",
+    "subtitle": "Die Führung, die den Unterschied zwischen Durchfahrt und Biss macht",
+    "chapter": "Dorsch",
+    "tag": "Führung",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Pilkdrill",
+        "bullets": [
+          "Pilker und Gummi funktionieren bei Dorsch am besten, wenn der Grundkontakt sauber kontrolliert und nicht dauerhaft geschleppt wird.",
+          "Eine typische Sequenz ist: ablassen, Grundtouch, 1–3 harte Anwürfe, kurze Pause, erneuter Kontakt.",
+          "Zu viel Hektik zieht den Köder aus der Zone; zu wenig Aktion macht ihn unsichtbar.",
+          "Dorsch reagiert oft auf den Moment des Wiederabsinkens, nicht nur auf die Hauruck-Phase.",
+          "Bei etwas tieferem Wasser darf die Pause länger sein, damit der Köder sauber in den Sichtbereich zurückkommt.",
+          "Ein schlanker Pilker erzeugt andere Signale als ein breiter Gummi: ersterer geht direkter, letzterer hält länger im Wasser.",
+          "Wenn der Fisch zögerlich ist, die Größe reduzieren und die Absinkphase verlängern.",
+          "Wenn der Fisch aggressiv jagt, dürfen Schläge und Rückholtempo klar zulegen.",
+          "Der Hakenmoment muss präsent sein – stumpfe, schlaffe Führung nimmt dem Köder die Lesbarkeit.",
+          "Bisskontrolle ist alles: Dorsch fängt oft in exakt dem Rhythmus, der gerade noch kontrolliert genug ist."
+        ]
+      },
+      {
+        "heading": "Kontaktlinie",
+        "bullets": [
+          "Auf der Kante fischt du nicht ins Nichts, sondern genau über dem Übergang – zu weit oben fehlt Tiefe, zu weit unten fehlt Nachdruck.",
+          "Beim Driftfischen auf Dorsch ist ein leichtes Schrägstellen des Bootes oft besser als exaktes Geradeauslaufen.",
+          "Die richtigen Kontakte kommen häufig nach dem ersten Bodenabkontakt am Kantenabfall.",
+          "Wenn der Dorsch im Mittelwasser steht, lohnt eine kürzere Absinkphase, um den Fisch nicht zu verpassen.",
+          "Bei Beißflaute die Farbe erst zuletzt ändern; meist sind Tiefe, Rhythmus und Geschwindigkeit wichtiger.",
+          "Ein schneller Probezug direkt nach dem Grundkontakt testet, ob aktive Fische an der Linie hängen.",
+          "Je klarer das Echolot die Beute zeigt, desto kleiner darf der Aktionradius des Köders sein.",
+          "Ein Gummi kann den Fisch länger binden, ein Pilker kann ihn schneller auslösen – beide haben ihren Platz.",
+          "Die sauberste Dorsch-Methode ist diejenige, die die Kante liest und nicht gegen sie arbeitet.",
+          "Kontrolle, nicht Chaos, bringt im Sommer die konstanten Dorschkontakte."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Der beste Dorsch-Kontakt kommt oft im kurzen Moment zwischen Bodentouch und kontrolliertem Wiederaufstieg.",
+    "photo": {
+      "src": "https://www.nabu.de/imperia/md/nabu/images/arten/tiere/fische/meeresfische/180612-nabu-dorsch-wolf-wichmann.jpeg",
+      "link": "https://www.nabu.de/imperia/md/nabu/images/arten/tiere/fische/meeresfische/180612-nabu-dorsch-wolf-wichmann.jpeg",
+      "alt": "Dorsch II: Pilker, Gummi und Bodenkontakt-Disziplin – passendes Foto",
+      "caption": "Dorsch II: Pilker, Gummi und Bodenkontakt-Disziplin",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Wind gegen Strom: die härtesten, aber oft besten Tage",
+    "subtitle": "Wie du Oberflächenstress in Fischdruck verwandelst",
+    "chapter": "Hydrodynamik",
+    "tag": "Wind/Strom",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Druckkante",
+        "bullets": [
+          "Wind gegen Strom erzeugt Oberflächenbrechung, sammelt Futter und macht die Strecke biologisch lebendig – aber die Präsentation schwieriger.",
+          "Wenn die Oberfläche buckelt, kann die Beute an eine Linie gedrückt werden, die unter ruhigerem Wetter unsichtbar wäre.",
+          "Die Drift wird dann unruhiger; das Boot braucht aktivere Kurskorrekturen, damit der Köder im Fenster bleibt.",
+          "Die Köderlinie muss in solchen Situationen oft früher gestartet werden, weil das System schneller aus dem Zielkorridor läuft.",
+          "Ein guter Angler liest nicht nur die Welle, sondern die darunter liegende Strömungsachse.",
+          "Bei Gegenstrom kann der Grundkontakt plötzlich ungleichmäßig werden; dann ist ein etwas schwereres Setup sinnvoll.",
+          "Wenn Wind und Strom quer zueinander stehen, entstehen Sackgassen und Bäche aus Futterdruck an Kanten.",
+          "Gegenstrom-Tage sind oft besonders gut an Engstellen, Sätteln und Kantenenden.",
+          "Die Fischlaune ist dann oft hoch, aber der Fehlerraum klein – präzise Positionierung wird Pflicht.",
+          "Was auf ruhigem Wasser banal aussieht, kann bei Gegenstrom die stärkste Fresskante des Tages sein."
+        ]
+      },
+      {
+        "heading": "Korrekturlinie",
+        "bullets": [
+          "Mit Strom laufende Oberflächen sind häufig gleichmäßiger, aber nicht immer besser – sie können Beute auch zu breit verteilen.",
+          "Leichte Seitenwinde sind oft angenehmer als Vollgegenwind, weil sie die Drifts kontrollierbar halten.",
+          "Wenn der Köder zu früh aus der Zone schwingt, liegt das Problem meist im Anfahrtswinkel und nicht im Köder.",
+          "In Wind-gegen-Strom-Situationen arbeiten kurze, wiederholte Anfahrten besser als lange, starre Durchzüge.",
+          "Boote mit guter Motorreaktion sind hier klar im Vorteil, weil kleine Korrekturen sofort Wirkung zeigen.",
+          "Zähle die Sekunden von der Kantenmarke bis zum ersten Kontakt; so optimierst du den Vorhalt für den nächsten Drift.",
+          "Oft ist die Lee-Seite zwar angenehmer zu fischen, aber die Windkante biologisch stärker.",
+          "Ein harter Tag kann die Schule enger zusammenziehen und die Bissrate paradox erhöhen.",
+          "Wenn die Oberfläche chaotisch wirkt, ist die Unterwasserstruktur oft der einzige verlässliche Kompass.",
+          "Gegenstrom ist kein Problem, sondern ein Filter: Wer sauber steuert, fängt die besseren Linien."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Die beste Fresskante ist oft genau dort, wo Wind und Strom sich gegenseitig nerven.",
+    "photo": {
+      "src": "https://meerdavon.com/wp-content/uploads/2018/10/Riptide-2.jpg",
+      "link": "https://meerdavon.com/wp-content/uploads/2018/10/Riptide-2.jpg",
+      "alt": "Wind gegen Strom: die härtesten, aber oft besten Tage – passendes Foto",
+      "caption": "Wind gegen Strom: die härtesten, aber oft besten Tage",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "50–400 g in der Praxis: Gewichtslogik statt Bauchgefühl",
+    "subtitle": "Welche Last in welcher Tiefe und Drift wirklich arbeitet",
+    "chapter": "Tackle",
+    "tag": "Gewichtslogik",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Leichtlauf",
+        "bullets": [
+          "50–80 g funktionieren bei flacherem Wasser, ruhiger Drift und präziser Oberflächenarbeit, etwa auf Makrele oder flachem Pollack.",
+          "80–120 g ist der saubere Arbeitsbereich für moderate Tiefen und kontrollierte Kanten mit geringer bis mittlerer Strömung.",
+          "120–200 g decken einen großen Teil der Dorsch- und Pollack-Situationen an der Kante ab, wenn die Drift noch lesbar bleibt.",
+          "200–300 g werden dann sinnvoll, wenn Tiefe, Seitenwind und Strömung den Köder sichtbar aus dem Fenster ziehen.",
+          "300–400 g sind kein Dauerstandard, sondern ein Werkzeug für harte Bedingungen, tiefe Drops und schwere Heilbutt-Setups.",
+          "Je schneller die Drift, desto wichtiger ist eine Bleilast, die den Grundkontakt nicht nur erreicht, sondern reproduzierbar hält.",
+          "Zu leicht bedeutet unsaubere Linie, zu schwer bedeutet tote Aktion – die Balance ist art- und spotabhängig.",
+          "Beim Gummi zählt nicht nur das Gewicht, sondern auch die Form: schlank sinkt anders als breit.",
+          "Naturköder profitieren oft von etwas mehr Gewicht, damit das System im Drift kontrolliert bleibt.",
+          "Ein gutes Setup ist das, welches genau so schwer ist, dass es die Zone hält, aber noch Reiz zeigt."
+        ]
+      },
+      {
+        "heading": "Schwerlauf",
+        "bullets": [
+          "Für den Sommer an der Ålesund-Küste ist ein adaptiver Gewichtswechsel oft wichtiger als eine perfekte Einzellösung.",
+          "Wenn die Kante steiler wird, nimm nicht nur mehr Blei, sondern verkürze auch die Rutenarbeit.",
+          "Bei flacherem Wasser ist ein zu schweres Gerät häufig kontraproduktiv, weil es den natürlichen Fall zerstört.",
+          "Mehr Gewicht ist nur dann eine Lösung, wenn gleichzeitig die Drift und die Aktion noch lesbar bleiben.",
+          "Ein Setup kann auf dem Papier ideal wirken und in der Praxis völlig tot sein, wenn es die Köderspur erstickt.",
+          "Bei Naturködern ist die Last oft etwas höher zu wählen, damit der Köderfisch nicht unkontrolliert ausdreht.",
+          "Bei Reaktionsködern ist die Last etwas geringer, damit die Führung noch lebendig bleibt.",
+          "Das Gewicht sollte zur Zielart, Tiefe, Kontaktart und Driftgeschwindigkeit passen, nicht zu einem pauschalen Dogma.",
+          "Wer zwischen 80 und 200 g blind bleibt, verschenkt in Ålesund viele saubere Fenster.",
+          "Der Gewichtswechsel ist oft der schnellste Hebel, um einen toten Drift in eine Fangdrift zu verwandeln."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Das richtige Gewicht ist das kleinste Gewicht, das die Linie noch sauber hält.",
+    "photo": {
+      "src": "https://www.norwegen-angelgeraet.de/media/images/org/meeresblei-tiefseeblei-naturkoederblei-uv-aktiv-selbstleuchtend-fluoreszierend-heilbutt-dorsch-rotbarsch-leng-lumb-naturkoederangeln-tiefseeangeln-angeln-norwegen-angelgeraet.jpg",
+      "link": "https://www.norwegen-angelgeraet.de/media/images/org/meeresblei-tiefseeblei-naturkoederblei-uv-aktiv-selbstleuchtend-fluoreszierend-heilbutt-dorsch-rotbarsch-leng-lumb-naturkoederangeln-tiefseeangeln-angeln-norwegen-angelgeraet.jpg",
+      "alt": "50–400 g in der Praxis: Gewichtslogik statt Bauchgefühl – passendes Foto",
+      "caption": "50–400 g in der Praxis: Gewichtslogik statt Bauchgefühl",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Makrelenvorfächer und Naturköder-Systeme",
+    "subtitle": "Wie du zwischen Futterfisch, Deadbait und Flatterköder sauber trennst",
+    "chapter": "Rigs",
+    "tag": "Vorfachlogik",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Schwarmvorfach",
+        "bullets": [
+          "Makrelenvorfächer sind perfekt, um schnell Masse an Köderfisch zu schaffen und daraus später größere Präsentationen zu bauen.",
+          "Mehrere kleine Haken oder kleine Köderhälften sind oft besser als ein überladener Einzelköder.",
+          "Flatter-Hering arbeitet über Rotation, Druckwelle und Schimmer, nicht über aggressives Ziehen.",
+          "Flatter-Makrele bringt mehr Fett, mehr Duft und oft eine stärkere Attraktion für größere Räuber.",
+          "Deadbait sollte natürlich aussehen, aber nicht passiv tot wirken – leichtes Öffnen und Schließen der Montage ist erwünscht.",
+          "Ein gutes Vorfach hält den Köderfisch in einer Richtung, statt ihn im Drall zu zerstören.",
+          "Bei starkem Driftzug sollte das Vorfach so gebaut sein, dass es den Köder nicht in die Schnur dreht.",
+          "Für Heilbutt ist ein naturalistisches Profil meist besser als ein übertriebenes Lockbild.",
+          "Für Dorsch und Pollack kann derselbe Köder zu träge sein; dort ist oft ein aktiveres Rig im Vorteil.",
+          "Die Montage muss immer zum Zielfisch und nicht zum Ködervorrat passen."
+        ]
+      },
+      {
+        "heading": "Naturköder",
+        "bullets": [
+          "Makrelenvorfächer liefern im Sommer oft den schnellsten Livebait-Output, weil die Schule häufig nahe genug steht.",
+          "Bei Naturköder-Drift ist die exakte Liegephase entscheidend – du willst nicht nur fangen, sondern im richtigen Strömungsband liegen.",
+          "Deadbait wird stärker, wenn die Beutequalität gut und das Wasser klar ist; dann wirkt das Profil besonders glaubwürdig.",
+          "Flatterköder darf gelegentlich hochziehen, aber nicht so stark, dass er aus der unteren Jagdzone fliegt.",
+          "Im Zweifel lieber eine saubere, kontrollierte Montage als ein wildes Bastelwerk mit zu vielen Reizpunkten.",
+          "Der Hakenwinkel beeinflusst die Bissausbeute massiv; flachere Einhängung kann bei vorsichtigen Fischen besser sein.",
+          "Naturköder sind im Sommer oft in ruhigen, klaren Phasen am stärksten, wenn Räuber auf Authentizität achten.",
+          "Makrelenstücke oder Hering funktionieren als Duftlieferant, sobald der Fisch im System steht.",
+          "Ein Naturköder auf der richtigen Kante übertrifft häufig einen perfekten Kunstköder auf der falschen Linie.",
+          "Wer Rigs als Such- und Verwertungswerkzeug denkt, fängt deutlich konstanter."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Die beste Naturköder-Montage in Ålesund ist die, die sauber im Strom arbeitet und den Köder nicht verdreht.",
+    "photo": {
+      "src": "https://www.1a-angelshop.de/images/product_images/original_images/2658_0.jpg",
+      "link": "https://www.1a-angelshop.de/images/product_images/original_images/2658_0.jpg",
+      "alt": "Makrelenvorfächer und Naturköder-Systeme – passendes Foto",
+      "caption": "Makrelenvorfächer und Naturköder-Systeme",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Sekundensuche auf Plateaus und Rinnen",
+    "subtitle": "Wie du aus einer Karte in Minuten einen Fangplan machst",
+    "chapter": "Arbeitsweise",
+    "tag": "Navigationscode",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Scanachsen",
+        "bullets": [
+          "Auf der Seekarte zuerst das Relief identifizieren: Kuppe, Schulter, Rinne, Ende, Engstelle, dann erst den genauen Driftkorridor wählen.",
+          "Ein Plateau wird nur dann interessant, wenn mindestens eine Seite einen sauberen Abfall oder eine scharfe Kante liefert.",
+          "Mehrere kleine Strukturen in 150–400 m Abstand sind wertvoller als ein riesiges monotones Feld.",
+          "Die Suchfahrt sollte quer zur erwarteten Strömung beginnen, um Kontur und Fischverteilung schnell zu lesen.",
+          "Wenn der erste Pass Beute zeigt, folgt der zweite Pass aus anderem Winkel zur Bestätigung.",
+          "Erst wenn Struktur und Fischbild zusammenpassen, wird ein Spot intensiv befischt.",
+          "Die Karte ist nicht für Schönheit da, sondern für die Vorhersage, wo das Wasser Fisch sammelt.",
+          "Je schmaler die Rinne, desto stärker kann sie als Förderkanal wirken.",
+          "Bei mehreren Kandidaten gewinnt meist der mit der höchsten Übergangsdichte, nicht der mit der größten Fläche.",
+          "Der beste Suchpunkt ist derjenige, der mehrere Arten gleichzeitig plausibel macht."
+        ]
+      },
+      {
+        "heading": "Routenlogik",
+        "bullets": [
+          "Ein guter Fangplan enthält immer eine Reihenfolge: erst Beute- und Räuberanzeichen, dann Tiefenfenster, dann Köderwahl.",
+          "Die erste Suche soll nur Informationen liefern; der Fangmodus beginnt erst nach der Bestätigung.",
+          "Ein halbwegs sicherer Treffer auf einer kleinen Struktur ist oft besser als der Traumspot, der zu lange unklar bleibt.",
+          "Wenn ein Plateau leer wirkt, prüfe die äußere Schulter und die Rückfallzone bevor du aufgibst.",
+          "Bodenechos und Beutezeichen sollten in einer Linie interpretiert werden, nicht als zwei getrennte Probleme.",
+          "Die effizienteste Bootsfahrt ist die, bei der du mit jeder Minute neue Entscheidungsqualität gewinnst.",
+          "Notiere Tiefe, Grundhärte, Wind und Tide pro Mini-Zone – so baust du den Fischatlas für den Sommer.",
+          "Ein Spot ist nicht „an“ oder „aus“, sondern hat klare Zeit- und Richtungsfenster.",
+          "Die beste Suchstrategie ist asymmetrisch: starkes Augenmerk auf die wahrscheinlichsten 20 Prozent der Fläche.",
+          "Wer Plateaus liest wie ein Raster, spart Zeit und landet schneller an der produktiven Kante."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Nicht die Fläche macht den Spot, sondern die Dichte der Wechsel in einem begehbaren Driftzug.",
+    "photo": {
+      "src": "https://www.dnr.de/sites/default/files/styles/image_style=crop_16_9&image_scale[width]=940/public/2023-07/ccs_underwater-g047c60365_1280.jpg.webp?itok=O9R7Ndyo",
+      "link": "https://www.dnr.de/sites/default/files/styles/image_style=crop_16_9&image_scale[width]=940/public/2023-07/ccs_underwater-g047c60365_1280.jpg.webp?itok=O9R7Ndyo",
+      "alt": "Sekundensuche auf Plateaus und Rinnen – passendes Foto",
+      "caption": "Sekundensuche auf Plateaus und Rinnen",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Boots- und Driftbetrieb bei Wind, Welle und Versatz",
+    "subtitle": "Wie du trotz Bewegung den Köder millimetergenau hältst",
+    "chapter": "Boot",
+    "tag": "Kontrolle",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Wetterfenster",
+        "bullets": [
+          "Halte die Bow-Position so, dass du nicht quer in die Welle fällst, sondern den Drift stabil abfährst.",
+          "Nutze kleine Motorkorrekturen, um den Kurs auf dem Plotter zu glätten, statt ständig zu übersteuern.",
+          "Das Boot darf bei Seitenwind leicht arbeiten, aber nicht aus dem Driftkorridor kippen.",
+          "Der Driftwinkel zum Spot sollte reproduzierbar bleiben; nur so kannst du gute Kontakte später wiederholen.",
+          "Bei langen Kanten ist ein leicht geschwungener Fahrtrack besser als eine nervöse Zickzacklinie.",
+          "Die Motorimpulse müssen vor dem kritischen Punkt gesetzt werden, nicht erst, wenn du schon herausgerutscht bist.",
+          "Längere Drifts brauchen mehr Positionsdisziplin als kurze Anrisse – sonst verlierst du die Strukturkontrolle.",
+          "Achte auf die Rückmeldung im Rutenblank: Sie zeigt dir oft früher als das Echolot, ob die Linie stimmt.",
+          "Wenn Welle und Wind zunehmen, verkürze die Driftabschnitte und arbeite mehr in Segmenten.",
+          "Bootskontrolle ist im Sommer oft der Unterschied zwischen zufälliger und wiederholbarer Fischerei."
+        ]
+      },
+      {
+        "heading": "Kursarbeit",
+        "bullets": [
+          "Ein gut geführtes Boot produziert eine ruhige Köderspur; ein hektisch gefahrenes Boot macht aus guten Spots chaotische Zonen.",
+          "Bei Gegenwind ist die Rückfahrtplanung genauso wichtig wie die Angelführung – Energie für Korrekturen bleibt Pflicht.",
+          "Auf schräg laufenden Kanten kann das Boot leicht versetzt bleiben, solange der Köder sauber im Winkel steht.",
+          "Wer nur auf die Position schaut, übersieht die Dynamik der Drift – wichtig ist die Richtung der Bewegung, nicht nur der Punkt auf der Karte.",
+          "Der Fischkontakt kommt häufig an der Stelle, an der Boot, Strömung und Relief für ein paar Sekunden deckungsgleich werden.",
+          "Motor, Wind und Welle müssen wie ein kleines Steuerungssystem behandelt werden.",
+          "Zu aggressives Gegensteuern erzeugt unnötige Störungen, die den Köder aus der Linie reißen.",
+          "Ein ruhiger Track auf dem Plotter ist ein unterschätzter Biss-Booster.",
+          "Wenn die Bootslogik passt, wird selbst ein mittelmäßiger Tag deutlich besser lesbar.",
+          "Effiziente Bootskontrolle ist die Grundlage für echtes Tiefenmanagement."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Gute Drift ist kein Zufall – sie ist eine bewusst gefahrene Linie durch die Fangzone.",
+    "photo": {
+      "src": "https://www.angelstunde.de/wp-content/uploads/Angeln-am-Hochseewrack-01.png",
+      "link": "https://www.angelstunde.de/wp-content/uploads/Angeln-am-Hochseewrack-01.png",
+      "alt": "Boots- und Driftbetrieb bei Wind, Welle und Versatz – passendes Foto",
+      "caption": "Boots- und Driftbetrieb bei Wind, Welle und Versatz",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Pattern Building: Logbuch, Wiederholung und Reproduzierbarkeit",
+    "subtitle": "Wie du aus Einzelbissen ein funktionierendes Sommermodell machst",
+    "chapter": "Analyse",
+    "tag": "Wissen",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Musterbank",
+        "bullets": [
+          "Jede gute Session bekommt ein Datenpaket: Datum, Uhrzeit, Tidefenster, Wind, Welle, Tiefe, Boden und Köder.",
+          "Ohne Notizen bleiben Bisse Erinnerungen; mit Notizen werden sie Muster.",
+          "Ein wiederkehrendes Tiefenband ist oft stärker als der spektakulärste Einzelspot.",
+          "Wenn mehrere Arten auf derselben Kante fressen, ist das ein Hinweis auf einen strukturell starken Bereich.",
+          "Speichere auch Fehlversuche, denn die No-Bite-Zone grenzt den echten Hotspot oft klar ein.",
+          "Eine gute Dokumentation zeigt dir, wann die Zone kippt: zu schnell, zu flach, zu hell oder zu ruhig.",
+          "Nicht jeder gute Fangtag ist wiederholbar, aber die meisten guten Muster sind es.",
+          "Protokolliere auch die Reihenfolge der Köder, nicht nur den Gewinner.",
+          "Das Ziel ist nicht Erinnerung, sondern Rekonstruierbarkeit.",
+          "Wer sauber dokumentiert, erkennt schon am Saisonanfang die ersten funktionierenden Sommerachsen."
+        ]
+      },
+      {
+        "heading": "Wiederholung",
+        "bullets": [
+          "Aus drei bis fünf sauber dokumentierten Sessions entsteht oft ein deutlich stabileres Revierverständnis als aus einem ganzen Bauchgefühl-Sommer.",
+          "Muster über Tiefe, Windrichtung und Fischart sind wertvoller als eine lose Liste von Fangorten.",
+          "Vergleiche gute Tage immer mit den ruhigen Tagen – dort liegen oft die Erklärungen für die Performance.",
+          "Einfaches Schema reicht: Startzeit, erster Biss, Tiefenband, Veränderung, Ergebnis.",
+          "Wer seine Drifts markiert, sieht schnell, welche Achsen wirklich tragen.",
+          "Pattern Building bedeutet, die Küste als System zu sehen, nicht als Sammlung einzelner Stellen.",
+          "Jede Spur mit wiederholtem Erfolg sollte in den nächsten drei Besuchen gezielt getestet werden.",
+          "Die besten Sommerangler bauen nicht nur Technik, sondern ein regionales Gedächtnis auf.",
+          "Mit jedem Eintrag wird das Revier kleiner und die Trefferquote größer.",
+          "Das Logbuch ist dein stiller Guide für den nächsten Tag."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Das stärkste Werkzeug nach dem Echolot ist ein sauberes, gnadenlos ehrliches Logbuch.",
+    "photo": {
+      "src": "https://alleangeln-data-prod.s3.eu-central-1.amazonaws.com/wordpress/2025/06/04223305/250604-WP-Pegelstaende-Header_04.jpg",
+      "link": "https://alleangeln-data-prod.s3.eu-central-1.amazonaws.com/wordpress/2025/06/04223305/250604-WP-Pegelstaende-Header_04.jpg",
+      "alt": "Pattern Building: Logbuch, Wiederholung und Reproduzierbarkeit – passendes Foto",
+      "caption": "Pattern Building: Logbuch, Wiederholung und Reproduzierbarkeit",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Abschluss: Der Ålesund-Sommer in einer Fangformel",
+    "subtitle": "Wie man Struktur, Timing, Drift und Köderführung zu einem System verschmilzt",
+    "chapter": "Finale",
+    "tag": "Battle Plan",
+    "intro": "Die Präsentation verdichtet die Sommerlogik der Region Ålesund in eine fangorientierte Systematik: Wo steht Beute, wie läuft die Drift, welche Tiefe trägt, und wie wird der Köder exakt dort präsentiert, wo der Fisch entscheidet.",
+    "fishTag": null,
+    "hero": true,
+    "columns": [
+      {
+        "heading": "Kernsatz",
+        "bullets": [
+          "Erst die Karte, dann die Kante, dann die Beute, dann der Köder – in dieser Reihenfolge wird das Revier lesbar.",
+          "Makrele testet das System schnell, Pollack öffnet Strukturkanten, Dorsch verwertet Übergänge, Heilbutt besetzt das Tiefenfenster, Scholle bindet den Boden.",
+          "Ein Spot ist nur stark, wenn er mehr als eine Art plausibel macht.",
+          "Die beste Köderwahl ist die, die exakt zur Tiefe, Drift und Aktivität des Tages passt.",
+          "Mit zunehmendem Sommerlicht wird die Reaktionsgeschwindigkeit der Fische wichtiger als reine Tiefe.",
+          "Wind und Strömung sind keine Feinde, sondern Parameter für Beuteverlagerung.",
+          "Echolotbild, Drifttrack und Rutenrückmeldung müssen zusammen gelesen werden.",
+          "Wer zu früh aufgibt, verschenkt die zweite und dritte Reaktionsphase des Spots.",
+          "Der größte Fehler ist nicht ein falscher Köder, sondern ein falscher Ansatz auf die richtige Kante.",
+          "Die besten Tage entstehen aus einer sauberen Kette von kleinen, richtigen Entscheidungen."
+        ]
+      },
+      {
+        "heading": "Feinlogik",
+        "bullets": [
+          "Der Sommer in Ålesund belohnt konsequente Angler, die nicht nur Fische suchen, sondern Bewegungen im System verstehen.",
+          "Eine gute Session ist planbar, wenn du Vorselektion, Driftsteuerung und Ködertempo sauber trennst.",
+          "Jede Fischart hat ihr eigenes Zeitfenster, aber alle reagieren auf denselben Kern: Futterdruck plus Struktur plus Kontrolle.",
+          "Wenn der erste Plan nicht klappt, ändere eine Variable zur Zeit – Tiefe, Winkel, Gewicht oder Geschwindigkeit.",
+          "Die Kunst liegt im sauberen Reduzieren: weniger Chaos, mehr Linie, mehr Treffer.",
+          "Mit jeder guten Drift wächst deine eigene Fangkarte für das Revier.",
+          "In Ålesund ist Präzision kein Luxus, sondern der eigentliche Vorteil.",
+          "Die Montage ist nur so gut wie die Drift, die sie in Position bringt.",
+          "Wer das Wasser liest, braucht weniger Zufall und mehr Konstanz.",
+          "Die Formel lautet: Kante erkennen, Beute bestätigen, Köder kontrollieren, Fenster ausfischen."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Ålesund schenkt dir keine Fische, es belohnt präzise Entscheidungen – genau darin liegt der Reiz des Reviers.",
+    "photo": {
+      "src": "https://contents.mediadecathlon.com/p2345732/k$190490432733025a24a062f694a8ac7e/1920x0/3817pt2562/7633xcr5124/sphere_media_background_sample.jpg?format=auto",
+      "link": "https://contents.mediadecathlon.com/p2345732/k$190490432733025a24a062f694a8ac7e/1920x0/3817pt2562/7633xcr5124/sphere_media_background_sample.jpg?format=auto",
+      "alt": "Abschluss: Der Ålesund-Sommer in einer Fangformel – passendes Foto",
+      "caption": "Abschluss: Der Ålesund-Sommer in einer Fangformel",
+      "sourceLabel": "Internetlink"
+    }
+  },
+  {
+    "title": "Schnellmatrix: Fischart, Tiefe, Tempo und Werkzeug",
+    "subtitle": "Die komprimierte Entscheidungsfolie für die erste Minute am Spot",
+    "chapter": "Referenz",
+    "tag": "Spickzettel",
+    "intro": null,
+    "fishTag": null,
+    "hero": false,
+    "columns": [
+      {
+        "heading": "Artfilter",
+        "bullets": [
+          "Heilbutt: 12–45 m, langsam bis mittel, große Silhouette, Grundnähe mit Geduld und sauberem Vorhalt.",
+          "Scholle: 8–20 m, sehr ruhig, kleiner Kontakt, weicher Boden, kurze Hüpfer und lange Pausen.",
+          "Makrele: 0–15 m, schnell, kompakt, Oberwasser und Mittelwasser mit flüchtigem Führungsbild.",
+          "Pollack: 8–35 m, schnell bis sehr schnell, harte Kante, Fels, Kelp und Reaktionsjagd.",
+          "Dorsch: 18–50 m, mittel, Kante plus Beute, sauberer Kontakt mit kontrolliertem Abfall.",
+          "50–80 g: Flachwasser und Makrele, wenn Drift und Strömung kontrolliert bleiben.",
+          "80–200 g: Der universelle Arbeitsbereich für viel Pollack-, Dorsch- und Kantenarbeit.",
+          "200–400 g: Tiefer, härter, windiger, heilbuttlastiger – nur wenn die Zone das verlangt.",
+          "Deadbait: Verwerten, wenn das System bestätigt ist und Präsenz wichtiger als Action wird.",
+          "Gummi: Suchen, öffnen, testen, durchbrechen – ideal, wenn du die Zone noch nicht sicher gelesen hast."
+        ]
+      },
+      {
+        "heading": "Tempofilter",
+        "bullets": [
+          "Bananen im Echolot sind oft Einzelkontakte; Wolken sind meist Futter oder enge Schule – erst das Muster lesen, dann werfen.",
+          "Harte Bodenlinie plus Übergang plus Bait ist fast immer stärker als ein isoliertes Fischsymbol.",
+          "Erst Karte, dann Echolot, dann Drift, dann Köder – diese Reihenfolge spart Stunden.",
+          "Wind gegen Strom ist schwerer zu fischen, aber oft biologisch stärker als glatte Bedingungen.",
+          "Wenn du nur eine Variable ändern kannst, ändere zuerst das Gewicht, dann den Winkel, dann die Geschwindigkeit.",
+          "Die Kantenenden sind oft wichtiger als die langen Geraden dazwischen.",
+          "Makrele liefert den Frühindikator, Pollack die Strukturreaktion, Dorsch die Übergangsausbeute, Heilbutt die Trophäe, Scholle die Bodengenauigkeit.",
+          "Ein gutes Sommerfenster ist meist kurz, scharf und wiederholbar – nicht lang und zufällig.",
+          "Die beste Session entsteht, wenn Drift und Köder exakt dieselbe Linie im System abfahren.",
+          "Merke dir: Das Wasser entscheidet nicht nach Ködermarke, sondern nach Signalqualität."
+        ]
+      }
+    ],
+    "callout": "Expertenblick: Wer am Spot in der ersten Minute die Matrix liest, fischt den Rest der Session auf deutlich höherem Niveau.",
+    "photo": {
+      "src": "https://aixcessive.de/media/rhein-angeln-buhne-sonnenaufgang.jpg",
+      "link": "https://aixcessive.de/media/rhein-angeln-buhne-sonnenaufgang.jpg",
+      "alt": "Schnellmatrix: Fischart, Tiefe, Tempo und Werkzeug – passendes Foto",
+      "caption": "Schnellmatrix: Fischart, Tiefe, Tempo und Werkzeug",
+      "sourceLabel": "Internetlink"
+    }
+  }
+];
+
+    const tocList = document.getElementById('tocList');
+    const slidesViewport = document.getElementById('slidesViewport');
+    const currentTitle = document.getElementById('currentTitle');
+    const currentSubtitle = document.getElementById('currentSubtitle');
+    const chapterLabel = document.getElementById('chapterLabel');
+    const currentIndex = document.getElementById('currentIndex');
+    const totalSlides = document.getElementById('totalSlides');
+    const progressBar = document.getElementById('progressBar');
+    const slideCount = document.getElementById('slideCount');
+    const search = document.getElementById('search');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    totalSlides.textContent = slidesData.length;
+    slideCount.textContent = slidesData.length;
+
+    function escapeHtml(str){
+      return String(str)
+        .replaceAll('&','&amp;')
+        .replaceAll('<','&lt;')
+        .replaceAll('>','&gt;')
+        .replaceAll('"','&quot;')
+        .replaceAll("'","&#39;");
+    }
+
+    function normalizeText(str){
+      return String(str || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[–—]/g, '-');
+    }
+
+    function collectText(value, out = []) {
+      if (value == null) return out;
+      if (typeof value === 'string') {
+        out.push(value);
+        return out;
+      }
+      if (Array.isArray(value)) {
+        value.forEach(v => collectText(v, out));
+        return out;
+      }
+      if (typeof value === 'object') {
+        Object.entries(value).forEach(([key, val]) => {
+          if (key === 'photo') {
+            if (val?.alt) out.push(val.alt);
+            if (val?.caption) out.push(val.caption);
+            return;
+          }
+          collectText(val, out);
         });
-    </script>
+      }
+      return out;
+    }
+
+    function searchIndex(slide) {
+      return normalizeText(collectText(slide).join(' '));
+    }
+
+    function slideMatches(slide, query) {
+      if (!query) return true;
+      const needle = normalizeText(query).trim();
+      if (!needle) return true;
+      return searchIndex(slide).includes(needle);
+    }
+
+    function photoBlock(photo, title) {
+      if (!photo) return '';
+      return `
+        <section class="slideMedia" aria-label="Passendes Foto">
+          <figure class="mediaFigure">
+            <img
+              src="${escapeHtml(photo.src)}"
+              alt="${escapeHtml(photo.alt || title)}"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <figcaption class="mediaCaption">
+              <span>${escapeHtml(photo.caption || title)}</span>
+            </figcaption>
+          </figure>
+        </section>
+      `;
+    }
+
+function renderSlide(data, idx){
+      const columnsHtml = data.columns ? `
+        <div class="heroGrid">
+          ${data.columns.map(col => `
+            <div class="panel">
+              <h3>${escapeHtml(col.heading)}</h3>
+              <ul>
+                ${col.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('')}
+              </ul>
+            </div>
+          `).join('')}
+        </div>` : '';
+
+      const gridHtml = data.grid ? `
+        <div class="grid2">
+          ${data.grid.map(item => `
+            <div class="card">
+              <div class="meta">${escapeHtml(item.meta)}</div>
+              <h4>${escapeHtml(item.title)}</h4>
+              <p>${escapeHtml(item.text)}</p>
+            </div>
+          `).join('')}
+        </div>` : '';
+
+      const tableHtml = data.table ? `
+        <table>
+          <thead>
+            <tr>
+              <th>Art</th>
+              <th>Tiefe / Zone</th>
+              <th>Tempo</th>
+              <th>Köder</th>
+              <th>Hinweis</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${data.rows.map(r => `
+              <tr>
+                <td>${escapeHtml(r[0])}</td>
+                <td>${escapeHtml(r[1])}</td>
+                <td>${escapeHtml(r[2])}</td>
+                <td>${escapeHtml(r[3])}</td>
+                <td>${escapeHtml(r[4])}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>` : '';
+
+      const fishBandHtml = data.fishTag ? `
+        <div class="fishBand">
+          ${data.fishTag.map((t,i) => `<span class="fishPill"><span class="dot ${i===0?'hot':i===1?'warm':'alt'}"></span>${escapeHtml(t)}</span>`).join('')}
+        </div>
+      ` : '';
+
+      return `
+        <article class="slide" id="slide-${idx}" data-title="${escapeHtml(data.title)}" data-chapter="${escapeHtml(data.chapter)}" data-search="${escapeHtml(searchIndex(data))}">
+          <div class="slideHeader">
+            <div>
+              <div class="slideTag">${escapeHtml(data.tag)}</div>
+              <h2>${escapeHtml(data.title)}</h2>
+              <p>${escapeHtml(data.subtitle)}</p>
+              ${fishBandHtml}
+            </div>
+          </div>
+
+          ${data.hero ? `
+            <div class="panel" style="margin-top:8px">
+              <h3>Executive Summary</h3>
+              <p>${escapeHtml(data.intro || data.callout || '')}</p>
+            </div>
+          ` : `
+            <div class="panel" style="margin-top:8px">
+              <p>${escapeHtml(data.intro || '')}</p>
+            </div>
+          `}
+
+          ${photoBlock(data.photo, data.title)}
+
+          ${columnsHtml}
+          ${gridHtml}
+          ${tableHtml}
+
+          ${data.callout ? `<div class="callout"><strong>Expertenpunkt:</strong> ${escapeHtml(data.callout)}</div>` : ''}
+        </article>
+      `;
+    }
+
+    slidesViewport.innerHTML = slidesData.map((s, i) => renderSlide(s, i)).join('');
+    const slides = [...document.querySelectorAll('.slide')];
+    let current = 0;
+
+    function buildToc(filter=''){
+      const normalized = normalizeText(filter).trim();
+      tocList.innerHTML = '';
+
+      const matches = [];
+      slidesData.forEach((s, i) => {
+        if (!normalized || slideMatches(s, normalized)) matches.push(i);
+      });
+
+      if (!matches.length) {
+        const empty = document.createElement('div');
+        empty.className = 'panel';
+        empty.style.marginTop = '4px';
+        empty.innerHTML = '<strong>Keine Treffer.</strong><div style="color:var(--muted);margin-top:6px;font-size:13px">Suchbegriff verfeinern oder einen anderen Fokus wählen.</div>';
+        tocList.appendChild(empty);
+        slides.forEach(slide => slide.classList.add('hiddenBySearch'));
+        return matches;
+      }
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('hiddenBySearch', normalized ? !matches.includes(i) : false);
+      });
+
+      matches.forEach(i => {
+        const s = slidesData[i];
+        const btn = document.createElement('button');
+        btn.className = 'tocItem';
+        btn.type = 'button';
+        btn.dataset.index = i;
+        btn.innerHTML = `
+          <div class="tocNo">${String(i+1).padStart(2,'0')}</div>
+          <div class="tocText">
+            <div class="tocTitle">${escapeHtml(s.title)}</div>
+            <p class="tocDesc">${escapeHtml(s.chapter)} · ${escapeHtml(s.tag)}</p>
+          </div>
+        `;
+        btn.addEventListener('click', () => showSlide(i));
+        tocList.appendChild(btn);
+      });
+
+      return matches;
+    }
+
+    function showSlide(index){
+      const visibleSlides = slides
+        .map((slide, i) => (slide.classList.contains('hiddenBySearch') ? null : i))
+        .filter(i => i !== null);
+
+      if (!visibleSlides.length) {
+        current = 0;
+      } else {
+        current = visibleSlides.includes(index) ? index : visibleSlides[0];
+      }
+
+      slides.forEach((s, i) => {
+        const isActive = i === current;
+        const hidden = s.classList.contains('hiddenBySearch');
+        s.classList.toggle('active', isActive && !hidden);
+      });
+
+      document.querySelectorAll('.tocItem').forEach(item => {
+        item.classList.toggle('active', Number(item.dataset.index) === current);
+      });
+
+      const s = slidesData[current];
+      currentTitle.textContent = s.title;
+      currentSubtitle.textContent = s.subtitle;
+      chapterLabel.textContent = s.chapter;
+      currentIndex.textContent = current + 1;
+      progressBar.style.width = `${((current + 1) / slides.length) * 100}%`;
+
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === slides.length - 1;
+
+      const activeToc = document.querySelector(`.tocItem[data-index="${current}"]`);
+      if (activeToc) activeToc.scrollIntoView({ block:'nearest', behavior:'smooth' });
+    }
+
+    function applySearch(query){
+      const matches = buildToc(query || '');
+      if (!matches.length) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        currentIndex.textContent = '0';
+        progressBar.style.width = '0%';
+        prevBtn.disabled = true;
+        nextBtn.disabled = true;
+        return;
+      }
+      if (!matches.includes(current)) {
+        current = matches[0];
+      }
+      showSlide(current);
+    }
+
+    prevBtn.addEventListener('click', () => {
+      const visible = slides
+        .map((slide, i) => (slide.classList.contains('hiddenBySearch') ? null : i))
+        .filter(i => i !== null);
+      if (!visible.length) return;
+      const pos = visible.indexOf(current);
+      const prev = pos > 0 ? visible[pos - 1] : visible[0];
+      showSlide(prev);
+    });
+    nextBtn.addEventListener('click', () => {
+      const visible = slides
+        .map((slide, i) => (slide.classList.contains('hiddenBySearch') ? null : i))
+        .filter(i => i !== null);
+      if (!visible.length) return;
+      const pos = visible.indexOf(current);
+      const nxt = pos >= 0 && pos < visible.length - 1 ? visible[pos + 1] : visible[visible.length - 1];
+      showSlide(nxt);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      const visible = slides
+        .map((slide, i) => (slide.classList.contains('hiddenBySearch') ? null : i))
+        .filter(i => i !== null);
+      if (!visible.length) return;
+      const pos = visible.indexOf(current);
+      if (e.key === 'ArrowRight') {
+        const nxt = pos >= 0 && pos < visible.length - 1 ? visible[pos + 1] : visible[visible.length - 1];
+        showSlide(nxt);
+      }
+      if (e.key === 'ArrowLeft') {
+        const prev = pos > 0 ? visible[pos - 1] : visible[0];
+        showSlide(prev);
+      }
+      if (e.key === 'Home') showSlide(visible[0]);
+      if (e.key === 'End') showSlide(visible[visible.length - 1]);
+    });
+
+    search.addEventListener('input', () => applySearch(search.value.trim()));
+
+    applySearch('');
+    showSlide(0);
+  </script>
+
 </body>
 </html>
