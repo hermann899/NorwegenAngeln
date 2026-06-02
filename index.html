@@ -542,6 +542,449 @@
       max-width:calc(100% - 24px);
     }
 
+
+    .quizLaunch{
+      width:100%;
+      margin:12px 0 10px;
+      background:linear-gradient(135deg, rgba(102,217,239,.20), rgba(141,255,179,.14));
+      border:1px solid rgba(102,217,239,.24);
+      box-shadow:0 0 0 1px rgba(102,217,239,.08) inset, 0 14px 30px rgba(0,0,0,.20);
+    }
+    .quizLaunch:hover{
+      border-color:rgba(141,255,179,.35);
+      transform:translateY(-1px);
+    }
+
+    .deck.quizMode .slidesViewport,
+    .deck.quizMode .footerNav{
+      display:none;
+    }
+    .deck.quizMode .quizView{
+      display:block;
+    }
+
+    .quizView{
+      display:none;
+      position:absolute;
+      inset:18px;
+      overflow:auto;
+      padding:6px 6px 12px;
+      background:
+        radial-gradient(1100px 500px at 15% 0%, rgba(102,217,239,.10), transparent 40%),
+        radial-gradient(900px 420px at 85% 12%, rgba(141,255,179,.08), transparent 40%);
+    }
+    .quizHero{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:16px;
+      margin-bottom:16px;
+      padding:22px 22px 18px;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(135deg, rgba(11,23,38,.98), rgba(6,13,22,.98));
+      box-shadow:var(--shadow);
+    }
+    .quizHero h2{
+      margin:8px 0 8px;
+      font-size:30px;
+      line-height:1.05;
+      letter-spacing:-.03em;
+    }
+    .quizHero p{
+      margin:0;
+      max-width:84ch;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+    .quizBackBtn{
+      flex:none;
+      align-self:center;
+      background:linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border-color:rgba(255,255,255,.08);
+    }
+
+    .fishHud{
+      position:sticky;
+      top:0;
+      z-index:3;
+      border-radius:28px;
+      margin-bottom:16px;
+      padding:16px 18px 18px;
+      background:linear-gradient(180deg, rgba(8,18,29,.96), rgba(5,11,18,.96));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 18px 40px rgba(0,0,0,.28);
+      backdrop-filter:blur(10px);
+    }
+    .fishHudTop{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:flex-start;
+      margin-bottom:14px;
+    }
+    .fishLabel{
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:#b9c9dc;
+      margin-bottom:6px;
+      font-weight:900;
+    }
+    .fishCounts{
+      font-size:14px;
+      color:#eaf5ff;
+      line-height:1.5;
+    }
+    .fishScore{
+      text-align:right;
+      min-width:120px;
+    }
+    .fishScoreK{
+      font-size:11px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin-bottom:4px;
+    }
+    .fishScoreV{
+      font-size:28px;
+      font-weight:900;
+      line-height:1;
+    }
+    .fishTrackWrap{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:16px;
+      align-items:center;
+    }
+    .fishTrack{
+      position:relative;
+      padding:12px 10px 18px;
+      border-radius:20px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.06);
+      overflow:hidden;
+    }
+    .fishTrack::before{
+      content:'';
+      position:absolute;
+      left:0; right:0; top:50%;
+      height:2px;
+      background:linear-gradient(90deg, transparent, rgba(102,217,239,.55), rgba(141,255,179,.58), transparent);
+      transform:translateY(-50%);
+      opacity:.7;
+    }
+    .fishSlots{
+      display:grid;
+      grid-template-columns:repeat(30, minmax(0, 1fr));
+      gap:8px;
+      position:relative;
+      z-index:1;
+    }
+    .fishSlot{
+      aspect-ratio:1/1;
+      border-radius:50%;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 0 0 1px rgba(0,0,0,.15) inset;
+      position:relative;
+      overflow:hidden;
+    }
+    .fishSlot.done.correct{
+      background:linear-gradient(135deg, rgba(141,255,179,.95), rgba(102,217,239,.95));
+      box-shadow:0 0 0 3px rgba(141,255,179,.14), 0 0 18px rgba(141,255,179,.55);
+    }
+    .fishSlot.done.wrong{
+      background:linear-gradient(135deg, rgba(255,107,139,.95), rgba(255,203,102,.55));
+      box-shadow:0 0 0 3px rgba(255,107,139,.12), 0 0 18px rgba(255,107,139,.40);
+    }
+    .fishSlot.done::after{
+      content:'';
+      position:absolute;
+      inset:3px;
+      border-radius:50%;
+      background:rgba(6,12,19,.18);
+    }
+    .fishFloatLane{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+    }
+    .fishStage{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:8px;
+      min-width:240px;
+    }
+    .fishShell{
+      position:relative;
+      width:130px;
+      height:72px;
+      display:grid;
+      place-items:center;
+      transform:scale(var(--fish-scale, .88));
+      transition:transform .35s cubic-bezier(.2,.9,.2,1.2), filter .25s ease;
+      filter:drop-shadow(0 0 18px rgba(102,217,239,.18));
+      transform-origin:center center;
+    }
+    .fishShell.eat{
+      animation:fishEat .45s ease;
+    }
+    .fishShell.spit{
+      animation:fishSpit .45s ease;
+    }
+    .fishTail{
+      position:absolute;
+      left:0;
+      width:34px;
+      height:34px;
+      clip-path:polygon(0 50%, 100% 0, 100% 100%);
+      background:linear-gradient(135deg, rgba(102,217,239,.92), rgba(141,255,179,.72));
+      filter:drop-shadow(0 0 8px rgba(102,217,239,.35));
+    }
+    .fishBody{
+      position:relative;
+      width:92px;
+      height:52px;
+      margin-left:28px;
+      border-radius:50% 58% 48% 52% / 62% 58% 42% 38%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.34), transparent 18%),
+        linear-gradient(135deg, rgba(8,19,32,.95), rgba(102,217,239,.52) 40%, rgba(141,255,179,.58) 100%);
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:0 0 0 1px rgba(0,0,0,.24) inset, 0 0 24px rgba(102,217,239,.18);
+    }
+    .fishEye{
+      position:absolute;
+      left:22px;
+      top:17px;
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#07101b;
+      box-shadow:0 0 0 2px rgba(255,255,255,.72);
+    }
+    .fishMouth{
+      position:absolute;
+      right:4px;
+      top:50%;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      border:2px solid rgba(7,16,27,.84);
+      border-left-color:transparent;
+      border-top-color:transparent;
+      transform:translateY(-50%) rotate(-45deg);
+      box-shadow:0 0 10px rgba(255,255,255,.18);
+    }
+    .fishHint{
+      font-size:12px;
+      color:var(--muted);
+      text-align:center;
+      line-height:1.4;
+      max-width:220px;
+    }
+
+    .quizGrid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+      gap:16px;
+      padding-bottom:8px;
+    }
+    .quizCard{
+      position:relative;
+      overflow:hidden;
+      border-radius:24px;
+      padding:16px 16px 14px;
+      background:
+        radial-gradient(620px 220px at 20% 0%, hsla(var(--h), 100%, 70%, .22), transparent 46%),
+        radial-gradient(420px 180px at 95% 10%, hsla(var(--h2), 100%, 70%, .16), transparent 44%),
+        linear-gradient(160deg, hsla(var(--h), 70%, 12%, .96), hsla(var(--h2), 74%, 8%, .98));
+      border:1px solid hsla(var(--h), 100%, 70%, .28);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.05) inset,
+        0 20px 44px rgba(0,0,0,.30),
+        0 0 30px hsla(var(--h), 100%, 65%, .12);
+      min-height:240px;
+    }
+    .quizCard::before{
+      content:'';
+      position:absolute;
+      inset:-1px;
+      background:
+        linear-gradient(120deg, transparent 0 38%, hsla(var(--h2), 100%, 70%, .12) 44%, transparent 56% 100%),
+        linear-gradient(90deg, transparent, rgba(255,255,255,.02), transparent);
+      pointer-events:none;
+      mix-blend-mode:screen;
+    }
+    .quizCardInner{
+      position:relative;
+      z-index:1;
+    }
+    .quizMeta{
+      display:flex;
+      justify-content:space-between;
+      gap:8px;
+      align-items:center;
+      margin-bottom:12px;
+    }
+    .quizTag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:hsla(var(--h), 100%, 65%, .14);
+      border:1px solid hsla(var(--h), 100%, 75%, .18);
+      color:#f7feff;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .quizNo{
+      font-size:11px;
+      color:#d9e7f6;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:900;
+    }
+    .quizQuestion{
+      font-size:16px;
+      line-height:1.45;
+      font-weight:900;
+      margin:0;
+      color:#fff;
+      text-wrap:pretty;
+    }
+    .quizOptions{
+      display:grid;
+      gap:10px;
+      margin-top:14px;
+    }
+    .quizOption{
+      position:relative;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      width:100%;
+      padding:12px 12px;
+      border-radius:16px;
+      text-align:left;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--text);
+      cursor:pointer;
+      transition:transform .15s ease, border-color .15s ease, background .15s ease, box-shadow .15s ease;
+      font:inherit;
+    }
+    .quizOption:hover{
+      transform:translateY(-1px);
+      border-color:hsla(var(--h), 100%, 75%, .25);
+      background:rgba(255,255,255,.075);
+    }
+    .quizOption:disabled{
+      cursor:default;
+      opacity:.95;
+    }
+    .quizBullet{
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      flex:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);
+      font-size:11px;
+      font-weight:900;
+    }
+    .quizOption.correct{
+      background:linear-gradient(135deg, rgba(141,255,179,.16), rgba(102,217,239,.10));
+      border-color:rgba(141,255,179,.35);
+      box-shadow:0 0 0 1px rgba(141,255,179,.08) inset, 0 0 18px rgba(141,255,179,.10);
+    }
+    .quizOption.wrong{
+      background:linear-gradient(135deg, rgba(255,107,139,.16), rgba(255,203,102,.10));
+      border-color:rgba(255,107,139,.36);
+      box-shadow:0 0 0 1px rgba(255,107,139,.08) inset, 0 0 18px rgba(255,107,139,.10);
+    }
+    .quizOption.correct .quizBullet{
+      background:rgba(141,255,179,.95);
+      color:#06111c;
+      border-color:transparent;
+    }
+    .quizOption.wrong .quizBullet{
+      background:rgba(255,107,139,.95);
+      color:#06111c;
+      border-color:transparent;
+    }
+    .quizFeedback{
+      min-height:46px;
+      margin-top:12px;
+      padding-top:12px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:#dce8f4;
+      font-size:13px;
+      line-height:1.5;
+    }
+    .quizFeedback.good{ color:#8dffb3; }
+    .quizFeedback.bad{ color:#ff8ca4; }
+
+    .quizSummary{
+      margin-top:18px;
+      padding:16px 18px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(135deg, rgba(102,217,239,.09), rgba(141,255,179,.06));
+      color:#eff8ff;
+      font-size:14px;
+      line-height:1.6;
+      box-shadow:var(--shadow);
+    }
+
+    .flyPoint{
+      position:fixed;
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      pointer-events:none;
+      z-index:9999;
+      box-shadow:0 0 16px currentColor;
+      transform:translate(-50%,-50%);
+    }
+    .flyPoint.eat{
+      background:rgba(141,255,179,.98);
+      color:rgba(141,255,179,.98);
+    }
+    .flyPoint.spit{
+      background:rgba(255,107,139,.98);
+      color:rgba(255,107,139,.98);
+    }
+    @keyframes fishEat{
+      0%{transform:scale(var(--fish-scale, .88));}
+      40%{transform:scale(calc(var(--fish-scale, .88) * 1.08)) translateX(2px);}
+      100%{transform:scale(var(--fish-scale, .88));}
+    }
+    @keyframes fishSpit{
+      0%{transform:scale(var(--fish-scale, .88));}
+      35%{transform:scale(calc(var(--fish-scale, .88) * 0.96)) translateX(-2px);}
+      100%{transform:scale(var(--fish-scale, .88));}
+    }
+    @keyframes flyToFish{
+      0%{transform:translate(var(--sx), var(--sy)) scale(1); opacity:1;}
+      70%{opacity:1;}
+      100%{transform:translate(var(--ex), var(--ey)) scale(.2); opacity:0;}
+    }
+    @keyframes flyFromFish{
+      0%{transform:translate(var(--sx), var(--sy)) scale(.2); opacity:0;}
+      20%{opacity:1;}
+      100%{transform:translate(var(--ex), var(--ey)) scale(1.1); opacity:0;}
+    }
+
     @media (max-width: 1180px){
       .slideMedia{display:block}
       .mediaFigure{max-height:none; aspect-ratio: 16 / 10;}
@@ -598,6 +1041,8 @@
         </div>
       </div>
 
+      <button class="navBtn quizLaunch" id="quizBtn" type="button">Quiz</button>
+
       <input id="search" class="search" type="search" placeholder="Folien suchen: Titel, Inhalt, Drift, Heilbutt, Echolot ..." />
 
       <div class="tocSection">
@@ -624,6 +1069,53 @@
       </div>
 
       <div class="slidesViewport" id="slidesViewport"></div>
+
+      <div class="quizView" id="quizView" hidden>
+        <div class="quizHero">
+          <div>
+            <div class="eyebrow">⚡ Quiz-Modus</div>
+            <h2>30 Multiple-Choice-Fragen zum gesamten Inhalt</h2>
+            <p>Jede Antwort zeigt sofort richtig oder falsch. Der Fisch wächst mit jedem Treffer und die Punkte werden gefressen oder ausgespuckt.</p>
+          </div>
+          <button class="navBtn quizBackBtn" id="quizBackBtn" type="button">← Zur Präsentation</button>
+        </div>
+
+        <div class="fishHud">
+          <div class="fishHudTop">
+            <div>
+              <div class="fishLabel">Fortschritt</div>
+              <div class="fishCounts"><span id="quizCorrectCount">0</span> richtige von <span id="quizAnsweredCount">0</span> beantworteten Fragen</div>
+            </div>
+            <div class="fishScore">
+              <div class="fishScoreK">Score</div>
+              <div class="fishScoreV" id="quizScoreText">0 / 30</div>
+            </div>
+          </div>
+
+          <div class="fishTrackWrap">
+            <div class="fishTrack" id="fishTrack">
+              <div class="fishSlots" id="fishSlots"></div>
+              <div class="fishFloatLane" id="fishFloatLane"></div>
+            </div>
+            <div class="fishStage">
+              <div class="fishShell" id="fishShell" style="--fish-scale:0.88;">
+                <div class="fishTail"></div>
+                <div class="fishBody" id="fishBody">
+                  <span class="fishEye"></span>
+                  <span class="fishMouth"></span>
+                </div>
+              </div>
+              <div class="fishHint" id="fishHint">Dein Fisch ist winzig.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quizGrid" id="quizGrid"></div>
+
+        <div class="quizSummary" id="quizSummary">
+          Beantworte alle Fragen, um deine Gesamtleistung zu sehen.
+        </div>
+      </div>
 
       <div class="footerNav">
         <div>Folie <span id="currentIndex">1</span> / <span id="totalSlides">24</span></div>
@@ -1826,6 +2318,342 @@
     const search = document.getElementById('search');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    const quizBtn = document.getElementById('quizBtn');
+    const quizView = document.getElementById('quizView');
+    const quizGrid = document.getElementById('quizGrid');
+    const quizSummary = document.getElementById('quizSummary');
+    const fishSlots = document.getElementById('fishSlots');
+    const fishFloatLane = document.getElementById('fishFloatLane');
+    const fishShell = document.getElementById('fishShell');
+    const fishBody = document.getElementById('fishBody');
+    const fishHint = document.getElementById('fishHint');
+    const quizBackBtn = document.getElementById('quizBackBtn');
+    const quizCorrectCount = document.getElementById('quizCorrectCount');
+    const quizAnsweredCount = document.getElementById('quizAnsweredCount');
+    const quizScoreText = document.getElementById('quizScoreText');
+    const deck = document.querySelector('.deck');
+
+    const quizData = [
+  {
+    "question": "Was ist laut Präsentation in Ålesund im Sommer wichtiger als der tiefste Punkt eines Reviers?",
+    "options": [
+      "Die größte freie Wasserfläche",
+      "Die Übergangskette aus Beutezone, Strömungsnaht und Driftanker",
+      "Ein möglichst langer Schleppkurs",
+      "Nur die maximale Tiefe"
+    ],
+    "answer": 1,
+    "explanation": "Entscheidend ist die Kette aus Beutezone, Strömungsnaht und einem Punkt, an dem die Drift sauber geführt werden kann."
+  },
+  {
+    "question": "Wie lang sind die produktivsten Linien laut Deck oft eher?",
+    "options": [
+      "20–300 Meter",
+      "2–3 Kilometer",
+      "50–80 Zentimeter",
+      "Nur exakt 10 Meter"
+    ],
+    "answer": 0,
+    "explanation": "Die Präsentation betont kleine, hochaktive Linien statt riesiger Fahrstrecken."
+  },
+  {
+    "question": "Welche Kombination beschreibt einen guten Sommerplatz am ehesten?",
+    "options": [
+      "Nur offene Fläche ohne Struktur",
+      "Tiefste Stelle ohne Futter",
+      "Mehrere aktive Ebenen in einer einzigen Drift",
+      "Einzig glatter Sandboden"
+    ],
+    "answer": 2,
+    "explanation": "Ein guter Spot liefert mehrere Ebenen und Übergänge in derselben Drift."
+  },
+  {
+    "question": "Wie wirkt harter Grund auf dem Echolot laut der Präsentation typischerweise?",
+    "options": [
+      "Breit und diffus",
+      "Schmaler und klarer",
+      "Unsichtbar",
+      "Nur als rotes Warnsignal"
+    ],
+    "answer": 1,
+    "explanation": "Harter Untergrund zeichnet sich als schmalere, sauberere Linie ab."
+  },
+  {
+    "question": "Wo sitzt der produktive Driftkorridor häufig?",
+    "options": [
+      "Genau mitten in einer Sandfläche",
+      "An der Grenze von hart zu weich",
+      "Nur im Hafenbecken",
+      "Ausschließlich im Tiefstwasser"
+    ],
+    "answer": 1,
+    "explanation": "Der Umschlag von hart zu weich ist biologisch meist relevanter als die reine Tiefe."
+  },
+  {
+    "question": "Welche Phase wird als besonders produktiv beschrieben?",
+    "options": [
+      "Lange nach kompletter Strömungsruhe",
+      "Kurz vor und nach dem Strömungswechsel",
+      "Nur bei absolutem Vollmond",
+      "Ausschließlich bei Sonnenschein um 12 Uhr"
+    ],
+    "answer": 1,
+    "explanation": "Kurz vor und nach dem Wechsel gerät Futter in Bewegung und macht Räuber aktiv."
+  },
+  {
+    "question": "In welchem Tiefenbereich steht Sommer-Heilbutt laut Deck oft besonders gut an Kanten?",
+    "options": [
+      "2–6 m",
+      "12–28 m",
+      "80–120 m",
+      "200–300 m"
+    ],
+    "answer": 1,
+    "explanation": "Für Sommer-Heilbutt werden flachere Kantenbereiche um 12–28 m genannt."
+  },
+  {
+    "question": "Wie arbeitet der 400-g-Gummi als Suchwerkzeug?",
+    "options": [
+      "Mit langen Pausen ohne Bodenkontakt",
+      "Mit 20–60 cm Hebephasen und kontrolliertem Fall",
+      "Mit dauerhaftem Einkurbeln über der Oberfläche",
+      "Mit reinem Stand ohne Bewegung"
+    ],
+    "answer": 1,
+    "explanation": "Der Gummi sucht über kurze Liftphasen, sauberen Fall und Bodenkontakt."
+  },
+  {
+    "question": "Wodurch gewinnt ein Deadbait-Setup für Heilbutt besonders?",
+    "options": [
+      "Durch hektische Dauerbewegung",
+      "Durch lange Stillstände und Präsenz",
+      "Durch möglichst große Geschwindigkeit",
+      "Durch ultrakurze Vorfächer ohne Ruhe"
+    ],
+    "answer": 1,
+    "explanation": "Deadbait lebt von Ruhe, Präsenz und sauberer Platzierung."
+  },
+  {
+    "question": "In welchem Bereich steht Scholle im Sommer laut Präsentation meist?",
+    "options": [
+      "8–18 m in ruhigen Sand- oder Schlickzonen",
+      "35–55 m im offenen Blauwasser",
+      "1–3 m in starker Brandung",
+      "Nur direkt unter Eis"
+    ],
+    "answer": 0,
+    "explanation": "Scholle bevorzugt ruhige, flachere Bodenbereiche mit weichen Übergängen."
+  },
+  {
+    "question": "Was ist bei Scholle häufiger erfolgreich?",
+    "options": [
+      "5–15 Sekunden Pause",
+      "Dauerhoppeln ohne Stillstand",
+      "Maximal aggressive Fluchtführung",
+      "Reine Oberflächenmontage"
+    ],
+    "answer": 0,
+    "explanation": "Lange Pausen und feiner Bodenkontakt sind bei Scholle zentral."
+  },
+  {
+    "question": "Welche Grundarten sind für Pollack besonders typisch?",
+    "options": [
+      "Fels, Kelp und strömungsreiches Relief",
+      "Nur blanker Tiefsand",
+      "Nur Schlamm ohne Struktur",
+      "Nur Hafenpierbeton"
+    ],
+    "answer": 0,
+    "explanation": "Pollack liebt die erste harte Kante an Fels und Kelp."
+  },
+  {
+    "question": "In welchem Tiefenbereich taucht Makrele laut Präsentation häufig auf?",
+    "options": [
+      "0–15 m, bei Druck auch 20–30 m",
+      "40–70 m ausschließlich",
+      "Nur auf Grund bei 100 m",
+      "Immer exakt an der Oberfläche"
+    ],
+    "answer": 0,
+    "explanation": "Makrelen jagen meist oberflächennah, können aber tiefer stehen."
+  },
+  {
+    "question": "Wofür steht eine kompakte, dynamische Wolke im Mittelwasser oft?",
+    "options": [
+      "Ein leerer Sensorfehler",
+      "Futterballen oder dichte Schule",
+      "Nur Schaum an der Oberfläche",
+      "Ein zufälliger Schatten"
+    ],
+    "answer": 1,
+    "explanation": "Solche Wolken sind meist Baitballs oder enge Schulen."
+  },
+  {
+    "question": "Was zeigt die Präsentation als kluge Suchstrategie pro Fischart?",
+    "options": [
+      "Nur eine Zone",
+      "Drei Zonen: flach, Kante, tiefer Auslauf",
+      "Ausschließlich Zufall",
+      "Nur die tiefste Rinne"
+    ],
+    "answer": 1,
+    "explanation": "Dreistufiges Denken spart Zeit und erhöht die Trefferquote."
+  },
+  {
+    "question": "Wie sollte der Motor bei zu schneller Drift eingesetzt werden?",
+    "options": [
+      "Als Dauerlösung mit Vollgas",
+      "Mit kurzen Korrekturimpulsen",
+      "Gar nicht",
+      "Nur rückwärts und immer gleich"
+    ],
+    "answer": 1,
+    "explanation": "Der Motor ist ein Feinkorrekturwerkzeug, kein Dauerstörer."
+  },
+  {
+    "question": "Welche Reihenfolge nennt der Text bei der Zonenarbeit?",
+    "options": [
+      "Leeseite, dann Windkante, dann Parkplatz",
+      "Windkante, Leekante, dann tiefere Rückfallzone",
+      "Zuerst Tiefwasser, zuletzt Kante",
+      "Zufällig und ohne System"
+    ],
+    "answer": 1,
+    "explanation": "Die Reihenfolge folgt der produktiven Struktur rund um die Kante."
+  },
+  {
+    "question": "Wie zeigen sich Schollenbisse oft?",
+    "options": [
+      "Als leichter Zug oder Gewichtsveränderung",
+      "Als lauter Splash an der Oberfläche",
+      "Immer als harter Run nach oben",
+      "Nur als sichtbarer Fangschwarm"
+    ],
+    "answer": 0,
+    "explanation": "Scholle nimmt oft subtil, eher als Gewicht oder seitlicher Zug."
+  },
+  {
+    "question": "Wie lang sind Makrelenpausen laut Führungsempfehlung meist?",
+    "options": [
+      "1–3 Sekunden",
+      "20–30 Sekunden",
+      "2–3 Minuten",
+      "Über zehn Minuten"
+    ],
+    "answer": 0,
+    "explanation": "Makrelen reagieren auf schnelle Züge mit sehr kurzen Pausen."
+  },
+  {
+    "question": "Welche Führungslogik passt zu Pollack?",
+    "options": [
+      "Langsam, zögernd, ohne Beschleunigung",
+      "Schnelle Züge, kontrollierte Drops, sofortiges Wiederaufnehmen",
+      "Nur statisches Liegenlassen",
+      "Nur im Zeitlupentempo über Grund"
+    ],
+    "answer": 1,
+    "explanation": "Pollack reagiert stark auf Beschleunigung und Attacke."
+  },
+  {
+    "question": "Was ist für Heilbutt besonders sinnvoll?",
+    "options": [
+      "Nur Deadbait von Anfang bis Ende",
+      "Erst Gummi zum Finden, dann Deadbait zum Ausschlachten",
+      "Nur Oberflächenköder",
+      "Nur ultraleichte Matchruten"
+    ],
+    "answer": 1,
+    "explanation": "Der Text empfiehlt Gummi für die Suche und Deadbait für das Ausfischen."
+  },
+  {
+    "question": "Warum sind Makrelen für das Revier so wichtig?",
+    "options": [
+      "Sie zeigen lokalen Futterdruck besonders schnell an",
+      "Sie sind nur dekorativ",
+      "Sie bedeuten automatisch, dass der Boden weich ist",
+      "Sie stehen nur bei Nacht"
+    ],
+    "answer": 0,
+    "explanation": "Makrelen sind ein starker Indikator für aktive Futterlagen."
+  },
+  {
+    "question": "Welche Aussage passt zu einem guten Sommer-Heilbuttplatz am besten?",
+    "options": [
+      "Reiner Tiefwasserpunkt ohne Kante",
+      "Flache Nahrungskante plus tiefe Rückfallzone",
+      "Nur glatte Sandfläche ohne Übergang",
+      "Nur Hafenliegeplatz"
+    ],
+    "answer": 1,
+    "explanation": "Die Kombination aus flacher Nahrungskante und Rückfallzone ist besonders stark."
+  },
+  {
+    "question": "Welche Echolot-Darstellung liefert laut Deck vor allem Geometrie?",
+    "options": [
+      "Side-Scan",
+      "Gar kein System",
+      "Nur Fischsymbolanzeige",
+      "Nur GPS-Ton"
+    ],
+    "answer": 0,
+    "explanation": "Side-Scan zeigt Struktur, Kanten und die räumliche Form."
+  },
+  {
+    "question": "Was ist bei Scholle wichtiger als rohe Geschwindigkeit?",
+    "options": [
+      "Feuerwerk",
+      "Präzision, Distanz, Pause und Bodenkontakt",
+      "Möglichst laut auftrumpfen",
+      "Große Sprünge über Grund"
+    ],
+    "answer": 1,
+    "explanation": "Der Text betont Präzision und ruhige Bodenarbeit."
+  },
+  {
+    "question": "Wo stehen Pollacks im Sommer häufig?",
+    "options": [
+      "Oft knapp über dem Grund in der Verwirbelung",
+      "Nur in der offenen Mitte des Fjords",
+      "Ausschließlich im Hafen",
+      "Tief unter 100 m"
+    ],
+    "answer": 0,
+    "explanation": "Pollack hält sich oft knapp über dem Grund in Kantenwasser auf."
+  },
+  {
+    "question": "Was ist eine starke Suchreihenfolge für schnelle Sessions?",
+    "options": [
+      "Zuerst die größte Fläche, dann Details",
+      "Erst die strukturell komplexe Zone, dann glattere Flächen",
+      "Immer nur blind Schleppen",
+      "Immer nur nach Gefühl"
+    ],
+    "answer": 1,
+    "explanation": "Strukturkomplexität zuerst spart Zeit und bringt öfter Kontakt."
+  },
+  {
+    "question": "Welche Biss- und Drucklogik passt zu Wind gegen Strom?",
+    "options": [
+      "Beute sammelt sich leichter, der Köderkontakt kann aber schlechter werden",
+      "Alles wird automatisch einfacher",
+      "Es gibt grundsätzlich keine Bewegung mehr",
+      "Die Oberfläche sagt dann alles"
+    ],
+    "answer": 0,
+    "explanation": "Wind gegen Strom kann Futter bündeln, erschwert aber oft die Präsentation."
+  },
+  {
+    "question": "Was ist an einem guten Platz mit Muschelfeld, Kies und kleinen Harten besonders?",
+    "options": [
+      "Er ist biologisch oft lebendiger als blanker Sand",
+      "Er ist immer tot",
+      "Er funktioniert nur im Winter",
+      "Er ist nur für Seehunde interessant"
+    ],
+    "answer": 0,
+    "explanation": "Die Präsentation hebt harte Mischgründe und biologische Aktivität hervor."
+  }
+];
 
     totalSlides.textContent = slidesData.length;
     slideCount.textContent = slidesData.length;
@@ -1991,6 +2819,178 @@ function renderSlide(data, idx){
     const slides = [...document.querySelectorAll('.slide')];
     let current = 0;
 
+
+    const quizState = {
+      answered: new Set(),
+      correct: 0
+    };
+
+    function renderFishSlots(){
+      fishSlots.innerHTML = quizData.map((_, i) => `<div class="fishSlot" data-slot="${i}"></div>`).join('');
+    }
+
+    function syncFish(){
+      const answered = quizState.answered.size;
+      const scale = Math.min(1.82, 0.88 + quizState.correct * 0.032);
+      fishShell.style.setProperty('--fish-scale', scale.toFixed(3));
+      quizCorrectCount.textContent = String(quizState.correct);
+      quizAnsweredCount.textContent = String(answered);
+      quizScoreText.textContent = `${quizState.correct} / ${quizData.length}`;
+
+      const allDone = answered === quizData.length;
+      if (allDone) {
+        const pct = Math.round((quizState.correct / quizData.length) * 100);
+        quizSummary.innerHTML = `Fertig: <strong>${quizState.correct} von ${quizData.length}</strong> Fragen richtig — das sind <strong>${pct}%</strong>. Der Fisch ist jetzt deutlich größer und der Stoff sitzt.`;
+        fishHint.textContent = pct >= 80
+          ? 'Sehr stark. Der Fisch ist satt und die Präsentation sitzt.'
+          : 'Gute Basis. Ein paar Kanten und Tiefen noch einmal nachschärfen.';
+      } else {
+        quizSummary.textContent = `Beantworte noch ${quizData.length - answered} Frage${quizData.length - answered === 1 ? '' : 'n'} — danach gibt es die Gesamtwertung.`;
+      }
+    }
+
+    function animatePoint(slotEl, correct){
+      const fishRect = fishBody.getBoundingClientRect();
+      const slotRect = slotEl.getBoundingClientRect();
+      const laneRect = fishFloatLane.getBoundingClientRect();
+
+      const point = document.createElement('div');
+      point.className = `flyPoint ${correct ? 'eat' : 'spit'}`;
+
+      const startX = slotRect.left + slotRect.width / 2 - laneRect.left;
+      const startY = slotRect.top + slotRect.height / 2 - laneRect.top;
+      const endX = fishRect.left + fishRect.width * 0.92 - laneRect.left;
+      const endY = fishRect.top + fishRect.height / 2 - laneRect.top;
+
+      point.style.setProperty('--sx', `${startX}px`);
+      point.style.setProperty('--sy', `${startY}px`);
+      if (correct) {
+        point.style.setProperty('--ex', `${endX}px`);
+        point.style.setProperty('--ey', `${endY}px`);
+        point.style.animation = 'flyToFish .82s cubic-bezier(.18,.82,.2,1) forwards';
+      } else {
+        point.style.setProperty('--ex', `${startX + (Math.random() * 120 + 80) * (Math.random() > .5 ? 1 : -1)}px`);
+        point.style.setProperty('--ey', `${startY - (Math.random() * 70 + 40)}px`);
+        point.style.animation = 'flyFromFish .72s cubic-bezier(.2,.8,.2,1) forwards';
+      }
+      fishFloatLane.appendChild(point);
+      setTimeout(() => point.remove(), 900);
+    }
+
+    function pulseFish(correct){
+      fishShell.classList.remove('eat', 'spit');
+      void fishShell.offsetWidth;
+      fishShell.classList.add(correct ? 'eat' : 'spit');
+      setTimeout(() => fishShell.classList.remove('eat', 'spit'), 500);
+    }
+
+    function setQuizMode(on){
+      deck.classList.toggle('quizMode', on);
+      quizView.hidden = !on;
+      currentTitle.textContent = on ? 'Quiz-Modus' : slidesData[current].title;
+      currentSubtitle.textContent = on
+        ? '30 schwierige Multiple-Choice-Fragen mit Neon-Feedback und Fisch-Fortschritt'
+        : slidesData[current].subtitle;
+      chapterLabel.textContent = on ? 'Quiz' : slidesData[current].chapter;
+      prevBtn.disabled = on || current === 0;
+      nextBtn.disabled = on || current === slidesData.length - 1;
+      if (on) {
+        quizView.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function showQuiz(){
+      setQuizMode(true);
+    }
+
+    function showDeck(){
+      setQuizMode(false);
+      showSlide(current);
+    }
+
+    function renderQuiz(){
+      renderFishSlots();
+      quizGrid.innerHTML = quizData.map((q, i) => {
+        const hue = (i * 37 + 210) % 360;
+        const hue2 = (hue + 46) % 360;
+        const tag = `NEON ${String(i + 1).padStart(2, '0')}`;
+        return `
+          <article class="quizCard" data-q="${i}" style="--h:${hue};--h2:${hue2};">
+            <div class="quizCardInner">
+              <div class="quizMeta">
+                <div class="quizNo">Frage ${i + 1} / ${quizData.length}</div>
+              </div>
+              <p class="quizQuestion">${escapeHtml(q.question)}</p>
+              <div class="quizOptions" role="radiogroup" aria-label="Frage ${i + 1}">
+                ${q.options.map((opt, oi) => `
+                  <button class="quizOption" type="button" data-option="${oi}" aria-pressed="false">
+                    <span class="quizBullet">${String.fromCharCode(65 + oi)}</span>
+                    <span>${escapeHtml(opt)}</span>
+                  </button>
+                `).join('')}
+              </div>
+              <div class="quizFeedback">Wähle die beste Antwort.</div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      quizGrid.querySelectorAll('.quizCard').forEach((card) => {
+        const qi = Number(card.dataset.q);
+        const q = quizData[qi];
+        const feedback = card.querySelector('.quizFeedback');
+        const buttons = [...card.querySelectorAll('.quizOption')];
+
+        buttons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            if (quizState.answered.has(qi)) return;
+
+            quizState.answered.add(qi);
+            const selected = Number(btn.dataset.option);
+            const correct = selected === q.answer;
+            if (correct) quizState.correct += 1;
+
+            buttons.forEach((b, bi) => {
+              b.disabled = true;
+              b.setAttribute('aria-pressed', 'false');
+              if (bi === q.answer) b.classList.add('correct');
+            });
+            btn.classList.add(correct ? 'correct' : 'wrong');
+            btn.setAttribute('aria-pressed', 'true');
+
+            const slot = fishSlots.querySelector(`.fishSlot[data-slot="${qi}"]`);
+            if (slot) {
+              slot.classList.add('done', correct ? 'correct' : 'wrong');
+              animatePoint(slot, correct);
+            }
+            pulseFish(correct);
+
+            feedback.className = `quizFeedback ${correct ? 'good' : 'bad'}`;
+            feedback.innerHTML = correct
+              ? `Richtig. ${escapeHtml(q.explanation)}`
+              : `Falsch. Richtig ist <strong>${String.fromCharCode(65 + q.answer)}</strong>: ${escapeHtml(q.options[q.answer])}. ${escapeHtml(q.explanation)}`;
+
+            fishHint.textContent = correct
+              ? 'Der Fisch frisst den Punkt👍'
+              : 'Der Fisch spuckt den Punkt wieder aus👎';
+            syncFish();
+          });
+        });
+      });
+
+      syncFish();
+    }
+
+    quizBtn.addEventListener('click', () => {
+      showQuiz();
+      quizView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    quizBackBtn.addEventListener('click', () => {
+      showDeck();
+      slidesViewport.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+
     function buildToc(filter=''){
       const normalized = normalizeText(filter).trim();
       tocList.innerHTML = '';
@@ -2035,6 +3035,7 @@ function renderSlide(data, idx){
     }
 
     function showSlide(index){
+      if (deck.classList.contains('quizMode')) return;
       const visibleSlides = slides
         .map((slide, i) => (slide.classList.contains('hiddenBySearch') ? null : i))
         .filter(i => i !== null);
@@ -2086,6 +3087,7 @@ function renderSlide(data, idx){
     }
 
     prevBtn.addEventListener('click', () => {
+      if (deck.classList.contains('quizMode')) return;
       const visible = slides
         .map((slide, i) => (slide.classList.contains('hiddenBySearch') ? null : i))
         .filter(i => i !== null);
@@ -2095,6 +3097,7 @@ function renderSlide(data, idx){
       showSlide(prev);
     });
     nextBtn.addEventListener('click', () => {
+      if (deck.classList.contains('quizMode')) return;
       const visible = slides
         .map((slide, i) => (slide.classList.contains('hiddenBySearch') ? null : i))
         .filter(i => i !== null);
@@ -2105,6 +3108,7 @@ function renderSlide(data, idx){
     });
 
     document.addEventListener('keydown', (e) => {
+      if (deck.classList.contains('quizMode')) return;
       const visible = slides
         .map((slide, i) => (slide.classList.contains('hiddenBySearch') ? null : i))
         .filter(i => i !== null);
@@ -2124,6 +3128,7 @@ function renderSlide(data, idx){
 
     search.addEventListener('input', () => applySearch(search.value.trim()));
 
+    renderQuiz();
     applySearch('');
     showSlide(0);
   </script>
